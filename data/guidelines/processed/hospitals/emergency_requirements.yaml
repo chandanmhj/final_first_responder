@@ -1,0 +1,40 @@
+# Which hospitals suit which emergency. Used by the hospital finder to rank results.
+# min_status: lowest emergency_status accepted (confirmed > probable).
+# tiers: accepted tiers, best first. prefer: capabilities that earn a bonus.
+# Capabilities are inferred from names unless verified (see capability_overrides.yaml).
+default:
+  min_status: probable
+  tiers: [tertiary, secondary, primary]
+  prefer: []
+conditions:
+  heart_attack:        {min_status: probable, tiers: [tertiary, secondary], prefer: [cardiac]}
+  cardiac_arrest_adult: {min_status: confirmed, tiers: [tertiary, secondary], prefer: [cardiac]}
+  cardiac_arrest_child_infant: {min_status: confirmed, tiers: [tertiary, secondary], prefer: [paediatric]}
+  stroke:              {min_status: probable, tiers: [tertiary, secondary], prefer: [neuro]}
+  seizure:             {min_status: probable, tiers: [tertiary, secondary, primary], prefer: [neuro]}
+  bleeding_severe:     {min_status: confirmed, tiers: [tertiary, secondary], prefer: [trauma]}
+  fracture_sprain:     {min_status: probable, tiers: [tertiary, secondary, primary], prefer: [orthopaedic, trauma]}
+  burns:               {min_status: confirmed, tiers: [tertiary, secondary], prefer: [burns, trauma]}
+  electric_shock:      {min_status: confirmed, tiers: [tertiary, secondary], prefer: [burns, trauma]}
+  drowning:            {min_status: confirmed, tiers: [tertiary, secondary], prefer: [trauma]}
+  snake_bite:          {min_status: confirmed, tiers: [tertiary, secondary], prefer: [trauma]}
+  scorpion_sting:      {min_status: confirmed, tiers: [tertiary, secondary], prefer: [paediatric]}
+  animal_bite:         {min_status: unlikely, tiers: [primary, secondary, tertiary], prefer: []}
+  poisoning:           {min_status: confirmed, tiers: [tertiary, secondary], prefer: []}
+  anaphylaxis:         {min_status: confirmed, tiers: [tertiary, secondary], prefer: []}
+  head_injury:         {min_status: probable, tiers: [tertiary, secondary], prefer: [neuro, trauma]}
+  chest_abdomen_injury: {min_status: confirmed, tiers: [tertiary, secondary], prefer: [trauma]}
+  amputation:          {min_status: confirmed, tiers: [tertiary, secondary], prefer: [trauma, orthopaedic]}
+  emergency_childbirth: {min_status: probable, tiers: [tertiary, secondary], prefer: [maternity]}
+  minor_wound:         {min_status: unlikely, tiers: [primary, secondary, tertiary], prefer: []}
+  nosebleed:           {min_status: unlikely, tiers: [primary, secondary, tertiary], prefer: []}
+  fever:               {min_status: unlikely, tiers: [primary, secondary, tertiary], prefer: []}
+  low_blood_sugar:     {min_status: probable, tiers: [secondary, tertiary, primary], prefer: []}
+  road_car_conscious:  {min_status: confirmed, tiers: [tertiary, secondary], prefer: [trauma]}
+  road_bike_helmet:    {min_status: confirmed, tiers: [tertiary, secondary], prefer: [trauma, neuro]}
+  road_pedestrian:     {min_status: confirmed, tiers: [tertiary, secondary], prefer: [trauma]}
+  road_not_breathing_car: {min_status: confirmed, tiers: [tertiary, secondary], prefer: [trauma]}
+  road_not_breathing_bike: {min_status: confirmed, tiers: [tertiary, secondary], prefer: [trauma]}
+  fall_or_machinery_trauma: {min_status: confirmed, tiers: [tertiary, secondary], prefer: [trauma]}
+  railway_trauma:      {min_status: confirmed, tiers: [tertiary, secondary], prefer: [trauma]}
+status_rank: {confirmed: 3, probable: 2, specialty_only: 1, unlikely: 0}

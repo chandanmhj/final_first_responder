@@ -1,0 +1,47 @@
+id: chest_abdomen_injury
+title: Chest or abdomen injury
+handbook_pages: IFRC p.267
+note: null
+steps:
+- id: chest_abdomen_injury.01
+  n: 1
+  text: Call 108. Help them lie down comfortably and watch them closely.
+  roles:
+  - B
+  - R
+  source: ifrc
+  page: '267'
+- id: chest_abdomen_injury.02
+  n: 2
+  text: 'Abdomen: lying with the knees pulled up is usually most comfortable. Control bleeding with pressure and
+    cover with a clean dressing.'
+  roles:
+  - B
+  - R
+  source: ifrc
+  page: '267'
+- id: chest_abdomen_injury.03
+  n: 3
+  text: If internal organs are showing, do not push them back. Cover them with a clean wet dressing.
+  roles:
+  - B
+  - R
+  source: ifrc
+  page: '267'
+- id: chest_abdomen_injury.04
+  n: 4
+  text: 'Chest: sit them up leaning toward the injured side, with one leg slightly raised. Press on any bleeding,
+    but do not seal the wound completely.'
+  roles:
+  - B
+  - R
+  source: ifrc
+  page: '267'
+- id: chest_abdomen_injury.05
+  n: 5
+  text: Reassure them and watch breathing, circulation and responsiveness, especially for signs of shock.
+  roles:
+  - B
+  - R
+  source: ifrc
+  page: '267'

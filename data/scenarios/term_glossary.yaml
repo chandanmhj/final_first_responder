@@ -1,0 +1,26 @@
+note: Certified first responders see clinical wording. Substitutions are applied to
+  the stored step text; no model rewrites medical steps.
+terms:
+  breastbone: sternum
+  windpipe: airway
+  heart attack: heart attack (myocardial infarction)
+  blood sugar: blood glucose
+  low sugar: hypoglycaemia
+  high sugar: hyperglycaemia
+  fit: seizure
+  fits: seizures
+  stroke: stroke (cerebrovascular accident)
+  pulse at one side of the neck: carotid pulse
+  chest compressions: chest compressions
+  pressure dressing: pressure dressing
+  bleeding: haemorrhage
+  pinch the shoulder muscle: apply a trapezius squeeze
+  faint: syncope
+  fainting: syncope
+  swelling of the face or throat: angioedema
+  severe allergic reaction: anaphylaxis
+  hospital: emergency department
+  breathing: ventilation
+  bluish: cyanotic
+  very hot dry skin: hot, dry skin (anhidrosis)
+  wound: wound

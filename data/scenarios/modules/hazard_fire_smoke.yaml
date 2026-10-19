@@ -1,0 +1,45 @@
+id: hazard_fire_smoke
+title: 'Hazard: fire and smoke'
+handbook_pages: p.17-18
+note: null
+steps:
+- id: hazard_fire_smoke.01
+  n: 1
+  text: 'Do not open doors and windows: fresh air makes the fire stronger.'
+  roles:
+  - B
+  - R
+  source: handbook
+  page: '17'
+- id: hazard_fire_smoke.02
+  n: 2
+  text: Hold a wet cloth or tissue over your face and crawl along the floor to a safer area.
+  roles:
+  - B
+  - R
+  source: handbook
+  page: '17'
+- id: hazard_fire_smoke.03
+  n: 3
+  text: Switch off the power supply and remove any live electrical wire.
+  roles:
+  - B
+  - R
+  source: handbook
+  page: '17'
+- id: hazard_fire_smoke.04
+  n: 4
+  text: If the person is on fire, wrap them in a heavy blanket and roll them on the floor; use water if it is available.
+  roles:
+  - B
+  - R
+  source: handbook
+  page: '17'
+- id: hazard_fire_smoke.05
+  n: 5
+  text: Never ignore fire hazards.
+  roles:
+  - B
+  - R
+  source: handbook
+  page: '3'

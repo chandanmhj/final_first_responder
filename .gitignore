@@ -1,0 +1,31 @@
+# secrets
+.env
+.env.*
+!.env.example
+
+# python
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+.ruff_cache/
+
+# node
+node_modules/
+dist/
+
+# notebooks
+.ipynb_checkpoints/
+
+# evaluation cache (large, regenerable)
+evaluation/cache/*
+!evaluation/cache/.gitkeep
+
+# raw media before compression (large)
+media/emergencies/**/*.mov
+media/emergencies/**/*.raw.*
+
+# os / editor
+.DS_Store
+.vscode/
+.idea/

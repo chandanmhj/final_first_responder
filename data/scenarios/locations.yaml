@@ -1,0 +1,49 @@
+locations:
+  home:
+    label: at home
+    prefix: []
+  public_place:
+    label: in a public place
+    prefix:
+    - scene_safety
+  workplace:
+    label: at a workplace
+    prefix:
+    - scene_safety
+  workplace_industrial:
+    label: at a factory or near heavy machinery
+    prefix:
+    - hazard_industrial
+    - scene_safety
+  road_journey_vehicle:
+    label: during a journey (in a vehicle)
+    prefix:
+    - hazard_vehicle_journey
+    - scene_safety
+  road_accident_scene:
+    label: at a road accident scene
+    prefix:
+    - hazard_road_scene
+    - scene_safety
+  railway:
+    label: on or near a railway
+    prefix:
+    - hazard_railway
+    - scene_safety
+  water_body:
+    label: at a water body (pool, river, sea)
+    prefix:
+    - hazard_water
+  fire_scene:
+    label: at a fire scene
+    prefix:
+    - hazard_fire_smoke
+    - scene_safety
+  outdoors:
+    label: outdoors (garden, farm, trail)
+    prefix:
+    - scene_safety
+  public_transport:
+    label: on public transport
+    prefix:
+    - scene_safety

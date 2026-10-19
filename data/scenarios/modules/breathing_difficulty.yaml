@@ -1,0 +1,61 @@
+id: breathing_difficulty
+title: Breathing difficulty
+handbook_pages: IFRC p.232
+note: null
+steps:
+- id: breathing_difficulty.01
+  n: 1
+  text: Help them into a comfortable position, usually sitting. Leaning forward with the arms resting on a table,
+    chair back or knees often helps. Stay calm and reassure them.
+  self_text: Sit upright and lean forward with your arms resting on something firm. Try to breathe slowly and stay
+    calm.
+  roles:
+  - B
+  - S
+  - R
+  source: ifrc
+  page: '232'
+- id: breathing_difficulty.02
+  n: 2
+  text: If they have their own medicine (for example an inhaler), help them use it. Loosen tight clothing.
+  self_text: Use your own inhaler or prescribed medicine now. Loosen tight clothing.
+  roles:
+  - B
+  - S
+  - R
+  source: ifrc
+  page: '232'
+  tags:
+  - own_medication
+- id: breathing_difficulty.03
+  n: 3
+  text: 'Call 108 at once if: the medicine is not working after a couple of minutes, breathing is very hard, they
+    become confused or drowsy, breathing slows down, or lips, fingers or ears turn blue.'
+  self_text: Call 108 or ask someone to if your medicine is not working after a couple of minutes, breathing is
+    very hard, you feel confused or drowsy, or your lips turn blue.
+  roles:
+  - B
+  - S
+  - R
+  source: ifrc
+  page: '232'
+- id: breathing_difficulty.04
+  n: 4
+  text: If you are trained and oxygen is available, give it as needed.
+  roles:
+  - R
+  source: ifrc
+  page: '232'
+  tags:
+  - oxygen
+- id: breathing_difficulty.05
+  n: 5
+  text: Stay with them and keep watching until breathing is back to normal or help arrives. If they become unresponsive
+    and are not breathing normally, start CPR.
+  roles:
+  - B
+  - R
+  source: ifrc
+  page: '232'
+  tags:
+  - escalate_cpr

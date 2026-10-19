@@ -1,0 +1,49 @@
+id: hypothermia
+title: Hypothermia (cold)
+handbook_pages: IFRC p.461
+note: null
+steps:
+- id: hypothermia.01
+  n: 1
+  text: Take them out of the cold or protect them from further cooling.
+  roles:
+  - B
+  - R
+  source: ifrc
+  page: '461'
+- id: hypothermia.02
+  n: 2
+  text: Remove wet clothes if you can, dry them gently and cover them well.
+  roles:
+  - B
+  - R
+  source: ifrc
+  page: '461'
+- id: hypothermia.03
+  n: 3
+  text: If they are awake and shivering, wrap them in blankets. If they can swallow, give a warm sweet drink or
+    food.
+  roles:
+  - B
+  - R
+  source: ifrc
+  page: '461'
+  tags:
+  - oral_intake
+- id: hypothermia.04
+  n: 4
+  text: If they are drowsy or not shivering, warm them gradually with hot water bottles or heating pads, with a
+    cloth layer so the skin does not burn.
+  roles:
+  - B
+  - R
+  source: ifrc
+  page: '461'
+- id: hypothermia.05
+  n: 5
+  text: Reassure them and watch their breathing and responsiveness. Call 108 if they are drowsy or confused.
+  roles:
+  - B
+  - R
+  source: ifrc
+  page: '461'

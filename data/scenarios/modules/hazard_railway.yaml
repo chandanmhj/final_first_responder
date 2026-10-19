@@ -1,0 +1,20 @@
+id: hazard_railway
+title: 'Hazard: railway'
+handbook_pages: p.1-2
+note: null
+steps:
+- id: hazard_railway.01
+  n: 1
+  text: Stay off the tracks. Trains can approach fast and quietly.
+  roles:
+  - B
+  - R
+  source: adapted
+  page: '1'
+- id: hazard_railway.02
+  n: 2
+  text: Move the patient away from the tracks only if it is safe, and call 108 and the railway authority.
+  roles:
+  - B
+  - R
+  source: extension

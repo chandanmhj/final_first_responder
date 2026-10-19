@@ -1,0 +1,53 @@
+id: insect_sting
+title: Insect bite or sting
+handbook_pages: IFRC p.326
+note: null
+steps:
+- id: insect_sting.01
+  n: 1
+  text: If a bee stinger is left in the skin, remove it quickly by gently scraping it with a flat edge such as a
+    bank card. Do not squeeze it with tweezers.
+  roles:
+  - B
+  - S
+  - R
+  source: ifrc
+  page: '326'
+- id: insect_sting.02
+  n: 2
+  text: A tick should be pulled out with fine tweezers or a tick remover, close to the skin, with steady pull. Do
+    not use petrol, ice or burning.
+  roles:
+  - B
+  - S
+  - R
+  source: ifrc
+  page: '326'
+- id: insect_sting.03
+  n: 3
+  text: Wash the area with clean water, then use an antiseptic.
+  roles:
+  - B
+  - S
+  - R
+  source: ifrc
+  page: '326'
+- id: insect_sting.04
+  n: 4
+  text: Watch for a severe allergic reaction. If swelling of the face, mouth or throat starts, call 108 and put
+    ice on the swelling.
+  roles:
+  - B
+  - S
+  - R
+  source: ifrc
+  page: '326'
+- id: insect_sting.05
+  n: 5
+  text: Try not to scratch. If it gets redder, more painful or warm after a day or two, see a doctor.
+  roles:
+  - B
+  - S
+  - R
+  source: ifrc
+  page: '326'

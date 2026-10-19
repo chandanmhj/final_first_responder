@@ -1,0 +1,62 @@
+id: fracture_sprain
+title: Fracture or sprain (RICE)
+handbook_pages: p.15, p.17
+note: null
+steps:
+- id: fracture_sprain.01
+  n: 1
+  text: 'Rest: do not move the injured part or put weight on it.'
+  roles:
+  - B
+  - S
+  - R
+  source: handbook
+  page: '15'
+- id: fracture_sprain.02
+  n: 2
+  text: Control any bleeding first, before you apply a splint.
+  roles:
+  - B
+  - S
+  - R
+  source: handbook
+  page: '17'
+- id: fracture_sprain.03
+  n: 3
+  text: 'Immobilise: splint with a stick or pipe padded with cloth. Extend it above and below the joints, and tie
+    it away from the injured spot.'
+  roles:
+  - B
+  - S
+  - R
+  source: handbook
+  page: 15,17
+  tags:
+  - splint
+- id: fracture_sprain.04
+  n: 4
+  text: Check circulation often (pale colour, swelling).
+  roles:
+  - B
+  - S
+  - R
+  source: handbook
+  page: '17'
+- id: fracture_sprain.05
+  n: 5
+  text: 'Ice: apply ice on intact skin above the fracture or sprain.'
+  roles:
+  - B
+  - S
+  - R
+  source: handbook
+  page: '15'
+- id: fracture_sprain.06
+  n: 6
+  text: 'Elevate: keep the injured part above the level of the heart.'
+  roles:
+  - B
+  - S
+  - R
+  source: handbook
+  page: '15'

@@ -1,0 +1,69 @@
+id: asthma_attack
+title: Asthma attack
+handbook_pages: IFRC p.245
+note: null
+steps:
+- id: asthma_attack.01
+  n: 1
+  text: Help them sit comfortably and reassure them. Leaning forward and resting the arms on a support can ease
+    breathing.
+  self_text: Sit comfortably, lean forward with your arms on something firm, and try to stay calm.
+  roles:
+  - B
+  - S
+  - R
+  source: ifrc
+  page: '245'
+- id: asthma_attack.02
+  n: 2
+  text: Help them use their own inhaler. A spacer, if they have one, helps the medicine reach the lungs, especially
+    in children. Loosen tight clothing.
+  self_text: Use your inhaler as prescribed (with a spacer if you have one). Loosen tight clothing.
+  roles:
+  - B
+  - S
+  - R
+  source: ifrc
+  page: '245'
+  tags:
+  - own_medication
+- id: asthma_attack.03
+  n: 3
+  text: Move them away from triggers such as smoke or dust. If there is no inhaler, sit near an open window with
+    fresh air.
+  roles:
+  - B
+  - S
+  - R
+  source: ifrc
+  page: 245,249
+- id: asthma_attack.04
+  n: 4
+  text: 'Call 108 at once if: there is no inhaler and the attack lasts several minutes, the inhaler does not work
+    within a few minutes, breathing is severe, lips or fingers turn blue, they become confused, or breathing becomes
+    slow, quiet or they seem tired.'
+  self_text: Call 108 or ask someone to if your inhaler is not working, you cannot speak in full sentences, your
+    lips turn blue, or you feel confused or very tired.
+  roles:
+  - B
+  - S
+  - R
+  source: ifrc
+  page: '245'
+- id: asthma_attack.05
+  n: 5
+  text: If you are trained and oxygen is available, give it as needed.
+  roles:
+  - R
+  source: ifrc
+  page: '245'
+  tags:
+  - oxygen
+- id: asthma_attack.06
+  n: 6
+  text: Stay with them. Help them follow their own doctor's instructions for extra doses while waiting for help.
+  roles:
+  - B
+  - R
+  source: ifrc
+  page: '245'

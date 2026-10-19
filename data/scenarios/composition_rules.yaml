@@ -1,0 +1,56 @@
+order:
+- location prefix modules (hazards, scene safety)
+- condition modules in listed order
+dedupe: A module appears once per scenario; the first occurrence wins.
+role_filter: A step is shown to a role only if the role is in its roles list. Modules with no steps for a role are
+  dropped for that role.
+role_codes:
+  B: bystander
+  S: self (the patient)
+  R: first responder (trained)
+role_notes:
+- Pulse checks, rescue breaths, bag valve mask and medication steps are for trained first responders only (R).
+- Self-help is offered only where the patient can act alone; other conditions list only B and R.
+conflict_rules:
+- id: R1
+  rule: Cardiac arrest, road accident and trauma scenarios never include the plain recovery position.
+- id: R2
+  rule: Nothing is given by mouth to an unconscious person; oral intake only for an awake person.
+- id: R3
+  rule: Snake bite never includes a tourniquet or cutting or sucking the wound.
+- id: R4
+  rule: Stroke never includes aspirin or other medicine at home.
+- id: R5
+  rule: Drowning does not include routine neck immobilisation unless diving or spinal injury is suspected.
+- id: R6
+  rule: Infant choking never includes abdominal thrusts or blind finger sweeps.
+- id: R7
+  rule: 'Fits: nothing in the mouth and no holding the person down.'
+- id: R8
+  rule: Heart attack transport is never by bike, and the patient is kept cool, not wrapped in blankets.
+- id: R9
+  rule: Tourniquet comes only after direct pressure and a pressure dressing fail, and never for a snake bite.
+- id: R10
+  rule: Medication steps are shown to trained first responders only, pending confirmation (see OPEN_QUESTIONS).
+- id: R11
+  rule: Any scenario escalates to CPR if the person is unresponsive with no signs of life.
+- id: R12
+  rule: An animal photo result never changes first-aid steps and never delays going to hospital.
+- id: R13
+  rule: Steps with source 'authored' carry a 'not yet medically reviewed' label in the app. Set SHOW_AUTHORED_STEPS=false
+    to hide them until a reviewer signs off.
+- id: R14
+  rule: Assisting with a person's own prescribed medicine (inhaler, auto-injector) is allowed for every role. Medicines
+    given by the helper (tag 'medication') are shown to certified first responders only.
+- id: R15
+  rule: Choose the adult or child/infant CPR condition from the patient's age band (see age_bands.yaml).
+- id: R16
+  rule: Poisoning never includes giving food or drink by mouth.
+forbidden_tags_check: Each condition lists forbid_tags. The expand script fails if a resolved step carries one of
+  them.
+source_precedence:
+- handbook
+- ifrc
+- authored
+source_precedence_note: When two sources disagree on a step, the handbook wins, then IFRC, then authored content.
+  Every step keeps its real source label.

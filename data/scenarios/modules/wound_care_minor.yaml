@@ -1,0 +1,23 @@
+id: wound_care_minor
+title: Minor wound care
+handbook_pages: p.16
+note: null
+steps:
+- id: wound_care_minor.01
+  n: 1
+  text: Wash the wound with clean water and soap. Do not put anything on it.
+  roles:
+  - B
+  - S
+  - R
+  source: handbook
+  page: '16'
+- id: wound_care_minor.02
+  n: 2
+  text: Cover it with a clean bandage, or a clean cloth if you have no bandage.
+  roles:
+  - B
+  - S
+  - R
+  source: handbook
+  page: '16'

@@ -1,0 +1,21 @@
+id: hazard_industrial
+title: 'Hazard: heavy machinery or factory'
+handbook_pages: p.1
+note: null
+steps:
+- id: hazard_industrial.01
+  n: 1
+  text: Make sure heavy machinery is switched off before you go near the patient.
+  roles:
+  - B
+  - R
+  source: adapted
+  page: '1'
+- id: hazard_industrial.02
+  n: 2
+  text: 'Count the victims. In factories, several people may be hurt: help those who need immediate help first.'
+  roles:
+  - B
+  - R
+  source: handbook
+  page: '1'

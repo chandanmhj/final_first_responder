@@ -1,0 +1,46 @@
+id: log_roll
+title: Log roll (4 people)
+handbook_pages: p.18
+note: null
+steps:
+- id: log_roll.01
+  n: 1
+  text: 'You need at least 4 people: one to hold the head and neck and lead, and three helpers.'
+  roles:
+  - B
+  - R
+  source: handbook
+  page: '18'
+- id: log_roll.02
+  n: 2
+  text: Leader holds head and neck. Helper 1 holds shoulder and hip. Helper 2 holds hip and leg. Helper 3 supports
+    and lifts the leg.
+  roles:
+  - B
+  - R
+  source: handbook
+  page: '18'
+- id: log_roll.03
+  n: 3
+  text: On the leader's count of three, roll the person like a log, all at once, keeping the spine straight.
+  roles:
+  - B
+  - R
+  source: handbook
+  page: '18'
+- id: log_roll.04
+  n: 4
+  text: Examine the back and slide a spine board or stretcher in.
+  roles:
+  - B
+  - R
+  source: handbook
+  page: '18'
+- id: log_roll.05
+  n: 5
+  text: On the leader's count of three, roll them back together onto the board.
+  roles:
+  - B
+  - R
+  source: handbook
+  page: '18'

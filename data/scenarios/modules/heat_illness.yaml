@@ -1,0 +1,53 @@
+id: heat_illness
+title: Heat illness and heatstroke
+handbook_pages: IFRC p.446
+note: null
+steps:
+- id: heat_illness.01
+  n: 1
+  text: Stop all activity. Move them to a cool place and take off extra clothing.
+  self_text: Stop what you are doing, move somewhere cool and remove extra clothing.
+  roles:
+  - B
+  - S
+  - R
+  source: ifrc
+  page: '446'
+- id: heat_illness.02
+  n: 2
+  text: 'Cool them quickly: cold water on hands and feet, ice packs on the neck and groin, a cold shower, or fanning.'
+  roles:
+  - B
+  - S
+  - R
+  source: ifrc
+  page: '446'
+- id: heat_illness.03
+  n: 3
+  text: If they are not vomiting, give water, a sports drink or cold sweet tea.
+  roles:
+  - B
+  - S
+  - R
+  source: ifrc
+  page: '446'
+  tags:
+  - oral_intake
+- id: heat_illness.04
+  n: 4
+  text: 'Call 108 immediately if they are confused, drowsy, aggressive, have stopped sweating, have very hot dry
+    skin, or have a seizure. This is heatstroke: keep cooling them while you wait.'
+  roles:
+  - B
+  - S
+  - R
+  source: ifrc
+  page: 446-447
+- id: heat_illness.05
+  n: 5
+  text: Keep checking their temperature and responsiveness until they recover or help arrives.
+  roles:
+  - B
+  - R
+  source: ifrc
+  page: '446'

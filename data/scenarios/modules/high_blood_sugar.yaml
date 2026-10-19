@@ -1,0 +1,33 @@
+id: high_blood_sugar
+title: High blood sugar
+handbook_pages: p.11
+note: null
+steps:
+- id: high_blood_sugar.01
+  n: 1
+  text: Suspect it in a known diabetic who urinates a lot, is very thirsty, has stomach pain or vomiting, or is
+    tired or unconscious.
+  roles:
+  - B
+  - S
+  - R
+  source: handbook
+  page: '11'
+- id: high_blood_sugar.02
+  n: 2
+  text: If they are awake, encourage them to drink plenty of water.
+  roles:
+  - B
+  - S
+  - R
+  source: handbook
+  page: '11'
+- id: high_blood_sugar.03
+  n: 3
+  text: See a doctor immediately. High sugar can become life-threatening (diabetic ketoacidosis).
+  roles:
+  - B
+  - S
+  - R
+  source: handbook
+  page: '11'

@@ -1,0 +1,101 @@
+id: bleeding_control
+title: Bleeding control
+handbook_pages: p.16-17
+note: null
+steps:
+- id: bleeding_control.01
+  n: 1
+  text: Wear gloves or put plastic over your hand if you can. Press firmly on the bleeding spot (direct pressure)
+    and keep pressing.
+  self_text: Press firmly on the wound with your hand or a clean cloth and keep pressing.
+  roles:
+  - B
+  - S
+  - R
+  source: handbook
+  page: 16-17
+  tags:
+  - direct_pressure
+- id: bleeding_control.02
+  n: 2
+  text: Suspect severe bleeding if clothes are soaked with blood or blood is pooling on the ground.
+  roles:
+  - B
+  - R
+  source: handbook
+  page: '16'
+- id: bleeding_control.03
+  n: 3
+  text: If it keeps bleeding or you need your hands free, put a thick pad of clean cloth on the wound and tie it
+    tightly (pressure dressing). Ask someone else to keep pressing.
+  roles:
+  - B
+  - S
+  - R
+  source: handbook
+  page: '16'
+  tags:
+  - pressure_dressing
+  not_worked:
+    label: Still bleeding
+    hint: Move to a tourniquet if it is a limb; otherwise keep pressing and wait for help.
+- id: bleeding_control.04
+  n: 4
+  text: Check the dressing often to make sure the bleeding has stopped.
+  roles:
+  - B
+  - S
+  - R
+  source: handbook
+  page: '17'
+- id: bleeding_control.05
+  n: 5
+  text: If a limb keeps bleeding heavily despite a pressure dressing, put a tourniquet about 3 cm above the wound,
+    never over the wound.
+  roles:
+  - B
+  - S
+  - R
+  source: handbook
+  page: '17'
+  tags:
+  - tourniquet
+- id: bleeding_control.06
+  n: 6
+  text: Use a band at least 3 to 4 finger-widths wide, such as a cloth strip twisted with a stick. Tighten until
+    the bleeding stops.
+  roles:
+  - B
+  - S
+  - R
+  source: handbook
+  page: '17'
+  not_worked:
+    label: Still bleeding
+    hint: Tighten further, or add a second band just above the first.
+- id: bleeding_control.07
+  n: 7
+  text: Write down the time the tourniquet was applied and tell the ambulance team.
+  roles:
+  - B
+  - S
+  - R
+  source: adapted
+  page: '17'
+- id: bleeding_control.08
+  n: 8
+  text: 'Signs of internal bleeding: severe pain, large bruises on the chest, belly or pelvis, weakness, confusion,
+    no pulse felt. Call an ambulance and go to a hospital with a surgeon.'
+  roles:
+  - B
+  - R
+  source: handbook
+  page: '16'
+- id: bleeding_control.09
+  n: 9
+  text: When moving the patient, avoid bending the neck and back.
+  roles:
+  - B
+  - R
+  source: handbook
+  page: '16'

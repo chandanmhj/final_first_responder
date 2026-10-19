@@ -1,0 +1,41 @@
+id: animal_bite
+title: Animal bite (dog, cat, other animals)
+handbook_pages: p.12
+note: null
+steps:
+- id: animal_bite.01
+  n: 1
+  text: Wash the wound straight away with soap and warm water, then rinse under flowing water for 15 minutes.
+  roles:
+  - B
+  - S
+  - R
+  source: handbook
+  page: '12'
+- id: animal_bite.02
+  n: 2
+  text: Caregivers must not touch the wound with bare hands.
+  roles:
+  - B
+  - R
+  source: handbook
+  page: '12'
+- id: animal_bite.03
+  n: 3
+  text: Apply antibiotic ointment or a disinfectant such as iodine.
+  roles:
+  - B
+  - S
+  - R
+  source: handbook
+  page: '12'
+- id: animal_bite.04
+  n: 4
+  text: Go to the nearest health centre as soon as possible for rabies and tetanus vaccination. Rabies is fatal
+    but fully preventable with prompt care.
+  roles:
+  - B
+  - S
+  - R
+  source: handbook
+  page: '12'

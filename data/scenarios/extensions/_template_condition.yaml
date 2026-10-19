@@ -1,0 +1,10 @@
+conditions:
+  example_condition:
+    title: Example condition
+    roles: [B, R]
+    groups: []
+    modules: [call_for_help, example_module, safe_transfer]
+    valid_locations: [home, public_place]
+    facility_requirements: What the hospital must have.
+    forbid_tags: []
+    note: null

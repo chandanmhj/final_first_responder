@@ -1,0 +1,27 @@
+roles:
+- code: B
+  id: common
+  label: Common person
+  style: simple_words
+  can_do:
+  - hands-only CPR
+  - own-medicine assist
+  - recovery position
+  - bleeding control
+- code: R
+  id: responder
+  label: Certified first responder
+  style: clinical_words
+  can_do:
+  - pulse check
+  - rescue breaths
+  - oxygen
+  - medication steps
+- code: S
+  id: self
+  label: Patient (helping yourself)
+  style: simple_words
+  note: Chosen per emergency with 'Is it for you or someone else?'
+gate: Role is asked before login (stored in the browser, saved to the profile after
+  login). Certified first responder requires a confirmation that the user is trained;
+  a certificate number is optional and not verified.

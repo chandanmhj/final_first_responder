@@ -1,0 +1,32 @@
+id: choking_special_cases
+title: 'Choking: special cases'
+handbook_pages: p.32-33
+note: null
+steps:
+- id: choking_special_cases.01
+  n: 1
+  text: 'Pregnant woman: no abdominal thrusts. Put your hands higher, over the lower part of the breastbone.'
+  roles:
+  - B
+  - R
+  source: handbook
+  page: 32-33
+  tags:
+  - pregnancy_variant
+- id: choking_special_cases.02
+  n: 2
+  text: 'Person taller than you: ask them to spread their legs wider, or stand on a stable stool against a wall,
+    or have them sit or kneel, or sit on the floor with your legs on each side of them.'
+  roles:
+  - B
+  - R
+  source: handbook
+  page: '33'
+- id: choking_special_cases.03
+  n: 3
+  text: 'Small child or toddler: kneel behind them, or place the child on a stool.'
+  roles:
+  - B
+  - R
+  source: handbook
+  page: '33'

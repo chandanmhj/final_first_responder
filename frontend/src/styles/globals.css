@@ -1,0 +1,47 @@
+@import "tailwindcss";
+@import "@fontsource-variable/inter";
+@import "@fontsource-variable/plus-jakarta-sans";
+
+@theme {
+  --font-sans: "Inter Variable", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-display: "Plus Jakarta Sans Variable", "Inter Variable", ui-sans-serif, system-ui, sans-serif;
+
+  --color-ink-950: #0b1226;
+  --color-ink-900: #111a33;
+  --color-ink-700: #3a4560;
+  --color-ink-500: #6b7590;
+  --color-ink-300: #c3c9d8;
+  --color-ink-200: #e2e6ef;
+  --color-ink-100: #eef1f7;
+  --color-ink-50: #f7f8fb;
+
+  --color-brand-50: #eef4ff;
+  --color-brand-100: #dbe7ff;
+  --color-brand-500: #3b73f0;
+  --color-brand-600: #2458e0;
+  --color-brand-700: #1c46b8;
+
+  --color-emergency-50: #fff1f1;
+  --color-emergency-500: #e5383b;
+  --color-emergency-600: #c92a2d;
+
+  --color-success-500: #16a34a;
+
+  --shadow-soft: 0 1px 2px rgb(11 18 38 / 0.04), 0 8px 24px rgb(11 18 38 / 0.06);
+  --shadow-lift: 0 2px 4px rgb(11 18 38 / 0.05), 0 18px 40px rgb(11 18 38 / 0.12);
+}
+
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    @apply bg-ink-50 font-sans text-ink-900 antialiased;
+  }
+  h1, h2, h3 {
+    @apply font-display tracking-tight;
+  }
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-brand-500;
+  }
+}

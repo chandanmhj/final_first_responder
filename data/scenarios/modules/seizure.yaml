@@ -1,0 +1,91 @@
+id: seizure
+title: Seizure (fit)
+handbook_pages: p.10-11
+note: null
+steps:
+- id: seizure.01
+  n: 1
+  text: Stay calm. Most fits stop by themselves.
+  roles:
+  - B
+  - R
+  source: handbook
+  page: '10'
+- id: seizure.02
+  n: 2
+  text: If the whole body is shaking, clear hard or sharp objects away and put something soft, like a pillow, under
+    the head.
+  roles:
+  - B
+  - R
+  source: handbook
+  page: '10'
+- id: seizure.03
+  n: 3
+  text: Remove glasses and loosen anything tight around the neck, such as a tie, belt or straps.
+  roles:
+  - B
+  - R
+  source: handbook
+  page: '10'
+- id: seizure.04
+  n: 4
+  text: Do NOT hold the person down. Do NOT put anything in their mouth.
+  roles:
+  - B
+  - R
+  source: handbook
+  page: '11'
+  tags:
+  - no_object_in_mouth
+- id: seizure.05
+  n: 5
+  text: Watch the time. Call 108 if the fit lasts more than 5 minutes.
+  roles:
+  - B
+  - R
+  source: handbook
+  page: 10-11
+- id: seizure.06
+  n: 6
+  text: When it stops, reassure them and tell them what happened. Be aware of tongue bite bleeding.
+  roles:
+  - B
+  - R
+  source: handbook
+  page: '10'
+- id: seizure.07
+  n: 7
+  text: If they are sleepy, place them in the recovery position until they are fully awake.
+  roles:
+  - B
+  - R
+  source: handbook
+  page: '10'
+  tags:
+  - recovery_position
+- id: seizure.08
+  n: 8
+  text: Check blood sugar if you can. If it is low, treat it.
+  roles:
+  - B
+  - R
+  source: handbook
+  page: '10'
+- id: seizure.09
+  n: 9
+  text: Help them get home or to a healthcare facility. If they missed their fit medicine, they should take it as
+    soon as possible.
+  roles:
+  - B
+  - R
+  source: handbook
+  page: '10'
+- id: seizure.10
+  n: 10
+  text: If it happened while driving, swimming or near machinery, check for injuries and get them medically checked.
+  roles:
+  - B
+  - R
+  source: adapted
+  page: '10'

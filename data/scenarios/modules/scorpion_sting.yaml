@@ -1,0 +1,72 @@
+id: scorpion_sting
+title: Scorpion sting
+handbook_pages: authored
+note: No scorpion guidance exists in the IFRC guidelines or the handbook. Authored from general first aid knowledge.
+  Needs medical review.
+steps:
+- id: scorpion_sting.01
+  n: 1
+  text: Move away from where the scorpion is. Do not try to catch or kill it. If it is safe, take a photo from a
+    distance.
+  roles:
+  - B
+  - S
+  - R
+  source: authored
+  tags:
+  - no_catch_snake
+- id: scorpion_sting.02
+  n: 2
+  text: Keep the person calm and still. Let them sit or lie down comfortably.
+  roles:
+  - B
+  - S
+  - R
+  source: authored
+- id: scorpion_sting.03
+  n: 3
+  text: Gently wash the sting with soap and clean water. Take off rings or tight items near the area in case of
+    swelling.
+  roles:
+  - B
+  - S
+  - R
+  source: authored
+- id: scorpion_sting.04
+  n: 4
+  text: A cool wet cloth, or an ice pack wrapped in cloth, on the sting may ease pain. Do not put ice directly on
+    skin.
+  roles:
+  - B
+  - S
+  - R
+  source: authored
+- id: scorpion_sting.05
+  n: 5
+  text: Do NOT cut the wound, suck it, or tie a tight band above it. Do not apply home remedies.
+  roles:
+  - B
+  - S
+  - R
+  source: authored
+  tags:
+  - no_tourniquet
+  - no_cut_suck
+- id: scorpion_sting.06
+  n: 6
+  text: Go to a hospital. Go urgently, and call 108, for a child, an older person, or if there is severe spreading
+    pain, sweating, vomiting, cold sweaty skin, a very fast or slow heartbeat, restlessness, muscle twitching or
+    trouble breathing.
+  roles:
+  - B
+  - S
+  - R
+  source: authored
+- id: scorpion_sting.07
+  n: 7
+  text: Note the time of the sting and the symptoms, and tell the doctor.
+  roles:
+  - B
+  - S
+  - R
+  source: authored

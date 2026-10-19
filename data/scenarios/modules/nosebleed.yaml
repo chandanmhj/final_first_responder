@@ -1,0 +1,35 @@
+id: nosebleed
+title: Nosebleed
+handbook_pages: IFRC p.354
+note: null
+steps:
+- id: nosebleed.01
+  n: 1
+  text: Sit down and lean the head slightly forward. Pinch the soft part of the nose for 10 to 15 minutes without
+    letting go.
+  self_text: Sit down, lean your head slightly forward and pinch the soft part of your nose for 10 to 15 minutes.
+  roles:
+  - B
+  - S
+  - R
+  source: ifrc
+  page: '354'
+- id: nosebleed.02
+  n: 2
+  text: If it is still bleeding after 15 minutes, or they feel light-headed, get medical help.
+  roles:
+  - B
+  - S
+  - R
+  source: ifrc
+  page: '354'
+- id: nosebleed.03
+  n: 3
+  text: If it followed an injury and there are signs of brain injury, a bent nose, a facial fracture, or they take
+    blood thinners, call 108.
+  roles:
+  - B
+  - S
+  - R
+  source: ifrc
+  page: '354'

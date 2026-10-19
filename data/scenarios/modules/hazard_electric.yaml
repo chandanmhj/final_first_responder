@@ -1,0 +1,21 @@
+id: hazard_electric
+title: 'Hazard: live electrical wires'
+handbook_pages: p.1, p.17
+note: null
+steps:
+- id: hazard_electric.01
+  n: 1
+  text: Do not touch the person until the power is off. Switch off the supply, or have the live wire removed.
+  roles:
+  - B
+  - R
+  source: adapted
+  page: '17'
+- id: hazard_electric.02
+  n: 2
+  text: Look for live wires and sparks before you approach.
+  roles:
+  - B
+  - R
+  source: handbook
+  page: '1'

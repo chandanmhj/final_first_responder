@@ -1,0 +1,132 @@
+{"id": "seed-aed-0", "question": "using an aed first aid steps", "gold_chunks": ["module:aed"], "scenario": "aed", "status": "seed_unreviewed"}
+{"id": "seed-aed-1", "question": "Someone near me has using an aed. What should I do?", "gold_chunks": ["module:aed"], "scenario": "aed", "status": "seed_unreviewed"}
+{"id": "seed-aed-2", "question": "How do I help with using an aed?", "gold_chunks": ["module:aed"], "scenario": "aed", "status": "seed_unreviewed"}
+{"id": "seed-amputation-3", "question": "Someone near me has amputation. What should I do?", "gold_chunks": ["module:amputation"], "scenario": "amputation", "status": "seed_unreviewed"}
+{"id": "seed-amputation-4", "question": "What should I not do for amputation?", "gold_chunks": ["module:amputation"], "scenario": "amputation", "status": "seed_unreviewed"}
+{"id": "seed-amputation-5", "question": "amputation first aid steps", "gold_chunks": ["module:amputation"], "scenario": "amputation", "status": "seed_unreviewed"}
+{"id": "seed-anaphylaxis-6", "question": "severe allergic reaction (anaphylaxis) first aid steps", "gold_chunks": ["module:anaphylaxis"], "scenario": "anaphylaxis", "status": "seed_unreviewed"}
+{"id": "seed-anaphylaxis-7", "question": "What should I not do for severe allergic reaction (anaphylaxis)?", "gold_chunks": ["module:anaphylaxis"], "scenario": "anaphylaxis", "status": "seed_unreviewed"}
+{"id": "seed-anaphylaxis-8", "question": "Someone near me has severe allergic reaction (anaphylaxis). What should I do?", "gold_chunks": ["module:anaphylaxis"], "scenario": "anaphylaxis", "status": "seed_unreviewed"}
+{"id": "seed-animal_bite-9", "question": "How do I help with animal bite (dog, cat, other animals)?", "gold_chunks": ["module:animal_bite"], "scenario": "animal_bite", "status": "seed_unreviewed"}
+{"id": "seed-animal_bite-10", "question": "Someone near me has animal bite (dog, cat, other animals). What should I do?", "gold_chunks": ["module:animal_bite"], "scenario": "animal_bite", "status": "seed_unreviewed"}
+{"id": "seed-animal_bite-11", "question": "animal bite (dog, cat, other animals) first aid steps", "gold_chunks": ["module:animal_bite"], "scenario": "animal_bite", "status": "seed_unreviewed"}
+{"id": "seed-asthma_attack-12", "question": "What should I not do for asthma attack?", "gold_chunks": ["module:asthma_attack"], "scenario": "asthma_attack", "status": "seed_unreviewed"}
+{"id": "seed-asthma_attack-13", "question": "How do I help with asthma attack?", "gold_chunks": ["module:asthma_attack"], "scenario": "asthma_attack", "status": "seed_unreviewed"}
+{"id": "seed-asthma_attack-14", "question": "Someone near me has asthma attack. What should I do?", "gold_chunks": ["module:asthma_attack"], "scenario": "asthma_attack", "status": "seed_unreviewed"}
+{"id": "seed-bleeding_control-15", "question": "How do I help with bleeding control?", "gold_chunks": ["module:bleeding_control"], "scenario": "bleeding_control", "status": "seed_unreviewed"}
+{"id": "seed-bleeding_control-16", "question": "Someone near me has bleeding control. What should I do?", "gold_chunks": ["module:bleeding_control"], "scenario": "bleeding_control", "status": "seed_unreviewed"}
+{"id": "seed-bleeding_control-17", "question": "What should I not do for bleeding control?", "gold_chunks": ["module:bleeding_control"], "scenario": "bleeding_control", "status": "seed_unreviewed"}
+{"id": "seed-breathing_difficulty-18", "question": "Someone near me has breathing difficulty. What should I do?", "gold_chunks": ["module:breathing_difficulty"], "scenario": "breathing_difficulty", "status": "seed_unreviewed"}
+{"id": "seed-breathing_difficulty-19", "question": "breathing difficulty first aid steps", "gold_chunks": ["module:breathing_difficulty"], "scenario": "breathing_difficulty", "status": "seed_unreviewed"}
+{"id": "seed-breathing_difficulty-20", "question": "What should I not do for breathing difficulty?", "gold_chunks": ["module:breathing_difficulty"], "scenario": "breathing_difficulty", "status": "seed_unreviewed"}
+{"id": "seed-burns-21", "question": "How do I help with burns?", "gold_chunks": ["module:burns"], "scenario": "burns", "status": "seed_unreviewed"}
+{"id": "seed-burns-22", "question": "burns first aid steps", "gold_chunks": ["module:burns"], "scenario": "burns", "status": "seed_unreviewed"}
+{"id": "seed-burns-23", "question": "Someone near me has burns. What should I do?", "gold_chunks": ["module:burns"], "scenario": "burns", "status": "seed_unreviewed"}
+{"id": "seed-car_patient_placement-24", "question": "What should I not do for car accident: patient placement?", "gold_chunks": ["module:car_patient_placement"], "scenario": "car_patient_placement", "status": "seed_unreviewed"}
+{"id": "seed-car_patient_placement-25", "question": "Someone near me has car accident: patient placement. What should I do?", "gold_chunks": ["module:car_patient_placement"], "scenario": "car_patient_placement", "status": "seed_unreviewed"}
+{"id": "seed-car_patient_placement-26", "question": "car accident: patient placement first aid steps", "gold_chunks": ["module:car_patient_placement"], "scenario": "car_patient_placement", "status": "seed_unreviewed"}
+{"id": "seed-chest_abdomen_injury-27", "question": "Someone near me has chest or abdomen injury. What should I do?", "gold_chunks": ["module:chest_abdomen_injury"], "scenario": "chest_abdomen_injury", "status": "seed_unreviewed"}
+{"id": "seed-chest_abdomen_injury-28", "question": "chest or abdomen injury first aid steps", "gold_chunks": ["module:chest_abdomen_injury"], "scenario": "chest_abdomen_injury", "status": "seed_unreviewed"}
+{"id": "seed-chest_abdomen_injury-29", "question": "What should I not do for chest or abdomen injury?", "gold_chunks": ["module:chest_abdomen_injury"], "scenario": "chest_abdomen_injury", "status": "seed_unreviewed"}
+{"id": "seed-choking_adult_child-30", "question": "choking: adult and child (awake) first aid steps", "gold_chunks": ["module:choking_adult_child"], "scenario": "choking_adult_child", "status": "seed_unreviewed"}
+{"id": "seed-choking_adult_child-31", "question": "How do I help with choking: adult and child (awake)?", "gold_chunks": ["module:choking_adult_child"], "scenario": "choking_adult_child", "status": "seed_unreviewed"}
+{"id": "seed-choking_adult_child-32", "question": "Someone near me has choking: adult and child (awake). What should I do?", "gold_chunks": ["module:choking_adult_child"], "scenario": "choking_adult_child", "status": "seed_unreviewed"}
+{"id": "seed-choking_infant-33", "question": "Someone near me has choking: infant. What should I do?", "gold_chunks": ["module:choking_infant"], "scenario": "choking_infant", "status": "seed_unreviewed"}
+{"id": "seed-choking_infant-34", "question": "choking: infant first aid steps", "gold_chunks": ["module:choking_infant"], "scenario": "choking_infant", "status": "seed_unreviewed"}
+{"id": "seed-choking_infant-35", "question": "How do I help with choking: infant?", "gold_chunks": ["module:choking_infant"], "scenario": "choking_infant", "status": "seed_unreviewed"}
+{"id": "seed-choking_self-36", "question": "How do I help with choking: if you are alone?", "gold_chunks": ["module:choking_self"], "scenario": "choking_self", "status": "seed_unreviewed"}
+{"id": "seed-choking_self-37", "question": "Someone near me has choking: if you are alone. What should I do?", "gold_chunks": ["module:choking_self"], "scenario": "choking_self", "status": "seed_unreviewed"}
+{"id": "seed-choking_self-38", "question": "choking: if you are alone first aid steps", "gold_chunks": ["module:choking_self"], "scenario": "choking_self", "status": "seed_unreviewed"}
+{"id": "seed-choking_special_cases-39", "question": "choking: special cases first aid steps", "gold_chunks": ["module:choking_special_cases"], "scenario": "choking_special_cases", "status": "seed_unreviewed"}
+{"id": "seed-choking_special_cases-40", "question": "Someone near me has choking: special cases. What should I do?", "gold_chunks": ["module:choking_special_cases"], "scenario": "choking_special_cases", "status": "seed_unreviewed"}
+{"id": "seed-choking_special_cases-41", "question": "What should I not do for choking: special cases?", "gold_chunks": ["module:choking_special_cases"], "scenario": "choking_special_cases", "status": "seed_unreviewed"}
+{"id": "seed-cpr_adult-42", "question": "Someone near me has cpr: adult chest compressions. What should I do?", "gold_chunks": ["module:cpr_adult"], "scenario": "cpr_adult", "status": "seed_unreviewed"}
+{"id": "seed-cpr_adult-43", "question": "cpr: adult chest compressions first aid steps", "gold_chunks": ["module:cpr_adult"], "scenario": "cpr_adult", "status": "seed_unreviewed"}
+{"id": "seed-cpr_adult-44", "question": "What should I not do for cpr: adult chest compressions?", "gold_chunks": ["module:cpr_adult"], "scenario": "cpr_adult", "status": "seed_unreviewed"}
+{"id": "seed-cpr_child_infant-45", "question": "What should I not do for cpr: child and infant?", "gold_chunks": ["module:cpr_child_infant"], "scenario": "cpr_child_infant", "status": "seed_unreviewed"}
+{"id": "seed-cpr_child_infant-46", "question": "cpr: child and infant first aid steps", "gold_chunks": ["module:cpr_child_infant"], "scenario": "cpr_child_infant", "status": "seed_unreviewed"}
+{"id": "seed-cpr_child_infant-47", "question": "How do I help with cpr: child and infant?", "gold_chunks": ["module:cpr_child_infant"], "scenario": "cpr_child_infant", "status": "seed_unreviewed"}
+{"id": "seed-drowning-48", "question": "drowning first aid steps", "gold_chunks": ["module:drowning"], "scenario": "drowning", "status": "seed_unreviewed"}
+{"id": "seed-drowning-49", "question": "How do I help with drowning?", "gold_chunks": ["module:drowning"], "scenario": "drowning", "status": "seed_unreviewed"}
+{"id": "seed-drowning-50", "question": "What should I not do for drowning?", "gold_chunks": ["module:drowning"], "scenario": "drowning", "status": "seed_unreviewed"}
+{"id": "seed-electric_shock-51", "question": "electric shock first aid steps", "gold_chunks": ["module:electric_shock"], "scenario": "electric_shock", "status": "seed_unreviewed"}
+{"id": "seed-electric_shock-52", "question": "How do I help with electric shock?", "gold_chunks": ["module:electric_shock"], "scenario": "electric_shock", "status": "seed_unreviewed"}
+{"id": "seed-electric_shock-53", "question": "Someone near me has electric shock. What should I do?", "gold_chunks": ["module:electric_shock"], "scenario": "electric_shock", "status": "seed_unreviewed"}
+{"id": "seed-emergency_childbirth-54", "question": "How do I help with emergency childbirth?", "gold_chunks": ["module:emergency_childbirth"], "scenario": "emergency_childbirth", "status": "seed_unreviewed"}
+{"id": "seed-emergency_childbirth-55", "question": "emergency childbirth first aid steps", "gold_chunks": ["module:emergency_childbirth"], "scenario": "emergency_childbirth", "status": "seed_unreviewed"}
+{"id": "seed-emergency_childbirth-56", "question": "Someone near me has emergency childbirth. What should I do?", "gold_chunks": ["module:emergency_childbirth"], "scenario": "emergency_childbirth", "status": "seed_unreviewed"}
+{"id": "seed-fainting-57", "question": "Someone near me has feeling faint or fainting. What should I do?", "gold_chunks": ["module:fainting"], "scenario": "fainting", "status": "seed_unreviewed"}
+{"id": "seed-fainting-58", "question": "feeling faint or fainting first aid steps", "gold_chunks": ["module:fainting"], "scenario": "fainting", "status": "seed_unreviewed"}
+{"id": "seed-fainting-59", "question": "How do I help with feeling faint or fainting?", "gold_chunks": ["module:fainting"], "scenario": "fainting", "status": "seed_unreviewed"}
+{"id": "seed-fever-60", "question": "What should I not do for fever?", "gold_chunks": ["module:fever"], "scenario": "fever", "status": "seed_unreviewed"}
+{"id": "seed-fever-61", "question": "How do I help with fever?", "gold_chunks": ["module:fever"], "scenario": "fever", "status": "seed_unreviewed"}
+{"id": "seed-fever-62", "question": "fever first aid steps", "gold_chunks": ["module:fever"], "scenario": "fever", "status": "seed_unreviewed"}
+{"id": "seed-fracture_sprain-63", "question": "fracture or sprain (rice) first aid steps", "gold_chunks": ["module:fracture_sprain"], "scenario": "fracture_sprain", "status": "seed_unreviewed"}
+{"id": "seed-fracture_sprain-64", "question": "What should I not do for fracture or sprain (rice)?", "gold_chunks": ["module:fracture_sprain"], "scenario": "fracture_sprain", "status": "seed_unreviewed"}
+{"id": "seed-fracture_sprain-65", "question": "Someone near me has fracture or sprain (rice). What should I do?", "gold_chunks": ["module:fracture_sprain"], "scenario": "fracture_sprain", "status": "seed_unreviewed"}
+{"id": "seed-head_injury-66", "question": "Someone near me has head injury. What should I do?", "gold_chunks": ["module:head_injury"], "scenario": "head_injury", "status": "seed_unreviewed"}
+{"id": "seed-head_injury-67", "question": "head injury first aid steps", "gold_chunks": ["module:head_injury"], "scenario": "head_injury", "status": "seed_unreviewed"}
+{"id": "seed-head_injury-68", "question": "How do I help with head injury?", "gold_chunks": ["module:head_injury"], "scenario": "head_injury", "status": "seed_unreviewed"}
+{"id": "seed-heart_attack-69", "question": "How do I help with heart attack?", "gold_chunks": ["module:heart_attack"], "scenario": "heart_attack", "status": "seed_unreviewed"}
+{"id": "seed-heart_attack-70", "question": "What should I not do for heart attack?", "gold_chunks": ["module:heart_attack"], "scenario": "heart_attack", "status": "seed_unreviewed"}
+{"id": "seed-heart_attack-71", "question": "Someone near me has heart attack. What should I do?", "gold_chunks": ["module:heart_attack"], "scenario": "heart_attack", "status": "seed_unreviewed"}
+{"id": "seed-heat_illness-72", "question": "What should I not do for heat illness and heatstroke?", "gold_chunks": ["module:heat_illness"], "scenario": "heat_illness", "status": "seed_unreviewed"}
+{"id": "seed-heat_illness-73", "question": "How do I help with heat illness and heatstroke?", "gold_chunks": ["module:heat_illness"], "scenario": "heat_illness", "status": "seed_unreviewed"}
+{"id": "seed-heat_illness-74", "question": "Someone near me has heat illness and heatstroke. What should I do?", "gold_chunks": ["module:heat_illness"], "scenario": "heat_illness", "status": "seed_unreviewed"}
+{"id": "seed-helmet_removal-75", "question": "Someone near me has helmet removal. What should I do?", "gold_chunks": ["module:helmet_removal"], "scenario": "helmet_removal", "status": "seed_unreviewed"}
+{"id": "seed-helmet_removal-76", "question": "helmet removal first aid steps", "gold_chunks": ["module:helmet_removal"], "scenario": "helmet_removal", "status": "seed_unreviewed"}
+{"id": "seed-helmet_removal-77", "question": "How do I help with helmet removal?", "gold_chunks": ["module:helmet_removal"], "scenario": "helmet_removal", "status": "seed_unreviewed"}
+{"id": "seed-high_blood_sugar-78", "question": "high blood sugar first aid steps", "gold_chunks": ["module:high_blood_sugar"], "scenario": "high_blood_sugar", "status": "seed_unreviewed"}
+{"id": "seed-high_blood_sugar-79", "question": "What should I not do for high blood sugar?", "gold_chunks": ["module:high_blood_sugar"], "scenario": "high_blood_sugar", "status": "seed_unreviewed"}
+{"id": "seed-high_blood_sugar-80", "question": "How do I help with high blood sugar?", "gold_chunks": ["module:high_blood_sugar"], "scenario": "high_blood_sugar", "status": "seed_unreviewed"}
+{"id": "seed-hypothermia-81", "question": "What should I not do for hypothermia (cold)?", "gold_chunks": ["module:hypothermia"], "scenario": "hypothermia", "status": "seed_unreviewed"}
+{"id": "seed-hypothermia-82", "question": "hypothermia (cold) first aid steps", "gold_chunks": ["module:hypothermia"], "scenario": "hypothermia", "status": "seed_unreviewed"}
+{"id": "seed-hypothermia-83", "question": "How do I help with hypothermia (cold)?", "gold_chunks": ["module:hypothermia"], "scenario": "hypothermia", "status": "seed_unreviewed"}
+{"id": "seed-infection_red_flags-84", "question": "Someone near me has infection: when to see a doctor now. What should I do?", "gold_chunks": ["module:infection_red_flags"], "scenario": "infection_red_flags", "status": "seed_unreviewed"}
+{"id": "seed-infection_red_flags-85", "question": "What should I not do for infection: when to see a doctor now?", "gold_chunks": ["module:infection_red_flags"], "scenario": "infection_red_flags", "status": "seed_unreviewed"}
+{"id": "seed-infection_red_flags-86", "question": "How do I help with infection: when to see a doctor now?", "gold_chunks": ["module:infection_red_flags"], "scenario": "infection_red_flags", "status": "seed_unreviewed"}
+{"id": "seed-insect_sting-87", "question": "What should I not do for insect bite or sting?", "gold_chunks": ["module:insect_sting"], "scenario": "insect_sting", "status": "seed_unreviewed"}
+{"id": "seed-insect_sting-88", "question": "insect bite or sting first aid steps", "gold_chunks": ["module:insect_sting"], "scenario": "insect_sting", "status": "seed_unreviewed"}
+{"id": "seed-insect_sting-89", "question": "Someone near me has insect bite or sting. What should I do?", "gold_chunks": ["module:insect_sting"], "scenario": "insect_sting", "status": "seed_unreviewed"}
+{"id": "seed-log_roll-90", "question": "Someone near me has log roll (4 people). What should I do?", "gold_chunks": ["module:log_roll"], "scenario": "log_roll", "status": "seed_unreviewed"}
+{"id": "seed-log_roll-91", "question": "log roll (4 people) first aid steps", "gold_chunks": ["module:log_roll"], "scenario": "log_roll", "status": "seed_unreviewed"}
+{"id": "seed-log_roll-92", "question": "How do I help with log roll (4 people)?", "gold_chunks": ["module:log_roll"], "scenario": "log_roll", "status": "seed_unreviewed"}
+{"id": "seed-low_blood_sugar-93", "question": "What should I not do for low blood sugar?", "gold_chunks": ["module:low_blood_sugar"], "scenario": "low_blood_sugar", "status": "seed_unreviewed"}
+{"id": "seed-low_blood_sugar-94", "question": "How do I help with low blood sugar?", "gold_chunks": ["module:low_blood_sugar"], "scenario": "low_blood_sugar", "status": "seed_unreviewed"}
+{"id": "seed-low_blood_sugar-95", "question": "low blood sugar first aid steps", "gold_chunks": ["module:low_blood_sugar"], "scenario": "low_blood_sugar", "status": "seed_unreviewed"}
+{"id": "seed-neck_stabilization-96", "question": "neck stabilisation first aid steps", "gold_chunks": ["module:neck_stabilization"], "scenario": "neck_stabilization", "status": "seed_unreviewed"}
+{"id": "seed-neck_stabilization-97", "question": "Someone near me has neck stabilisation. What should I do?", "gold_chunks": ["module:neck_stabilization"], "scenario": "neck_stabilization", "status": "seed_unreviewed"}
+{"id": "seed-neck_stabilization-98", "question": "How do I help with neck stabilisation?", "gold_chunks": ["module:neck_stabilization"], "scenario": "neck_stabilization", "status": "seed_unreviewed"}
+{"id": "seed-nosebleed-99", "question": "nosebleed first aid steps", "gold_chunks": ["module:nosebleed"], "scenario": "nosebleed", "status": "seed_unreviewed"}
+{"id": "seed-nosebleed-100", "question": "Someone near me has nosebleed. What should I do?", "gold_chunks": ["module:nosebleed"], "scenario": "nosebleed", "status": "seed_unreviewed"}
+{"id": "seed-nosebleed-101", "question": "What should I not do for nosebleed?", "gold_chunks": ["module:nosebleed"], "scenario": "nosebleed", "status": "seed_unreviewed"}
+{"id": "seed-panic_attack-102", "question": "What should I not do for panic or anxiety?", "gold_chunks": ["module:panic_attack"], "scenario": "panic_attack", "status": "seed_unreviewed"}
+{"id": "seed-panic_attack-103", "question": "Someone near me has panic or anxiety. What should I do?", "gold_chunks": ["module:panic_attack"], "scenario": "panic_attack", "status": "seed_unreviewed"}
+{"id": "seed-panic_attack-104", "question": "panic or anxiety first aid steps", "gold_chunks": ["module:panic_attack"], "scenario": "panic_attack", "status": "seed_unreviewed"}
+{"id": "seed-poisoning-105", "question": "poisoning first aid steps", "gold_chunks": ["module:poisoning"], "scenario": "poisoning", "status": "seed_unreviewed"}
+{"id": "seed-poisoning-106", "question": "Someone near me has poisoning. What should I do?", "gold_chunks": ["module:poisoning"], "scenario": "poisoning", "status": "seed_unreviewed"}
+{"id": "seed-poisoning-107", "question": "What should I not do for poisoning?", "gold_chunks": ["module:poisoning"], "scenario": "poisoning", "status": "seed_unreviewed"}
+{"id": "seed-recovery_position-108", "question": "What should I not do for recovery position?", "gold_chunks": ["module:recovery_position"], "scenario": "recovery_position", "status": "seed_unreviewed"}
+{"id": "seed-recovery_position-109", "question": "How do I help with recovery position?", "gold_chunks": ["module:recovery_position"], "scenario": "recovery_position", "status": "seed_unreviewed"}
+{"id": "seed-recovery_position-110", "question": "recovery position first aid steps", "gold_chunks": ["module:recovery_position"], "scenario": "recovery_position", "status": "seed_unreviewed"}
+{"id": "seed-rescue_breaths-111", "question": "Someone near me has rescue breaths (trained responders). What should I do?", "gold_chunks": ["module:rescue_breaths"], "scenario": "rescue_breaths", "status": "seed_unreviewed"}
+{"id": "seed-rescue_breaths-112", "question": "What should I not do for rescue breaths (trained responders)?", "gold_chunks": ["module:rescue_breaths"], "scenario": "rescue_breaths", "status": "seed_unreviewed"}
+{"id": "seed-rescue_breaths-113", "question": "How do I help with rescue breaths (trained responders)?", "gold_chunks": ["module:rescue_breaths"], "scenario": "rescue_breaths", "status": "seed_unreviewed"}
+{"id": "seed-scorpion_sting-114", "question": "What should I not do for scorpion sting?", "gold_chunks": ["module:scorpion_sting"], "scenario": "scorpion_sting", "status": "seed_unreviewed"}
+{"id": "seed-scorpion_sting-115", "question": "scorpion sting first aid steps", "gold_chunks": ["module:scorpion_sting"], "scenario": "scorpion_sting", "status": "seed_unreviewed"}
+{"id": "seed-scorpion_sting-116", "question": "How do I help with scorpion sting?", "gold_chunks": ["module:scorpion_sting"], "scenario": "scorpion_sting", "status": "seed_unreviewed"}
+{"id": "seed-seizure-117", "question": "How do I help with seizure (fit)?", "gold_chunks": ["module:seizure"], "scenario": "seizure", "status": "seed_unreviewed"}
+{"id": "seed-seizure-118", "question": "What should I not do for seizure (fit)?", "gold_chunks": ["module:seizure"], "scenario": "seizure", "status": "seed_unreviewed"}
+{"id": "seed-seizure-119", "question": "seizure (fit) first aid steps", "gold_chunks": ["module:seizure"], "scenario": "seizure", "status": "seed_unreviewed"}
+{"id": "seed-shock-120", "question": "What should I not do for shock?", "gold_chunks": ["module:shock"], "scenario": "shock", "status": "seed_unreviewed"}
+{"id": "seed-shock-121", "question": "How do I help with shock?", "gold_chunks": ["module:shock"], "scenario": "shock", "status": "seed_unreviewed"}
+{"id": "seed-shock-122", "question": "shock first aid steps", "gold_chunks": ["module:shock"], "scenario": "shock", "status": "seed_unreviewed"}
+{"id": "seed-snake_bite-123", "question": "How do I help with snake bite?", "gold_chunks": ["module:snake_bite"], "scenario": "snake_bite", "status": "seed_unreviewed"}
+{"id": "seed-snake_bite-124", "question": "Someone near me has snake bite. What should I do?", "gold_chunks": ["module:snake_bite"], "scenario": "snake_bite", "status": "seed_unreviewed"}
+{"id": "seed-snake_bite-125", "question": "snake bite first aid steps", "gold_chunks": ["module:snake_bite"], "scenario": "snake_bite", "status": "seed_unreviewed"}
+{"id": "seed-stroke-126", "question": "How do I help with stroke?", "gold_chunks": ["module:stroke"], "scenario": "stroke", "status": "seed_unreviewed"}
+{"id": "seed-stroke-127", "question": "Someone near me has stroke. What should I do?", "gold_chunks": ["module:stroke"], "scenario": "stroke", "status": "seed_unreviewed"}
+{"id": "seed-stroke-128", "question": "stroke first aid steps", "gold_chunks": ["module:stroke"], "scenario": "stroke", "status": "seed_unreviewed"}
+{"id": "seed-wound_care_minor-129", "question": "How do I help with minor wound care?", "gold_chunks": ["module:wound_care_minor"], "scenario": "wound_care_minor", "status": "seed_unreviewed"}
+{"id": "seed-wound_care_minor-130", "question": "Someone near me has minor wound care. What should I do?", "gold_chunks": ["module:wound_care_minor"], "scenario": "wound_care_minor", "status": "seed_unreviewed"}
+{"id": "seed-wound_care_minor-131", "question": "What should I not do for minor wound care?", "gold_chunks": ["module:wound_care_minor"], "scenario": "wound_care_minor", "status": "seed_unreviewed"}

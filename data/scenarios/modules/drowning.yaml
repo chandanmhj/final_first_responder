@@ -1,0 +1,87 @@
+id: drowning
+title: Drowning
+handbook_pages: p.28-29
+note: null
+steps:
+- id: drowning.01
+  n: 1
+  text: Once the person is out of the water and the area is safe, check responsiveness (AVPU) and call 108.
+  roles:
+  - B
+  - R
+  source: handbook
+  page: '28'
+- id: drowning.02
+  n: 2
+  text: Cover your face and theirs, look for chest rise and, if trained, feel for a pulse.
+  roles:
+  - B
+  - R
+  source: handbook
+  page: '28'
+- id: drowning.03
+  n: 3
+  text: 'If they are breathing: place them in the recovery position and warm them with dry clothes or blankets.'
+  roles:
+  - B
+  - R
+  source: handbook
+  page: '28'
+  tags:
+  - recovery_position
+- id: drowning.04
+  n: 4
+  text: 'If they are not breathing: drowning arrests are caused by lack of oxygen. If you are trained, give 2 rescue
+    breaths first. If not, start chest compressions immediately.'
+  roles:
+  - B
+  - R
+  source: handbook
+  page: '28'
+  tags:
+  - escalate_cpr
+  - rescue_breaths
+- id: drowning.05
+  n: 5
+  text: Then 30 compressions to 2 breaths for an adult, 15 to 2 for a child. If you are alone, do compressions only
+    without pausing for breaths.
+  roles:
+  - B
+  - R
+  source: handbook
+  page: 28-29
+- id: drowning.06
+  n: 6
+  text: Use an AED if there is one, but do not let it delay breaths or compressions.
+  roles:
+  - B
+  - R
+  source: handbook
+  page: '28'
+- id: drowning.07
+  n: 7
+  text: In cold water the person may be hypothermic. Warm them with blankets and a warmer room. Keep going with
+    resuscitation until help takes over.
+  roles:
+  - B
+  - R
+  source: handbook
+  page: 28-29
+- id: drowning.08
+  n: 8
+  text: Do not routinely immobilise the neck. Do it only if there was diving or signs of spinal injury.
+  roles:
+  - B
+  - R
+  source: handbook
+  page: '29'
+  tags:
+  - no_routine_cspine
+- id: drowning.09
+  n: 9
+  text: Anyone who needed rescue breaths or CPR must go to a hospital, even if they look well afterwards.
+  roles:
+  - B
+  - R
+  source: handbook
+  page: '29'

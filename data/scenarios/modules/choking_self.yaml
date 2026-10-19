@@ -1,0 +1,27 @@
+id: choking_self
+title: 'Choking: if you are alone'
+handbook_pages: p.33
+note: null
+steps:
+- id: choking_self.01
+  n: 1
+  text: If you can cough, lean forward and cough hard until it comes out.
+  roles:
+  - S
+  source: handbook
+  page: '33'
+- id: choking_self.02
+  n: 2
+  text: If you cannot cough, lean over a firm edge such as a chair back, countertop or rail.
+  roles:
+  - S
+  source: handbook
+  page: '33'
+- id: choking_self.03
+  n: 3
+  text: Put your fists between your navel and the lower end of your breastbone, lean your weight onto the edge,
+    and thrust inward and upward until it comes out.
+  roles:
+  - S
+  source: handbook
+  page: '33'

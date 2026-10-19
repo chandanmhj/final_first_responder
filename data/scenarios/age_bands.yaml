@@ -1,0 +1,19 @@
+note: Age is asked in the chat and stored as a band. The handbook does not define
+  child and infant ages; these defaults need review.
+bands:
+- id: 0-1
+  label: Baby (under 1 year)
+  protocol: infant
+- id: 1-5
+  label: Child (1 to 5 years)
+  protocol: child
+- id: 5-10
+  label: Child (5 to 10 years)
+  protocol: child
+- id: 10-18
+  label: Teenager (10 to 18 years)
+  protocol: adult
+- id: 18+
+  label: Adult (18 and over)
+  protocol: adult
+unknown_default: adult

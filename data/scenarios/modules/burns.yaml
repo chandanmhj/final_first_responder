@@ -1,0 +1,68 @@
+id: burns
+title: Burns
+handbook_pages: p.17-18
+note: null
+steps:
+- id: burns.01
+  n: 1
+  text: Cool the burn under running water for 15 to 20 minutes.
+  roles:
+  - B
+  - S
+  - R
+  source: handbook
+  page: '18'
+- id: burns.02
+  n: 2
+  text: Remove jewellery near the burn before swelling starts.
+  roles:
+  - B
+  - S
+  - R
+  source: handbook
+  page: '18'
+- id: burns.03
+  n: 3
+  text: Cover the burn loosely with a clean cloth.
+  roles:
+  - B
+  - S
+  - R
+  source: handbook
+  page: '18'
+- id: burns.04
+  n: 4
+  text: Do NOT put anything on the burn. Do NOT break blisters.
+  roles:
+  - B
+  - S
+  - R
+  source: handbook
+  page: '18'
+- id: burns.05
+  n: 5
+  text: Keep a burned limb raised to reduce swelling.
+  roles:
+  - B
+  - S
+  - R
+  source: handbook
+  page: '17'
+- id: burns.06
+  n: 6
+  text: Control any bleeding that comes with the burn.
+  roles:
+  - B
+  - R
+  source: handbook
+  page: '17'
+- id: burns.07
+  n: 7
+  text: Burns are life-threatening if caused by electric shock, if they involve the face (hoarse voice, blackish
+    spit), cover a large part of the body, or come with severe injury. Call 108 and go to a hospital now.
+  roles:
+  - B
+  - S
+  - R
+  source: handbook
+  page: '18'

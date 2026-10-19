@@ -1,0 +1,75 @@
+id: emergency_childbirth
+title: Emergency childbirth
+handbook_pages: IFRC p.418
+note: null
+steps:
+- id: emergency_childbirth.01
+  n: 1
+  text: Call 108 or a midwife and follow their instructions. Make a private, comfortable space and let her choose
+    a comfortable position.
+  roles:
+  - B
+  - R
+  source: ifrc
+  page: '418'
+- id: emergency_childbirth.02
+  n: 2
+  text: When the baby is about to be born, help her find a comfortable position, preferably upright. Wash your hands
+    if you can and put a clean cloth under her.
+  roles:
+  - B
+  - R
+  source: ifrc
+  page: '418'
+- id: emergency_childbirth.03
+  n: 3
+  text: Support the baby's head as it comes out. Do not pull on the head or shoulders. Wipe the mouth and nose.
+  roles:
+  - B
+  - R
+  source: ifrc
+  page: '418'
+- id: emergency_childbirth.04
+  n: 4
+  text: If the cord is around the neck, gently ease it over the head. Do not pull on the cord.
+  roles:
+  - B
+  - R
+  source: ifrc
+  page: '418'
+- id: emergency_childbirth.05
+  n: 5
+  text: Dry the baby, wrap in a clean cloth, cover the head, and place the baby on the mother's chest.
+  roles:
+  - B
+  - R
+  source: ifrc
+  page: '418'
+- id: emergency_childbirth.06
+  n: 6
+  text: 'Do not cut the cord. Do not push on her stomach. The afterbirth usually comes within about 30 minutes:
+    keep it for the medical team.'
+  roles:
+  - B
+  - R
+  source: ifrc
+  page: '418'
+- id: emergency_childbirth.07
+  n: 7
+  text: If bleeding is severe, help her lie down, keep her warm and treat as shock until help arrives.
+  roles:
+  - B
+  - R
+  source: ifrc
+  page: '418'
+- id: emergency_childbirth.08
+  n: 8
+  text: If the baby is not responding and breathing abnormally, open the airway and follow the baby resuscitation
+    steps.
+  roles:
+  - B
+  - R
+  source: ifrc
+  page: '418'
+  tags:
+  - escalate_cpr

@@ -1,0 +1,37 @@
+id: car_patient_placement
+title: 'Car accident: patient placement'
+handbook_pages: adapted
+note: The handbook has no vehicle-specific placement text. See gaps.
+steps:
+- id: car_patient_placement.01
+  n: 1
+  text: Do not move the person unless there is immediate danger (fire, traffic, fuel leak).
+  roles:
+  - B
+  - R
+  source: adapted
+  page: 2-3
+- id: car_patient_placement.02
+  n: 2
+  text: If you must move them, support the head and neck in a neutral position and move the whole body as one.
+  roles:
+  - B
+  - R
+  source: adapted
+  page: '18'
+- id: car_patient_placement.03
+  n: 3
+  text: If there is no danger, keep them still in the seat and hold the head and neck steady until the ambulance
+    arrives.
+  roles:
+  - B
+  - R
+  source: extension
+- id: car_patient_placement.04
+  n: 4
+  text: To lay them down, use the log-roll technique with a spine board, keeping the neck neutral.
+  roles:
+  - B
+  - R
+  source: adapted
+  page: '18'

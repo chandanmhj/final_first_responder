@@ -1,0 +1,58 @@
+id: shock
+title: Shock
+handbook_pages: IFRC p.388
+note: null
+steps:
+- id: shock.01
+  n: 1
+  text: Help them lie down on their back, or in the most comfortable position if breathing is hard.
+  roles:
+  - B
+  - R
+  source: ifrc
+  page: '388'
+- id: shock.02
+  n: 2
+  text: Treat the cause if you can. For example press on a bleeding wound.
+  roles:
+  - B
+  - R
+  source: ifrc
+  page: '388'
+- id: shock.03
+  n: 3
+  text: Call 108 immediately.
+  roles:
+  - B
+  - R
+  source: ifrc
+  page: '388'
+- id: shock.04
+  n: 4
+  text: Keep them warm with a blanket or clothing and protect them from a cold ground.
+  roles:
+  - B
+  - R
+  source: ifrc
+  page: '388'
+- id: shock.05
+  n: 5
+  text: Reassure them and watch their responsiveness and breathing. If they stop responding and are not breathing
+    normally, start CPR.
+  roles:
+  - B
+  - R
+  source: ifrc
+  page: '388'
+  tags:
+  - escalate_cpr
+- id: shock.06
+  n: 6
+  text: If it helps them feel better and there is no injury, you may raise their legs 30 to 60 degrees.
+  roles:
+  - B
+  - R
+  only_groups:
+  - medical_only
+  source: ifrc
+  page: '388'

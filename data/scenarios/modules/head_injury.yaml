@@ -1,0 +1,41 @@
+id: head_injury
+title: Head injury
+handbook_pages: IFRC p.312
+note: null
+steps:
+- id: head_injury.01
+  n: 1
+  text: Take them out of what they were doing and ask them to rest.
+  roles:
+  - B
+  - S
+  - R
+  source: ifrc
+  page: '312'
+- id: head_injury.02
+  n: 2
+  text: Watch for signs of concussion and for any change in how responsive they are or how they breathe.
+  roles:
+  - B
+  - R
+  source: ifrc
+  page: '312'
+- id: head_injury.03
+  n: 3
+  text: 'If the injury is serious: call 108, keep the head and neck as still as possible (you can hold the head
+    with your hands), and keep watching until help arrives.'
+  roles:
+  - B
+  - R
+  source: ifrc
+  page: '312'
+- id: head_injury.04
+  n: 4
+  text: If it is mild, help them rest and treat small injuries. Keep watching them for hours and days, because a
+    concussion can develop later.
+  roles:
+  - B
+  - S
+  - R
+  source: ifrc
+  page: '312'

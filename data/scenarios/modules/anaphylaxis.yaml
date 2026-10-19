@@ -1,0 +1,77 @@
+id: anaphylaxis
+title: Severe allergic reaction (anaphylaxis)
+handbook_pages: IFRC p.376
+note: null
+steps:
+- id: anaphylaxis.01
+  n: 1
+  text: Call 108 as soon as you see signs of a severe allergic reaction (swelling of face or throat, trouble breathing,
+    widespread rash with weakness or dizziness).
+  self_text: Call 108 or ask someone to as soon as you notice swelling of your face or throat, trouble breathing,
+    or feeling faint after contact with something you are allergic to.
+  roles:
+  - B
+  - S
+  - R
+  source: ifrc
+  page: '376'
+- id: anaphylaxis.02
+  n: 2
+  text: Ask about known allergies and remove the cause if you can (for example, a sting or food).
+  roles:
+  - B
+  - R
+  source: ifrc
+  page: '376'
+- id: anaphylaxis.03
+  n: 3
+  text: Help them lie down. If they have trouble breathing, help them sit up instead.
+  self_text: Lie down, or sit up if breathing is hard.
+  roles:
+  - B
+  - S
+  - R
+  source: ifrc
+  page: '376'
+- id: anaphylaxis.04
+  n: 4
+  text: If they have an epinephrine (adrenaline) auto-injector, help them use it. The best place is the middle of
+    the outer thigh. It can go through thin clothes.
+  self_text: Use your epinephrine auto-injector now on the middle of the outer thigh. It can go through thin clothes.
+  roles:
+  - B
+  - S
+  - R
+  source: ifrc
+  page: '376'
+  tags:
+  - own_medication
+- id: anaphylaxis.05
+  n: 5
+  text: If there is no improvement in five to ten minutes and help has not arrived, a second dose may be considered.
+  roles:
+  - R
+  source: ifrc
+  page: '376'
+  tags:
+  - medication
+- id: anaphylaxis.06
+  n: 6
+  text: Keep checking responsiveness and breathing until help arrives. If they stop responding and are not breathing
+    normally, start CPR.
+  roles:
+  - B
+  - R
+  source: ifrc
+  page: '376'
+  tags:
+  - escalate_cpr
+- id: anaphylaxis.07
+  n: 7
+  text: If there is no auto-injector, call 108 immediately and keep them lying down or sitting as above.
+  roles:
+  - B
+  - S
+  - R
+  source: ifrc
+  page: '376'

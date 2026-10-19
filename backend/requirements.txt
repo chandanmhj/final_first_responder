@@ -1,0 +1,12 @@
+fastapi>=0.115
+uvicorn[standard]>=0.30
+httpx>=0.27
+pydantic>=2.7
+pydantic-settings>=2.3
+python-multipart>=0.0.9
+pyyaml>=6.0
+numpy>=1.26
+rank-bm25>=0.2.2
+supabase>=2.5
+# Embeddings (default provider). For tests and offline development set EMBEDDING_PROVIDER=hash and skip this line.
+fastembed>=0.3

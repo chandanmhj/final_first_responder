@@ -1,0 +1,67 @@
+id: choking_infant
+title: 'Choking: infant'
+handbook_pages: p.34-35
+note: null
+steps:
+- id: choking_infant.01
+  n: 1
+  text: A baby who suddenly cannot cry, cough or breathe, drools, or turns blue may be choking. Look in the mouth.
+  roles:
+  - B
+  - R
+  source: handbook
+  page: '34'
+- id: choking_infant.02
+  n: 2
+  text: If you can see the object, hook it out with a finger. NEVER do blind finger sweeps.
+  roles:
+  - B
+  - R
+  source: handbook
+  page: '34'
+  tags:
+  - no_blind_sweep
+- id: choking_infant.03
+  n: 3
+  text: If it is not visible and the baby is awake, alternate 5 back blows with 5 chest thrusts.
+  roles:
+  - B
+  - R
+  source: handbook
+  page: '34'
+- id: choking_infant.04
+  n: 4
+  text: 'Back blows: sit down, rest the baby face-down along your thigh with the head lower than the body, support
+    the head and neck, and give 5 firm blows between the shoulder blades with the heel of your other hand.'
+  roles:
+  - B
+  - R
+  source: handbook
+  page: '34'
+- id: choking_infant.05
+  n: 5
+  text: 'Chest thrusts: turn the baby over and press the lower half of the breastbone 5 times with two fingers or
+    both thumbs.'
+  roles:
+  - B
+  - R
+  source: handbook
+  page: 34-35
+- id: choking_infant.06
+  n: 6
+  text: Repeat until the baby coughs, cries or breathes, or becomes unresponsive.
+  roles:
+  - B
+  - R
+  source: handbook
+  page: '34'
+- id: choking_infant.07
+  n: 7
+  text: 'If the baby becomes unresponsive: call for help and start infant chest compressions at about 120 a minute.'
+  roles:
+  - B
+  - R
+  source: handbook
+  page: 34-35
+  tags:
+  - escalate_cpr

@@ -1,0 +1,44 @@
+id: fever
+title: Fever
+handbook_pages: IFRC p.406
+note: null
+steps:
+- id: fever.01
+  n: 1
+  text: Rest and dress lightly.
+  roles:
+  - B
+  - S
+  - R
+  source: ifrc
+  page: '406'
+- id: fever.02
+  n: 2
+  text: Drink fluids to replace what is lost by sweating.
+  roles:
+  - B
+  - S
+  - R
+  source: ifrc
+  page: '406'
+  tags:
+  - oral_intake
+- id: fever.03
+  n: 3
+  text: If they feel unwell, the usual dose of paracetamol can be given. Sponging with lukewarm water can help if
+    it does not upset them.
+  roles:
+  - R
+  source: ifrc
+  page: '406'
+  tags:
+  - medication
+- id: fever.04
+  n: 4
+  text: Watch for new symptoms.
+  roles:
+  - B
+  - S
+  - R
+  source: ifrc
+  page: '406'

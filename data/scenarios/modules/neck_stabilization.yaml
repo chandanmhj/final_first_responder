@@ -1,0 +1,40 @@
+id: neck_stabilization
+title: Neck stabilisation
+handbook_pages: p.18
+note: null
+steps:
+- id: neck_stabilization.01
+  n: 1
+  text: Suspect a neck injury in every trauma patient until it is ruled out.
+  roles:
+  - B
+  - R
+  source: handbook
+  page: '18'
+- id: neck_stabilization.02
+  n: 2
+  text: Keep the neck in a neutral position, especially when moving or transporting. Never pull on the neck.
+  roles:
+  - B
+  - R
+  source: handbook
+  page: '18'
+- id: neck_stabilization.03
+  n: 3
+  text: Fit a cervical collar if one is available.
+  roles:
+  - B
+  - R
+  source: handbook
+  page: '18'
+  not_worked:
+    label: No collar
+    hint: Hold the head still with both hands in a neutral position until help arrives.
+- id: neck_stabilization.04
+  n: 4
+  text: Tell them not to move their head, and keep them still.
+  roles:
+  - B
+  - R
+  source: adapted
+  page: '18'

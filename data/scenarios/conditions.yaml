@@ -1,0 +1,854 @@
+conditions:
+  heart_attack:
+    title: Heart attack (awake, chest pain or similar)
+    roles:
+    - B
+    - S
+    - R
+    groups:
+    - cardiac
+    modules:
+    - call_for_help
+    - heart_attack
+    - safe_transfer
+    valid_locations: &id001
+    - home
+    - public_place
+    - workplace
+    - road_journey_vehicle
+    - public_transport
+    facility_requirements: Hospital that can treat heart attacks (clot-dissolving medicine, stenting, bypass). Ambulance
+      with AED.
+    forbid_tags: []
+    note: null
+  cardiac_arrest_adult:
+    title: Cardiac arrest (adult)
+    roles:
+    - B
+    - R
+    groups:
+    - cardiac
+    modules:
+    - call_for_help
+    - primary_assessment
+    - cpr_adult
+    - aed
+    - safe_transfer
+    valid_locations:
+    - home
+    - public_place
+    - workplace
+    - workplace_industrial
+    - road_journey_vehicle
+    - public_transport
+    - outdoors
+    facility_requirements: Hospital with ICU and cardiac catheterisation.
+    forbid_tags:
+    - recovery_position
+    - oral_intake
+    - aspirin
+    note: null
+  cardiac_arrest_child_infant:
+    title: Cardiac arrest (child or infant)
+    roles:
+    - B
+    - R
+    groups:
+    - cardiac
+    modules:
+    - call_for_help
+    - primary_assessment
+    - cpr_child_infant
+    - aed
+    - safe_transfer
+    valid_locations:
+    - home
+    - public_place
+    - road_journey_vehicle
+    - outdoors
+    facility_requirements: Hospital with paediatric emergency care.
+    forbid_tags:
+    - recovery_position
+    - oral_intake
+    note: null
+  unresponsive_unknown_cause:
+    title: Unresponsive person (cause unknown)
+    roles:
+    - B
+    - R
+    groups: []
+    modules:
+    - call_for_help
+    - primary_assessment
+    - recovery_position
+    - safe_transfer
+    valid_locations:
+    - home
+    - public_place
+    - workplace
+    - road_journey_vehicle
+    - public_transport
+    - outdoors
+    facility_requirements: Nearest emergency department.
+    forbid_tags:
+    - oral_intake
+    note: null
+  stroke:
+    title: Suspected stroke
+    roles:
+    - B
+    - S
+    - R
+    groups: []
+    modules:
+    - call_for_help
+    - stroke
+    - safe_transfer
+    valid_locations: *id001
+    facility_requirements: Hospital with CT scan, ideally a stroke unit.
+    forbid_tags:
+    - aspirin
+    note: null
+  seizure:
+    title: Seizure (fit)
+    roles:
+    - B
+    - R
+    groups: []
+    modules:
+    - seizure
+    valid_locations:
+    - home
+    - public_place
+    - workplace
+    - workplace_industrial
+    - road_journey_vehicle
+    - water_body
+    - public_transport
+    facility_requirements: Nearest hospital if fit lasts over 5 minutes or injury occurred.
+    forbid_tags:
+    - object_in_mouth
+    note: In water, rescue first, then treat as drowning if needed.
+  low_blood_sugar:
+    title: Low blood sugar
+    roles:
+    - B
+    - S
+    - R
+    groups: []
+    modules:
+    - low_blood_sugar
+    valid_locations:
+    - home
+    - public_place
+    - workplace
+    - road_journey_vehicle
+    - public_transport
+    facility_requirements: Hospital immediately if drowsy or unconscious.
+    forbid_tags: []
+    note: null
+  high_blood_sugar:
+    title: High blood sugar
+    roles:
+    - B
+    - S
+    - R
+    groups: []
+    modules:
+    - high_blood_sugar
+    valid_locations:
+    - home
+    - public_place
+    - workplace
+    facility_requirements: Doctor as early as possible.
+    forbid_tags: []
+    note: null
+  infection_red_flags:
+    title: Infection with warning signs
+    roles:
+    - B
+    - S
+    - R
+    groups: []
+    modules:
+    - infection_red_flags
+    valid_locations:
+    - home
+    - public_place
+    - workplace
+    facility_requirements: Doctor immediately if any warning sign.
+    forbid_tags: []
+    note: null
+  choking_adult_child:
+    title: Choking (adult or child, awake)
+    roles:
+    - B
+    - R
+    groups: []
+    modules:
+    - choking_adult_child
+    - choking_special_cases
+    valid_locations:
+    - home
+    - public_place
+    - workplace
+    - public_transport
+    facility_requirements: Hospital check afterwards.
+    forbid_tags: []
+    note: null
+  choking_self:
+    title: Choking when alone
+    roles:
+    - S
+    groups: []
+    modules:
+    - choking_self
+    valid_locations:
+    - home
+    - public_place
+    - workplace
+    facility_requirements: Hospital check afterwards.
+    forbid_tags: []
+    note: null
+  choking_infant:
+    title: Choking (infant)
+    roles:
+    - B
+    - R
+    groups: []
+    modules:
+    - choking_infant
+    valid_locations:
+    - home
+    - public_place
+    facility_requirements: Hospital check afterwards.
+    forbid_tags:
+    - abdominal_thrust
+    note: null
+  bleeding_severe:
+    title: Severe bleeding
+    roles:
+    - B
+    - S
+    - R
+    groups:
+    - trauma
+    modules:
+    - call_for_help
+    - bleeding_control
+    - safe_transfer
+    valid_locations:
+    - home
+    - public_place
+    - workplace
+    - workplace_industrial
+    - road_journey_vehicle
+    - outdoors
+    facility_requirements: Hospital with a surgeon.
+    forbid_tags: []
+    note: null
+  minor_wound:
+    title: Minor wound
+    roles:
+    - B
+    - S
+    - R
+    groups: []
+    modules:
+    - wound_care_minor
+    valid_locations:
+    - home
+    - public_place
+    - workplace
+    - outdoors
+    facility_requirements: Health centre if it worsens.
+    forbid_tags: []
+    note: null
+  fracture_sprain:
+    title: Suspected fracture or sprain
+    roles:
+    - B
+    - S
+    - R
+    groups:
+    - trauma
+    modules:
+    - call_for_help
+    - fracture_sprain
+    - safe_transfer
+    valid_locations:
+    - home
+    - public_place
+    - workplace
+    - workplace_industrial
+    - outdoors
+    facility_requirements: Hospital with orthopaedic care.
+    forbid_tags: []
+    note: null
+  burns:
+    title: Burns
+    roles:
+    - B
+    - S
+    - R
+    groups: []
+    modules:
+    - call_for_help
+    - burns
+    - safe_transfer
+    valid_locations:
+    - home
+    - workplace
+    - workplace_industrial
+    - fire_scene
+    - road_accident_scene
+    facility_requirements: Hospital with burn care if severe.
+    forbid_tags: []
+    note: null
+  electric_shock:
+    title: Electric shock
+    roles:
+    - B
+    - R
+    groups: []
+    modules:
+    - electric_shock
+    - call_for_help
+    - burns
+    - safe_transfer
+    valid_locations:
+    - home
+    - workplace
+    - workplace_industrial
+    - public_place
+    facility_requirements: 'Hospital: electrical burns can be life-threatening.'
+    forbid_tags: []
+    note: null
+  drowning:
+    title: Drowning
+    roles:
+    - B
+    - R
+    groups: []
+    modules:
+    - call_for_help
+    - primary_assessment
+    - drowning
+    - safe_transfer
+    valid_locations:
+    - water_body
+    - home
+    facility_requirements: Hospital for evaluation, even if the person looks well.
+    forbid_tags:
+    - routine_cspine
+    note: null
+  snake_bite:
+    title: Snake bite
+    roles:
+    - B
+    - S
+    - R
+    groups: []
+    modules:
+    - hazard_animal_snake
+    - call_for_help
+    - snake_bite
+    - safe_transfer
+    valid_locations:
+    - home
+    - outdoors
+    - workplace
+    - public_place
+    facility_requirements: Hospital immediately (venom may act within 30 minutes to 6 hours).
+    forbid_tags:
+    - tourniquet
+    - cut_suck
+    note: null
+  animal_bite:
+    title: Animal bite
+    roles:
+    - B
+    - S
+    - R
+    groups: []
+    modules:
+    - animal_bite
+    valid_locations:
+    - home
+    - public_place
+    - outdoors
+    facility_requirements: Centre for rabies and tetanus vaccination.
+    forbid_tags: []
+    note: null
+  road_car_conscious:
+    title: 'Road accident: car occupant (awake)'
+    roles:
+    - B
+    - R
+    groups:
+    - trauma
+    modules:
+    - call_for_help
+    - primary_assessment
+    - car_patient_placement
+    - neck_stabilization
+    - bleeding_control
+    - safe_transfer
+    valid_locations:
+    - road_accident_scene
+    facility_requirements: Hospital with trauma care and a surgeon.
+    forbid_tags:
+    - recovery_position
+    note: null
+  road_bike_helmet:
+    title: 'Road accident: two-wheeler rider with helmet'
+    roles:
+    - B
+    - R
+    groups:
+    - trauma
+    modules:
+    - call_for_help
+    - primary_assessment
+    - neck_stabilization
+    - helmet_removal
+    - bleeding_control
+    - log_roll
+    - safe_transfer
+    valid_locations:
+    - road_accident_scene
+    facility_requirements: Hospital with trauma care and a surgeon.
+    forbid_tags:
+    - recovery_position
+    note: null
+  road_pedestrian:
+    title: 'Road accident: pedestrian hit by a vehicle'
+    roles:
+    - B
+    - R
+    groups:
+    - trauma
+    modules:
+    - call_for_help
+    - primary_assessment
+    - neck_stabilization
+    - bleeding_control
+    - fracture_sprain
+    - log_roll
+    - safe_transfer
+    valid_locations:
+    - road_accident_scene
+    facility_requirements: Hospital with trauma care and a surgeon.
+    forbid_tags:
+    - recovery_position
+    note: null
+  road_not_breathing_car:
+    title: 'Road accident: car occupant not breathing'
+    roles:
+    - B
+    - R
+    groups:
+    - cardiac
+    - trauma
+    modules:
+    - call_for_help
+    - primary_assessment
+    - cpr_adult
+    - aed
+    - safe_transfer
+    valid_locations:
+    - road_accident_scene
+    facility_requirements: Hospital with ICU and trauma care.
+    forbid_tags:
+    - recovery_position
+    - oral_intake
+    note: null
+  road_not_breathing_bike:
+    title: 'Road accident: rider with helmet not breathing'
+    roles:
+    - B
+    - R
+    groups:
+    - cardiac
+    - trauma
+    modules:
+    - call_for_help
+    - primary_assessment
+    - helmet_removal
+    - cpr_adult
+    - aed
+    - safe_transfer
+    valid_locations:
+    - road_accident_scene
+    facility_requirements: Hospital with ICU and trauma care.
+    forbid_tags:
+    - recovery_position
+    - oral_intake
+    note: Handbook does not say when to remove a helmet to start CPR. See gaps.
+  road_severe_bleeding:
+    title: 'Road accident: severe bleeding'
+    roles:
+    - B
+    - R
+    groups:
+    - trauma
+    modules:
+    - call_for_help
+    - bleeding_control
+    - neck_stabilization
+    - safe_transfer
+    valid_locations:
+    - road_accident_scene
+    facility_requirements: Hospital with a surgeon.
+    forbid_tags:
+    - recovery_position
+    note: null
+  fall_or_machinery_trauma:
+    title: Fall or machinery injury
+    roles:
+    - B
+    - R
+    groups:
+    - trauma
+    modules:
+    - call_for_help
+    - primary_assessment
+    - bleeding_control
+    - fracture_sprain
+    - neck_stabilization
+    - log_roll
+    - safe_transfer
+    valid_locations:
+    - home
+    - workplace_industrial
+    - public_place
+    - outdoors
+    facility_requirements: Hospital with trauma care and a surgeon.
+    forbid_tags:
+    - recovery_position
+    note: null
+  railway_trauma:
+    title: Railway accident
+    roles:
+    - B
+    - R
+    groups:
+    - trauma
+    modules:
+    - call_for_help
+    - primary_assessment
+    - bleeding_control
+    - neck_stabilization
+    - log_roll
+    - safe_transfer
+    valid_locations:
+    - railway
+    facility_requirements: Hospital with trauma care and a surgeon.
+    forbid_tags:
+    - recovery_position
+    note: null
+  breathing_difficulty:
+    title: Breathing difficulty
+    roles:
+    - B
+    - S
+    - R
+    groups: []
+    modules:
+    - breathing_difficulty
+    - safe_transfer
+    valid_locations:
+    - home
+    - public_place
+    - workplace
+    - road_journey_vehicle
+    - public_transport
+    - outdoors
+    - workplace_industrial
+    facility_requirements: Nearest emergency department if medicine does not help or breathing is severe.
+    forbid_tags: []
+    note: null
+  asthma_attack:
+    title: Asthma attack
+    roles:
+    - B
+    - S
+    - R
+    groups: []
+    modules:
+    - asthma_attack
+    valid_locations: &id002
+    - home
+    - public_place
+    - workplace
+    - road_journey_vehicle
+    - public_transport
+    - outdoors
+    facility_requirements: Nearest emergency department if the inhaler does not work.
+    forbid_tags: []
+    note: null
+  anaphylaxis:
+    title: Severe allergic reaction
+    roles:
+    - B
+    - S
+    - R
+    groups: []
+    modules:
+    - anaphylaxis
+    - safe_transfer
+    valid_locations: *id002
+    facility_requirements: Nearest emergency department. Always, even if the person improves after epinephrine.
+    forbid_tags: []
+    note: null
+  poisoning:
+    title: Poisoning
+    roles:
+    - B
+    - R
+    groups: []
+    modules:
+    - poisoning
+    - safe_transfer
+    valid_locations:
+    - home
+    - workplace
+    - workplace_industrial
+    - public_place
+    - outdoors
+    facility_requirements: Hospital with an emergency department; poison control centre by phone.
+    forbid_tags:
+    - oral_intake
+    note: null
+  insect_sting:
+    title: Insect bite or sting
+    roles:
+    - B
+    - S
+    - R
+    groups: []
+    modules:
+    - insect_sting
+    valid_locations:
+    - home
+    - public_place
+    - outdoors
+    - workplace
+    facility_requirements: Doctor if it worsens or an allergic reaction starts.
+    forbid_tags: []
+    note: null
+  scorpion_sting:
+    title: Scorpion sting
+    roles:
+    - B
+    - S
+    - R
+    groups: []
+    modules:
+    - scorpion_sting
+    - safe_transfer
+    valid_locations:
+    - home
+    - outdoors
+    - workplace
+    - public_place
+    facility_requirements: Hospital with an emergency department; urgently for children, older people or any severe
+      symptom.
+    forbid_tags:
+    - tourniquet
+    - cut_suck
+    note: No source in the IFRC guidelines or the handbook. Authored; needs medical review.
+  shock:
+    title: Signs of shock
+    roles:
+    - B
+    - R
+    groups:
+    - medical_only
+    modules:
+    - call_for_help
+    - shock
+    - safe_transfer
+    valid_locations:
+    - home
+    - public_place
+    - workplace
+    - road_journey_vehicle
+    - public_transport
+    facility_requirements: Nearest emergency department.
+    forbid_tags:
+    - oral_intake
+    note: null
+  fainting:
+    title: Feeling faint or fainting
+    roles:
+    - B
+    - S
+    - R
+    groups: []
+    modules:
+    - fainting
+    valid_locations: *id001
+    facility_requirements: Doctor if it repeats, or with chest pain.
+    forbid_tags: []
+    note: null
+  heat_illness:
+    title: Heat illness or heatstroke
+    roles:
+    - B
+    - S
+    - R
+    groups: []
+    modules:
+    - heat_illness
+    valid_locations:
+    - home
+    - public_place
+    - workplace
+    - workplace_industrial
+    - outdoors
+    - road_journey_vehicle
+    - public_transport
+    facility_requirements: Emergency department for heatstroke.
+    forbid_tags: []
+    note: null
+  hypothermia:
+    title: Hypothermia (too cold)
+    roles:
+    - B
+    - R
+    groups: []
+    modules:
+    - hypothermia
+    valid_locations:
+    - home
+    - outdoors
+    - water_body
+    facility_requirements: Emergency department if drowsy or confused.
+    forbid_tags: []
+    note: null
+  head_injury:
+    title: Head injury
+    roles:
+    - B
+    - S
+    - R
+    groups: []
+    modules:
+    - head_injury
+    - safe_transfer
+    valid_locations:
+    - home
+    - public_place
+    - workplace
+    - workplace_industrial
+    - outdoors
+    facility_requirements: Hospital with CT scan if serious.
+    forbid_tags:
+    - recovery_position
+    note: null
+  nosebleed:
+    title: Nosebleed
+    roles:
+    - B
+    - S
+    - R
+    groups: []
+    modules:
+    - nosebleed
+    valid_locations:
+    - home
+    - public_place
+    - workplace
+    facility_requirements: Doctor if bleeding lasts over 15 minutes.
+    forbid_tags: []
+    note: null
+  chest_abdomen_injury:
+    title: Chest or abdomen injury
+    roles:
+    - B
+    - R
+    groups: []
+    modules:
+    - call_for_help
+    - chest_abdomen_injury
+    - shock
+    - safe_transfer
+    valid_locations:
+    - home
+    - workplace_industrial
+    - public_place
+    - road_accident_scene
+    - outdoors
+    facility_requirements: Hospital with trauma care and a surgeon.
+    forbid_tags:
+    - recovery_position
+    note: null
+  amputation:
+    title: Amputation
+    roles:
+    - B
+    - R
+    groups: []
+    modules:
+    - call_for_help
+    - amputation
+    - shock
+    - safe_transfer
+    valid_locations:
+    - home
+    - workplace_industrial
+    - road_accident_scene
+    - public_place
+    facility_requirements: Hospital with trauma and reconstructive surgery.
+    forbid_tags:
+    - recovery_position
+    note: null
+  fever:
+    title: Fever
+    roles:
+    - B
+    - S
+    - R
+    groups: []
+    modules:
+    - fever
+    - infection_red_flags
+    valid_locations:
+    - home
+    - workplace
+    - public_place
+    facility_requirements: Doctor if any warning sign appears.
+    forbid_tags: []
+    note: null
+  emergency_childbirth:
+    title: Emergency childbirth
+    roles:
+    - B
+    - R
+    groups: []
+    modules:
+    - call_for_help
+    - emergency_childbirth
+    - safe_transfer
+    valid_locations:
+    - home
+    - public_place
+    - road_journey_vehicle
+    - public_transport
+    facility_requirements: Hospital with maternity and newborn care.
+    forbid_tags: []
+    note: null
+  panic_attack:
+    title: Panic or anxiety
+    roles:
+    - B
+    - S
+    - R
+    groups: []
+    modules:
+    - panic_attack
+    valid_locations: *id002
+    facility_requirements: Doctor if it keeps happening.
+    forbid_tags: []
+    note: null

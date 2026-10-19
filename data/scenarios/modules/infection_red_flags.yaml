@@ -1,0 +1,35 @@
+id: infection_red_flags
+title: 'Infection: when to see a doctor now'
+handbook_pages: p.12
+note: null
+steps:
+- id: infection_red_flags.01
+  n: 1
+  text: Most infections get better at home with rest, fluids and medicines.
+  roles:
+  - B
+  - S
+  - R
+  source: handbook
+  page: '12'
+- id: infection_red_flags.02
+  n: 2
+  text: See a doctor immediately if there is confusion or unconsciousness, fits, blurred vision or neck pain, inability
+    to eat or drink, no urine for many hours, a very dry mouth and eyes, fever that does not settle with paracetamol
+    or lasts more than 5 days, bleeding from nose, mouth or gums, or jaundice or dark urine.
+  roles:
+  - B
+  - S
+  - R
+  source: handbook
+  page: '12'
+- id: infection_red_flags.03
+  n: 3
+  text: Diabetics, people with low immunity (for example cancer or AIDS) and older people can become critically
+    ill sooner. Seek care earlier.
+  roles:
+  - B
+  - S
+  - R
+  source: handbook
+  page: '12'

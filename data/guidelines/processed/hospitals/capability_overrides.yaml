@@ -1,0 +1,24 @@
+# Verified or corrected facts about specific hospitals. Add rows as you verify them.
+# match: regular expression matched against the hospital name (case-insensitive).
+# verified: set to true only after you have checked the capability yourself.
+overrides:
+  - match: "Jayadeva"
+    capabilities: [cardiac]
+    emergency_status: confirmed
+    tier: tertiary
+    verified: false
+    note: "Cardiology institute (inferred from name). Verify cath lab and emergency intake."
+  - match: "Sanjay Gandhi Accident"
+    capabilities: [trauma, orthopaedic]
+    emergency_status: confirmed
+    verified: false
+    note: "Accident and trauma hospital (inferred from name). Verify."
+  - match: "NIMHANS.*Emergency"
+    capabilities: [neuro, psychiatric]
+    emergency_status: confirmed
+    verified: false
+    note: "Emergency block of NIMHANS (inferred from name). Verify stroke and trauma capability."
+  - match: "Indira Gandhi Institute Of Child Health"
+    capabilities: [paediatric]
+    verified: false
+    note: "Child health institute (inferred from name)."

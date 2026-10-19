@@ -1,0 +1,84 @@
+id: low_blood_sugar
+title: Low blood sugar
+handbook_pages: p.11
+note: null
+steps:
+- id: low_blood_sugar.01
+  n: 1
+  text: Suspect low sugar in a person on diabetes treatment who missed or delayed a meal, took too much insulin,
+    exercised more than usual, or drank alcohol.
+  self_text: You may have low sugar if you are on diabetes treatment and missed a meal, took too much insulin, exercised
+    more than usual, or drank alcohol.
+  roles:
+  - B
+  - S
+  - R
+  source: handbook
+  page: '11'
+- id: low_blood_sugar.02
+  n: 2
+  text: 'Signs: confusion, dizziness, anxiety, heavy sweating, blurred vision, weakness, fits or fainting.'
+  roles:
+  - B
+  - S
+  - R
+  source: handbook
+  page: '11'
+- id: low_blood_sugar.03
+  n: 3
+  text: If you can, check blood sugar. Below about 70 mg/dl is low.
+  roles:
+  - B
+  - S
+  - R
+  source: handbook
+  page: '11'
+- id: low_blood_sugar.04
+  n: 4
+  text: If they are awake and can swallow, give juice, sugar, sweets or chocolate.
+  self_text: Eat or drink sugar, juice, sweets or chocolate right away.
+  roles:
+  - B
+  - S
+  - R
+  source: handbook
+  page: '11'
+  tags:
+  - oral_intake
+- id: low_blood_sugar.05
+  n: 5
+  text: Recheck the sugar. If it is still low, repeat until they improve.
+  roles:
+  - B
+  - S
+  - R
+  source: handbook
+  page: '11'
+- id: low_blood_sugar.06
+  n: 6
+  text: Stop insulin and diabetes tablets until a doctor has seen them. If an insulin pump is attached, disconnect
+    it.
+  roles:
+  - B
+  - S
+  - R
+  source: handbook
+  page: '11'
+- id: low_blood_sugar.07
+  n: 7
+  text: 'If they are drowsy or unconscious: give nothing by mouth. Get them to a hospital immediately. Trained staff
+    give glucose by drip.'
+  roles:
+  - B
+  - R
+  source: adapted
+  page: '11'
+  tags:
+  - no_oral_if_unconscious
+- id: low_blood_sugar.08
+  n: 8
+  text: Trained personnel, including in an ambulance, can give glucose by IV for an unconscious patient.
+  roles:
+  - R
+  source: handbook
+  page: '11'

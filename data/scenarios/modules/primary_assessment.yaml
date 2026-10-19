@@ -1,0 +1,78 @@
+id: primary_assessment
+title: Primary assessment (AVPU, signs of life)
+handbook_pages: p.2-4
+note: 'Branching: cardiac arrest, breathing assistance, or recovery position.'
+steps:
+- id: primary_assessment.01
+  n: 1
+  text: Check how responsive they are (AVPU). Alert? Talk loudly and tap the shoulder (Voice). If no reply, go to
+    the head end and pinch the shoulder muscle (Pain).
+  roles:
+  - B
+  - R
+  source: handbook
+  page: '2'
+- id: primary_assessment.02
+  n: 2
+  text: If they respond only to pain or not at all, it is serious. Call for help now and ask for an AED.
+  roles:
+  - B
+  - R
+  source: handbook
+  page: '3'
+- id: primary_assessment.03
+  n: 3
+  text: Cover your face and theirs with a mask or cloth.
+  roles:
+  - B
+  - R
+  source: handbook
+  page: '3'
+- id: primary_assessment.04
+  n: 4
+  text: Look at the chest for rise (breathing) for up to 10 seconds. Watch for sounds and movements, which are signs
+    of life.
+  roles:
+  - B
+  - R
+  source: handbook
+  page: '3'
+- id: primary_assessment.05
+  n: 5
+  text: 'If you are trained: feel for a pulse at one side of the neck (carotid) for no more than 10 seconds.'
+  roles:
+  - R
+  source: handbook
+  page: '3'
+- id: primary_assessment.06
+  n: 6
+  text: 'Not responding and no breathing or signs of life (and no pulse, if trained) means cardiac arrest: start
+    CPR now.'
+  roles:
+  - B
+  - R
+  source: handbook
+  page: 3-4
+  tags:
+  - escalate_cpr
+- id: primary_assessment.07
+  n: 7
+  text: 'Pulse present but not breathing: call for help and, if trained, help the breathing (bag valve mask or mouth-to-mouth)
+    until help arrives.'
+  roles:
+  - R
+  source: handbook
+  page: '3'
+  tags:
+  - rescue_breaths
+- id: primary_assessment.08
+  n: 8
+  text: 'Pulse and breathing present: place in the recovery position (protect neck and back if injury is possible)
+    and arrange transport.'
+  roles:
+  - B
+  - R
+  source: handbook
+  page: 3-4
+  tags:
+  - recovery_branch

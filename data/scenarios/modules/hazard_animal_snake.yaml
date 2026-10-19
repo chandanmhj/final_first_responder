@@ -1,0 +1,22 @@
+id: hazard_animal_snake
+title: 'Hazard: snake nearby'
+handbook_pages: p.1, p.12
+note: null
+steps:
+- id: hazard_animal_snake.01
+  n: 1
+  text: Keep away from the snake. Do not try to catch it.
+  roles:
+  - B
+  - R
+  source: handbook
+  page: '12'
+  tags:
+  - no_catch_snake
+- id: hazard_animal_snake.02
+  n: 2
+  text: Move the person calmly away from the snake.
+  roles:
+  - B
+  - R
+  source: extension

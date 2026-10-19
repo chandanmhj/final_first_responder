@@ -1,0 +1,29 @@
+id: rescue_breaths
+title: Rescue breaths (trained responders)
+handbook_pages: p.3, p.28
+note: null
+steps:
+- id: rescue_breaths.01
+  n: 1
+  text: If you are trained, give 2 rescue breaths with a pocket mask, bag valve mask, or mouth-to-mouth.
+  roles:
+  - R
+  source: handbook
+  page: '28'
+  tags:
+  - rescue_breaths
+- id: rescue_breaths.02
+  n: 2
+  text: Then continue 30 compressions to 2 breaths for an adult, or 15 to 2 for a child.
+  roles:
+  - R
+  source: handbook
+  page: '28'
+- id: rescue_breaths.03
+  n: 3
+  text: 'Pulse present but not breathing: assist the breathing with a bag valve mask or mouth-to-mouth until help
+    arrives.'
+  roles:
+  - R
+  source: handbook
+  page: '3'

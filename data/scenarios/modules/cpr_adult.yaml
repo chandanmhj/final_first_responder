@@ -1,0 +1,112 @@
+id: cpr_adult
+title: 'CPR: adult chest compressions'
+handbook_pages: p.21-26
+note: null
+steps:
+- id: cpr_adult.01
+  n: 1
+  text: Start chest compressions right away if the person is unresponsive and not breathing normally. Do not wait
+    for the ambulance.
+  roles:
+  - B
+  - R
+  source: handbook
+  page: 21,24
+  tags:
+  - cpr
+- id: cpr_adult.02
+  n: 2
+  text: Lay them on a hard, flat surface. If they are on a bed, move them to the floor or put a hard board under
+    them.
+  roles:
+  - B
+  - R
+  source: handbook
+  page: '23'
+  not_worked:
+    label: I can't move them
+    hint: Kneel on the bed or stand on a stool so your knees are level with the hard board.
+- id: cpr_adult.03
+  n: 3
+  text: Kneel at their side, level with the chest, with your shoulders in line with their breastbone.
+  roles:
+  - B
+  - R
+  source: handbook
+  page: '23'
+- id: cpr_adult.04
+  n: 4
+  text: Put the heel of one hand on the middle of the chest, on the lower half of the breastbone. Put your other
+    hand on top and interlock your fingers.
+  roles:
+  - B
+  - R
+  source: handbook
+  page: '24'
+- id: cpr_adult.05
+  n: 5
+  text: Lock your elbows and keep your arms straight. Push with your body weight, not just your arms.
+  roles:
+  - B
+  - R
+  source: handbook
+  page: '24'
+- id: cpr_adult.06
+  n: 6
+  text: Push down about one-third of the chest depth, at 100 to 120 pushes a minute. Let the chest come fully back
+    up between pushes.
+  roles:
+  - B
+  - R
+  source: handbook
+  page: '24'
+  not_worked:
+    label: Not sure about the rhythm
+    hint: Aim for about two pushes per second and keep the pushes even.
+- id: cpr_adult.07
+  n: 7
+  text: Do not stop. If someone else is there, swap every 2 minutes with as little pause as possible.
+  roles:
+  - B
+  - R
+  source: adapted
+  page: 24,26
+- id: cpr_adult.08
+  n: 8
+  text: Use an AED as soon as one arrives and follow its voice prompts.
+  roles:
+  - B
+  - R
+  source: handbook
+  page: '25'
+- id: cpr_adult.09
+  n: 9
+  text: 'Stop only if: they show signs of life (open eyes, breathe, make sounds), the AED is analysing or about
+    to shock, or emergency staff take over.'
+  roles:
+  - B
+  - R
+  source: adapted
+  page: '25'
+- id: cpr_adult.10
+  n: 10
+  text: Every 2 minutes (about 200 to 240 compressions) pause for no more than 10 seconds and check the pulse.
+  roles:
+  - R
+  source: handbook
+  page: '24'
+- id: cpr_adult.11
+  n: 11
+  text: If there is no pulse or sign of life after 20 to 40 minutes, the team leader may decide to stop. Continue
+    longer for young victims, cold weather or drowning.
+  roles:
+  - R
+  source: handbook
+  page: '25'
+- id: cpr_adult.12
+  n: 12
+  text: Do not do chest compressions if a pulse is present.
+  roles:
+  - R
+  source: handbook
+  page: '26'

@@ -1,0 +1,30 @@
+id: hazard_vehicle_journey
+title: 'Hazard: patient in a vehicle during a journey'
+handbook_pages: adapted
+note: null
+steps:
+- id: hazard_vehicle_journey.01
+  n: 1
+  text: If you are driving and feel unwell, slow down, signal and pull over to a safe place away from traffic.
+  self_text: 'You are driving and feel unwell: slow down, signal and pull over somewhere safe away from traffic
+    before doing anything else.'
+  roles:
+  - B
+  - S
+  - R
+  source: extension
+- id: hazard_vehicle_journey.02
+  n: 2
+  text: Switch on the hazard lights, stop the engine and apply the parking brake.
+  roles:
+  - B
+  - S
+  - R
+  source: extension
+- id: hazard_vehicle_journey.03
+  n: 3
+  text: Do not keep driving with a collapsing patient. Stop first, then call 108.
+  roles:
+  - B
+  - R
+  source: extension

@@ -1,0 +1,94 @@
+id: snake_bite
+title: Snake bite
+handbook_pages: p.12-13
+note: null
+steps:
+- id: snake_bite.01
+  n: 1
+  text: Keep away from the snake. Do not try to catch it.
+  roles:
+  - B
+  - R
+  source: handbook
+  page: '12'
+  tags:
+  - no_catch_snake
+- id: snake_bite.02
+  n: 2
+  text: Reassure the person and keep them calm and still. Most bites do not inject venom, but every bite must be
+    checked by a doctor.
+  roles:
+  - B
+  - S
+  - R
+  source: handbook
+  page: 12-13
+- id: snake_bite.03
+  n: 3
+  text: Immobilise the limb and the person. Splint the bitten limb like a fracture with cloth, bandages, sticks
+    or pipes. Do NOT tie a tourniquet or tight band.
+  roles:
+  - B
+  - S
+  - R
+  source: handbook
+  page: '13'
+  tags:
+  - no_tourniquet
+- id: snake_bite.04
+  n: 4
+  text: Take off shoes, rings, watches, jewellery and tight clothing from the bitten area, because swelling may
+    trap them.
+  roles:
+  - B
+  - S
+  - R
+  source: handbook
+  page: '13'
+- id: snake_bite.05
+  n: 5
+  text: Do NOT cut, suck, wash, rub or put anything on the wound.
+  roles:
+  - B
+  - S
+  - R
+  source: handbook
+  page: 12-13
+  tags:
+  - no_cut_suck
+- id: snake_bite.06
+  n: 6
+  text: The person must not run or drive to the hospital. Use an ambulance or carry them.
+  roles:
+  - B
+  - S
+  - R
+  source: handbook
+  page: '13'
+- id: snake_bite.07
+  n: 7
+  text: Get to a hospital immediately. Traditional remedies have no proven benefit and waste time.
+  roles:
+  - B
+  - S
+  - R
+  source: handbook
+  page: '13'
+- id: snake_bite.08
+  n: 8
+  text: 'Tell the doctor about symptoms: pain, weakness, bleeding, blurred vision, drooping eyelids, trouble swallowing
+    or breathing. Venom can act within 30 minutes or take up to 6 hours.'
+  roles:
+  - B
+  - S
+  - R
+  source: handbook
+  page: '13'
+- id: snake_bite.09
+  n: 9
+  text: If it is safe, a photo of the snake from a distance can help the doctor. Never go near it or try to catch
+    it.
+  roles:
+  - B
+  - R
+  source: extension

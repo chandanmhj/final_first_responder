@@ -1,0 +1,39 @@
+id: hazard_road_scene
+title: 'Hazard: road accident scene'
+handbook_pages: p.1, p.3, p.18
+note: null
+steps:
+- id: hazard_road_scene.01
+  n: 1
+  text: Do not stand in moving traffic. Check for approaching vehicles before you step onto the road.
+  roles:
+  - B
+  - R
+  source: adapted
+  page: '1'
+- id: hazard_road_scene.02
+  n: 2
+  text: Ask bystanders to warn oncoming traffic and keep the crowd back.
+  roles:
+  - B
+  - R
+  source: extension
+- id: hazard_road_scene.03
+  n: 3
+  text: Ask for engines to be switched off and for nobody to smoke. Watch for fuel leaks and fire.
+  roles:
+  - B
+  - R
+  source: adapted
+  page: '3'
+  tags:
+  - fire_hazard
+- id: hazard_road_scene.04
+  n: 4
+  text: Do not move injured people unless there is immediate danger such as fire or traffic. If you must move them,
+    protect the neck and spine.
+  roles:
+  - B
+  - R
+  source: adapted
+  page: 2,18

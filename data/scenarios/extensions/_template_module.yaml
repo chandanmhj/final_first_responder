@@ -1,0 +1,16 @@
+id: example_module
+title: Example module title
+handbook_pages: none
+note: Why this module exists and who reviewed it.
+steps:
+  - id: example_module.01
+    n: 1
+    text: One clear instruction in plain language.
+    roles: [B, R]          # B bystander, S self, R first responder
+    source: extension      # handbook | adapted | extension
+    reviewed_by: ""        # name and date of the reviewer (required for extension steps)
+    tags: []               # for example: medication, tourniquet, recovery_position
+    only_groups: []        # optional: cardiac, trauma
+    not_worked:
+      label: That did not work
+      hint: What to do next if this step fails.

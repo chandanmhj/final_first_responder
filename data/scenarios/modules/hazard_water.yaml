@@ -1,0 +1,29 @@
+id: hazard_water
+title: 'Hazard: water (reach, throw, don''t go)'
+handbook_pages: p.28
+note: null
+steps:
+- id: hazard_water.01
+  n: 1
+  text: Do not enter the water unless you are trained. Rescuers who are not trained often die in drowning rescues.
+  roles:
+  - B
+  - R
+  source: handbook
+  page: '28'
+- id: hazard_water.02
+  n: 2
+  text: 'Rescue from land: reach with a pole, or throw a rope or a floating object. Reach, throw, don''t go.'
+  roles:
+  - B
+  - R
+  source: handbook
+  page: '28'
+- id: hazard_water.03
+  n: 3
+  text: Only once the person is out of the water and the area is safe, start helping.
+  roles:
+  - B
+  - R
+  source: handbook
+  page: '28'

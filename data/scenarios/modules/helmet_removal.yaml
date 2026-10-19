@@ -1,0 +1,72 @@
+id: helmet_removal
+title: Helmet removal
+handbook_pages: p.19
+note: null
+steps:
+- id: helmet_removal.01
+  n: 1
+  text: If the person is unconscious or has signs of spinal injury (numbness, tingling, cannot move hands or legs),
+    do not move them unless absolutely necessary.
+  roles:
+  - B
+  - R
+  source: handbook
+  page: '19'
+- id: helmet_removal.02
+  n: 2
+  text: If they are conscious, tell them you will remove the helmet and ask them not to move their head.
+  roles:
+  - B
+  - R
+  source: handbook
+  page: '19'
+- id: helmet_removal.03
+  n: 3
+  text: Person 1 kneels at the head and holds the helmet on both sides with fingers on the jaw so it cannot slip.
+  roles:
+  - B
+  - R
+  source: handbook
+  page: '19'
+- id: helmet_removal.04
+  n: 4
+  text: Person 2, at the side, undoes or cuts the strap.
+  roles:
+  - B
+  - R
+  source: handbook
+  page: '19'
+- id: helmet_removal.05
+  n: 5
+  text: 'Person 2 then holds the neck: one hand behind the neck and the back of the head, the other holding both
+    sides of the jaw.'
+  roles:
+  - B
+  - R
+  source: handbook
+  page: '19'
+- id: helmet_removal.06
+  n: 6
+  text: 'Full-face helmet: remove glasses first.'
+  roles:
+  - B
+  - R
+  source: handbook
+  page: '19'
+- id: helmet_removal.07
+  n: 7
+  text: Person 1 gently widens the helmet sideways to clear the ears, tilts it back to clear the nose, and slides
+    it off with a slight rocking motion.
+  roles:
+  - B
+  - R
+  source: handbook
+  page: '19'
+- id: helmet_removal.08
+  n: 8
+  text: Person 1 takes over holding the neck in a neutral position once the helmet is off.
+  roles:
+  - B
+  - R
+  source: handbook
+  page: '19'

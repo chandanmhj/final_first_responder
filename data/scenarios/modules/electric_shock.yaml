@@ -1,0 +1,32 @@
+id: electric_shock
+title: Electric shock
+handbook_pages: p.17-18, p.22
+note: null
+steps:
+- id: electric_shock.01
+  n: 1
+  text: Do not touch the person until the power is off. Switch off the supply or have the live wire removed.
+  roles:
+  - B
+  - R
+  source: adapted
+  page: '17'
+- id: electric_shock.02
+  n: 2
+  text: Check responsiveness and signs of life. Electric shock and lightning can stop the heart. If there is no
+    breathing and no signs of life, start CPR.
+  roles:
+  - B
+  - R
+  source: handbook
+  page: '22'
+  tags:
+  - escalate_cpr
+- id: electric_shock.03
+  n: 3
+  text: 'Cover burns with a clean cloth. Electrical burns can be life-threatening: go to a hospital.'
+  roles:
+  - B
+  - R
+  source: handbook
+  page: '18'

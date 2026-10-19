@@ -1,0 +1,58 @@
+id: scene_safety
+title: Scene safety check
+handbook_pages: p.1-3
+note: null
+steps:
+- id: scene_safety.01
+  n: 1
+  text: 'Ask yourself: Am I safe? Is my team safe? Are we safe from approaching traffic? Do we have protection (gloves,
+    a mask, or a plastic bag)? If not, make it safe first.'
+  roles:
+  - B
+  - R
+  source: handbook
+  page: '2'
+- id: scene_safety.02
+  n: 2
+  text: 'Look, listen and smell for hazards: sparks, trains or fast traffic, loose boulders, live wires, snakes,
+    gas or smoke.'
+  roles:
+  - B
+  - R
+  source: handbook
+  page: '1'
+- id: scene_safety.03
+  n: 3
+  text: Check the patient is safe. Move them away from immediate danger (railway, fire, electrical sources) only
+    if needed, and with precautions.
+  roles:
+  - B
+  - R
+  source: handbook
+  page: '2'
+- id: scene_safety.04
+  n: 4
+  text: 'Check the whole environment: moving traffic, toxic fumes, loose wires, angry crowds. Look for clues to
+    the cause, such as an empty medicine bottle, broken glass or weapons.'
+  roles:
+  - B
+  - R
+  source: handbook
+  page: '2'
+- id: scene_safety.05
+  n: 5
+  text: Count the victims. If there are several, help those who need immediate attention first.
+  roles:
+  - B
+  - R
+  source: handbook
+  page: 1-2
+- id: scene_safety.06
+  n: 6
+  text: Do not start resuscitation, and do not touch body fluids or pesticides with bare hands, until the area is
+    safe.
+  roles:
+  - B
+  - R
+  source: handbook
+  page: '3'

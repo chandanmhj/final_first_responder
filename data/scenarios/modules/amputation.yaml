@@ -1,0 +1,49 @@
+id: amputation
+title: Amputation
+handbook_pages: IFRC p.271
+note: null
+steps:
+- id: amputation.01
+  n: 1
+  text: Call 108.
+  roles:
+  - B
+  - R
+  source: ifrc
+  page: '271'
+- id: amputation.02
+  n: 2
+  text: Stop heavy bleeding by pressing on the wound.
+  roles:
+  - B
+  - R
+  source: ifrc
+  page: '271'
+  tags:
+  - direct_pressure
+- id: amputation.03
+  n: 3
+  text: 'Partial amputation: keep the limb as still as possible, in normal alignment, and cover the wound with a
+    clean cloth.'
+  roles:
+  - B
+  - R
+  source: ifrc
+  page: '271'
+- id: amputation.04
+  n: 4
+  text: 'Complete amputation: cover the wound with a clean cloth. Keep the severed part dry and cool: put it in
+    a clean sealed plastic bag, then place the bag in a container of ice and water. Send it with the person to hospital.'
+  roles:
+  - B
+  - R
+  source: ifrc
+  page: '271'
+- id: amputation.05
+  n: 5
+  text: Keep the person still, reassure them, and watch for shock.
+  roles:
+  - B
+  - R
+  source: ifrc
+  page: '271'

@@ -1,0 +1,62 @@
+id: aed
+title: Using an AED
+handbook_pages: p.25-26
+note: null
+steps:
+- id: aed.01
+  n: 1
+  text: Switch the AED on as soon as it arrives and follow its voice prompts.
+  roles:
+  - B
+  - R
+  source: handbook
+  page: '25'
+- id: aed.02
+  n: 2
+  text: Attach the pads to the person's chest and plug the pad connector into the AED.
+  roles:
+  - B
+  - R
+  source: handbook
+  page: '25'
+- id: aed.03
+  n: 3
+  text: When it says it is analysing, stop compressions and make sure nobody is touching the person.
+  roles:
+  - B
+  - R
+  source: handbook
+  page: '25'
+- id: aed.04
+  n: 4
+  text: 'If it says shock is advised, say loudly: stay away, I am clear, you are clear, all are clear. Look all
+    around, then press the shock button.'
+  roles:
+  - B
+  - R
+  source: handbook
+  page: '25'
+- id: aed.05
+  n: 5
+  text: Restart compressions immediately after the shock. Do not check the pulse for 2 minutes of continuous compressions.
+  roles:
+  - B
+  - R
+  source: handbook
+  page: '25'
+- id: aed.06
+  n: 6
+  text: If it says no shock is advised, continue chest compressions.
+  roles:
+  - B
+  - R
+  source: handbook
+  page: '25'
+- id: aed.07
+  n: 7
+  text: Leave the AED attached even if the pulse returns. The heart can stop again and may need another shock.
+  roles:
+  - B
+  - R
+  source: handbook
+  page: '26'

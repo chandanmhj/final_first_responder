@@ -1,0 +1,26 @@
+id: recovery_position
+title: Recovery position
+handbook_pages: p.3, p.10
+note: The handbook shows the recovery position only as a figure; text is adapted. See gaps.
+steps:
+- id: recovery_position.01
+  n: 1
+  text: Roll the breathing person onto their side so the airway stays open. Take care with the neck and back if
+    injury is possible.
+  roles:
+  - B
+  - R
+  source: adapted
+  page: 3,10
+  tags:
+  - recovery_position
+- id: recovery_position.02
+  n: 2
+  text: Keep watching their breathing. If they stop breathing or you cannot find signs of life, start CPR.
+  roles:
+  - B
+  - R
+  source: adapted
+  page: '3'
+  tags:
+  - escalate_cpr

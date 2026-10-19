@@ -1,0 +1,36 @@
+id: call_for_help
+title: Call for help
+handbook_pages: p.3, p.37
+note: null
+steps:
+- id: call_for_help.01
+  n: 1
+  text: Call 108 for an ambulance, or point at one person nearby and tell them to call, then ask them to confirm
+    when it is done.
+  self_text: Call 108 now, or ask anyone nearby to call for you.
+  roles:
+  - B
+  - S
+  - R
+  source: handbook
+  page: '3'
+  not_worked:
+    label: I can't call
+    hint: Ask the nearest person, shout for help, or use any phone nearby.
+- id: call_for_help.02
+  n: 2
+  text: 'Ask for the right equipment: an AED for a collapsed or unresponsive person; a tourniquet, spine board and
+    neck collar for serious injuries.'
+  roles:
+  - B
+  - R
+  source: handbook
+  page: '3'
+- id: call_for_help.03
+  n: 3
+  text: Give the exact location, what happened, how many people are hurt, and whether they are breathing.
+  roles:
+  - B
+  - R
+  source: adapted
+  page: 37-38

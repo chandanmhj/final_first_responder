@@ -1,0 +1,76 @@
+id: stroke
+title: Stroke
+handbook_pages: p.8-10
+note: null
+steps:
+- id: stroke.01
+  n: 1
+  text: Suspect a stroke if there are sudden balance problems or dizziness, vision loss or double vision, a drooping
+    face, weakness of an arm or leg, or slurred speech.
+  self_text: You may be having a stroke if you suddenly have balance problems, vision problems, a drooping face,
+    weakness in an arm or leg, or slurred speech.
+  roles:
+  - B
+  - S
+  - R
+  source: handbook
+  page: '9'
+- id: stroke.02
+  n: 2
+  text: 'Check: ask them to walk (balance), smile (does the mouth droop?), lift both arms and legs (weakness), and
+    speak (slurring or mixed words).'
+  roles:
+  - B
+  - R
+  source: handbook
+  page: '9'
+- id: stroke.03
+  n: 3
+  text: Do not waste time. Call 108 and go straight to a hospital with CT scan facilities, ideally a stroke unit.
+  self_text: Call 108 now, or ask someone nearby to.
+  roles:
+  - B
+  - S
+  - R
+  source: handbook
+  page: '9'
+- id: stroke.04
+  n: 4
+  text: Do NOT give aspirin or any medicine at home. Some strokes are caused by bleeding in the brain, and aspirin
+    can make that worse.
+  roles:
+  - B
+  - S
+  - R
+  source: handbook
+  page: '9'
+  tags:
+  - no_aspirin
+- id: stroke.05
+  n: 5
+  text: Check blood sugar if you can. Low sugar can look like a stroke and must be treated.
+  roles:
+  - B
+  - S
+  - R
+  source: handbook
+  page: '9'
+- id: stroke.06
+  n: 6
+  text: Note the exact time the symptoms began. Clot-dissolving treatment works only within about 4.5 hours.
+  roles:
+  - B
+  - S
+  - R
+  source: adapted
+  page: '9'
+- id: stroke.07
+  n: 7
+  text: If they become unresponsive and show no signs of life, start CPR.
+  roles:
+  - B
+  - R
+  source: handbook
+  page: '8'
+  tags:
+  - escalate_cpr

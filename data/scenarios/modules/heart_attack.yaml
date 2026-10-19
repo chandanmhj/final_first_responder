@@ -1,0 +1,102 @@
+id: heart_attack
+title: Heart attack
+handbook_pages: p.6-8
+note: null
+steps:
+- id: heart_attack.01
+  n: 1
+  text: 'Suspect a heart attack with chest pain, pressure or tightness, which may spread to the arm, shoulder, neck
+    or jaw. Some people, especially people with diabetes, have no chest pain: look for heavy sweating, nausea, breathlessness,
+    back ache, weakness or unease.'
+  self_text: You may be having a heart attack if you have chest pain, pressure or tightness (possibly spreading
+    to the arm, neck or jaw), or sweating, nausea, breathlessness or unusual tiredness.
+  roles:
+  - B
+  - S
+  - R
+  source: handbook
+  page: '6'
+- id: heart_attack.02
+  n: 2
+  text: Make them stop all activity and rest. Reassure them and keep them calm.
+  self_text: Stop what you are doing, sit or lie down, and stay as calm as you can.
+  roles:
+  - B
+  - S
+  - R
+  source: handbook
+  page: '7'
+- id: heart_attack.03
+  n: 3
+  text: Call 108 now and ask for an ambulance with an AED. Do not wait to see whether it passes.
+  self_text: Call 108 now, or ask someone nearby to, and say you may be having a heart attack.
+  roles:
+  - B
+  - S
+  - R
+  source: handbook
+  page: '7'
+- id: heart_attack.04
+  n: 4
+  text: 'Trained providers only: chewable aspirin 325 mg may be given if there is no allergy; other heart medicines
+    are for clinicians. Avoid any medicine the patient is allergic to.'
+  roles:
+  - R
+  source: handbook
+  page: '7'
+  tags:
+  - medication
+  - aspirin
+- id: heart_attack.05
+  n: 5
+  text: If oxygen is available, give it.
+  roles:
+  - R
+  source: handbook
+  page: '7'
+- id: heart_attack.06
+  n: 6
+  text: Stay with them. If they become unresponsive and you cannot find signs of life, start CPR and use an AED.
+  roles:
+  - B
+  - R
+  source: handbook
+  page: '8'
+  tags:
+  - escalate_cpr
+- id: heart_attack.07
+  n: 7
+  text: Note the exact time the symptoms started and tell the ambulance team.
+  roles:
+  - B
+  - S
+  - R
+  source: adapted
+  page: '7'
+- id: heart_attack.08
+  n: 8
+  text: 'Keep them lying flat for transport. Never take a heart attack patient on a bike: they may lose consciousness.'
+  roles:
+  - B
+  - R
+  source: handbook
+  page: '8'
+  tags:
+  - no_bike
+- id: heart_attack.09
+  n: 9
+  text: 'Keep them cool: use AC or a fan, open windows, and remove sweaters and heavy clothes.'
+  roles:
+  - B
+  - R
+  source: handbook
+  page: '8'
+- id: heart_attack.10
+  n: 10
+  text: Go to a hospital that can treat heart attacks (clot-dissolving medicine, stenting or bypass surgery).
+  roles:
+  - B
+  - S
+  - R
+  source: handbook
+  page: '8'

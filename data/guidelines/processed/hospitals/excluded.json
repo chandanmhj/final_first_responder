@@ -1,0 +1,954 @@
+[
+ {
+  "name": "Clinic",
+  "reason": "generic or missing name"
+ },
+ {
+  "name": "Dr Ganesh Medical and Diabetic Clinic",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "Mallige Medical Centre",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "Santosh Diagnostic & Scan Center",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "Lotus Diagnostic centre",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "Supra's Diagnostic Centre",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "Yogananda Medical and Research Centre",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "Krupa Medical center",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "Greenview Medical Center",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "Happy Tooth",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "Anurag Medical Center",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "United Medical lab",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "unknown clinic",
+  "reason": "generic or missing name"
+ },
+ {
+  "name": "Hear2Speak Clinic",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "Manasa Medical Centre",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "Medplus Path Labs",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "Medical Shop",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "Telerad Rx Dx Health Care Whitefield",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "Homeocare International",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "ClinRad",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "Rajan's Speech & Hearing Center",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "Samatvam Diabeties Center",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "JP Nagar Diagnostic Centre",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "Dr. Rajkumar Blood Bank",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "Supriya Diagnostic Center",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "Nile Hair and Skin Care",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "Dr. Ravi Lab And Research Center",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "Sanghi Medical Centre (P) Ltd",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "ALDOS Medical Service Pvt LTD",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "APM Optics",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "National Medical Center",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "Dr. Rama's Test Tube Baby Centre",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "Ameena Medical centre",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "Astha Centre of Autism",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "Srinivasa Ultrasound Scan Centre",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "Piles and Fistula Clinic",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "Ittina Wellness Centre",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "Carewell Homoeo Clinic",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "The Family Doctor & The Family Pharma",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "A & J Ayur Care",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "Sri Venkateshwara Medicals",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "Anurag Medical Centre",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "Sky Diagnostic Centre kumbena agrahara",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "Divine Medical Centre",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "Thyrocare",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "Sri Sanjeevini Cold Laser Therapy",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "Kosmoderma Skin & Hair Clinics",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "New Look Laser Clinic",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "The Family Doctor & The Family Pharma Indiranagar",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "Sri Lakshmi Diagnostic Center",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "Kaya Skin Bar",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "Fj Merrit Hydrotherapy And Wellness",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "Dr Priyas Skin And Hair Clinic",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "Ayur jagruti",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "Derma Solutions",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "Sofiyacare Skin And Hair Clinic",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "Revive Aesthetic Clinic Skin Hair And Laser Center",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "Lotus Diagnostic Centre",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "Wellness Ever",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "Hair Loss Treatment in Bangalore - Hairline International",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "Amplifon",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "V Care Medical Systems P Ltd",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "Shreya Hearing Clinic",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "Nirmal Skin & Hair Clinic",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "The Homoeo World",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "Vijay Diagnostic Centre",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "Dr Lal PathLabs",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "Center for Holistic Development",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "Saldana Diagnostic Center",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "Sree Clinic and Laboratory",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "Medical Center",
+  "reason": "generic or missing name"
+ },
+ {
+  "name": "Health and hijama clinic",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "Ancient China",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "Dr. Satish skin & ENT clinic",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "Medical Center",
+  "reason": "generic or missing name"
+ },
+ {
+  "name": "Renew Medical Center",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "Dr. Shetty's Cosmetic Centre",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "Virile Men's Health Clinic",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "Telerad RXDX Kadugodi",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "Hebbal Medical Center",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "Deepashri Clinical Laboratory",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "The Skin and Cosmetic Clinic",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "Sri Balaji Speciality Clinic & Diagnostic Center",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "Medical Center",
+  "reason": "generic or missing name"
+ },
+ {
+  "name": "Tibetan Healing & Wellness Center",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "Lourdes High School",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "Bangalore Piles Clinic",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "North City CT Scan",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "Nu Trust",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "Ragavs Diagnostic and Research Centre Pvt Ltd",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "Sri Balaji Polyclinic and Diagnostic Centr",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "Parvathi Piles Clinic",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "Health Centre",
+  "reason": "generic or missing name"
+ },
+ {
+  "name": "Focus Diagnostic Center",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "Cauvery Clinic and Laboratory",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "Lotus Medical Centre",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "Sri Ragavendra Homeo Clinic",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "Bhavani Skin & Cosmetology Clinic",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "Bharat Piles & Fistula Clinic",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "Rapha Polyclinic & Lab",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "Tvacha Skin and Cosmetology Clinic",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "Shree Srinivasa Homeo Clinic",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "Lifespan Diabetic Clinic",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "Mahayogam Clinic",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "Sparkle Tooth Care Centre",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "Grihi's Diabetes Centre",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "Spectrum Physio Centre",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "Bhadrahomeo",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "Dr. Nagbhushan Skin Care Clinic",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "Sudharma Homeo Clinic",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "Smile Studio Oral Care",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "Chethana Homeo Clinic",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "AR Diagnostic Healthcare and Polyclinic",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "Bengaluru Child Neurology and Rehabilitaion Centre",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "Bangalore Psoriasis Clinic",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "N N Homeo clinic",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "Dr. Hebbal Homeo and Polyclinic",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "Happy Heart Cardiac & Diabetes Clinic",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "Medall Healthcare",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "Ashwini Medical Specialist Centre",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "Orthodontic Maxillofacial Clinic",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "Novel Hearing Care Centre",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "Skin, Allergy, Cosmetology & Hair Clinic",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "Chamarajpete Skin care clinic",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "Synergy Diabetes Clinic",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "Oliva Skin and Hair Clinic",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "Rishi Acupuncture Clinic",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "Pranav Diabetes Centre",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "Dr. Uma Homeo Clinic",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "Dr. Josephs Holistic Health Care Clinic",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "Revive Skin and Hair Clinic",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "Premji Occupational Therapy & Rehabilitation Centre",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "Merlins Trichology Clinic",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "Sree Rajeshwari Homeo Clinic",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "Shanthi Women's Healthcare Centre",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "Sri Krishna Scanning and Diagnostic Centre",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "Shuban Diabetes Center",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "Just Smiles",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "Aayurjisha Women's Clinic",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "Reviva Dermaesthetic",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "Vitiligo Clinic",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "Amba Laser Clinic",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "Metropolis Healthcare",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "Madhumeha Diabetes Centre",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "Richfeel Hair And Scalp Clinic",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "Mona Clinic and Lab",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "Appllo Diagnostic",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "clinic",
+  "reason": "generic or missing name"
+ },
+ {
+  "name": "Kaveri Diagnostic Centre",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "Yelahanka new standard diagnostic centre",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "My Dentist",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "Hurbz",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "Skinsi",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "Toothsi",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "Turning Point Therapists",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "Geronics",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "GHOC Obesity Clinic",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "The Local Dentist",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "Shankarapuram Diagnostic Centre",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "Rayara Kirana",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "Prestige Medical Healthcare PMHS",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "Epicorium Skin Hair Nail Clinic",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "NIMHANS Department Of Psychiatric and Neuro Rehabilitation",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "Pristyn Care",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "Aster Labs",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "PharmEasy Labs collection centre",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "sugar.fit",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "Hayagreeva Medical And Women's Health",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "Laxmi Piles Clinic",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "Cosmo Clinic and Diagnostic Centre",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "Sugar.Fit Diabetes Reversal Centre",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "Homeocare International",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "Dhatri Ayurdhama",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "Victory Homeo Speciality Clinic",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "4 Sense Skin, Hair And ENT Clinic",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "Glow up Skin, Hair & Laser clinic",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "Vijaya Medical Centre",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "Oncquest Laboratories",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "dermalogica",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "JJ Poly Clinic & Diagnostic Center",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "Apollo Medical Center",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "Apollo Medical Center",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "Suraksha Diagnostic Centre",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "Aster Labs",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "Sri Sangama Diagnostic and Health Centre",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "MS Clinic, Diagnostic & Scan Center",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "Dr Swarna Skin Hair & Laser Clinic",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "Kasper Multi Speciality Clinic",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "Orange Health Labs",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "Femlife",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "Garbha Gudi",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "Healing Hands Clinic - J.P Nagar, Bengaluru",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "Healing Hands Clinic - Indiranagar, Bengaluru",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "Healing Hands Clinic - Sahakar Nagar, Bengaluru",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "Healing Hands Clinic - HSR Layout, Bengaluru",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "Healing Hands Clinic - Rajajinagar, Bengaluru",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "Healing Hands Clinic - Whitefield, Bengaluru",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "Health Centre",
+  "reason": "generic or missing name"
+ },
+ {
+  "name": "Karunashraya",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "Facelit Skin Hair & Wellness",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "Ways2Guide Speech Therapy Center",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "Sharada Medicals",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "Homeocure Clinic",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "touchwood",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "Medical Centre",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "Chaitanya Medical Centre Maternity and Surgical Care",
+  "reason": "not an emergency-care facility (pharmacy, lab, dental, aesthetic, wellness or similar)"
+ },
+ {
+  "name": "Welnext",
+  "reason": "duplicate of 'Welnext'"
+ },
+ {
+  "name": "We care clinic",
+  "reason": "duplicate of 'We care clinic'"
+ },
+ {
+  "name": "N.D.R. Hospital",
+  "reason": "duplicate of 'NDR Hospital'"
+ },
+ {
+  "name": "Bilva Hospital",
+  "reason": "duplicate of 'Bilva Hospital'"
+ },
+ {
+  "name": "Sri Venkateshwara Hospitals",
+  "reason": "duplicate of 'Venkateshwara Hospital'"
+ },
+ {
+  "name": "Ring Road Hospital",
+  "reason": "duplicate of 'Ring Road Hospital'"
+ },
+ {
+  "name": "Karthik Hospital, Bengaluru Urban",
+  "reason": "duplicate of 'Karthik Hospital'"
+ },
+ {
+  "name": "Prasad Eye Hospital, Bengaluru Urban",
+  "reason": "duplicate of 'Prasad Eye Hospital'"
+ },
+ {
+  "name": "Pristine Hospital",
+  "reason": "duplicate of 'Pristline Hospital'"
+ },
+ {
+  "name": "Metro Hospital, Bengaluru Rural",
+  "reason": "duplicate of 'Metro Hospital'"
+ },
+ {
+  "name": "Manipal Poly Clinic And Nursing Home",
+  "reason": "duplicate of 'Manipal Polyclinic and Nursing Home'"
+ },
+ {
+  "name": "Bright Children's Clinic",
+  "reason": "duplicate of 'Bright Children's Clinic'"
+ },
+ {
+  "name": "Vinayaka Hospital",
+  "reason": "duplicate of 'Vinayaka Hospital, Hanumantha Nagar'"
+ },
+ {
+  "name": "Shekhar Hospital",
+  "reason": "duplicate of 'Shekar Hospital'"
+ },
+ {
+  "name": "Sham's Child and Adult Care",
+  "reason": "duplicate of 'Sham's Child and Adult Care'"
+ },
+ {
+  "name": "Rangalakshmi Netralaya",
+  "reason": "duplicate of 'Rangalakshmi Netralaya'"
+ },
+ {
+  "name": "Prashanth Nursing Home",
+  "reason": "duplicate of 'Prashanth Nursing Home'"
+ },
+ {
+  "name": "Spurthy Hospital",
+  "reason": "duplicate of 'Spurthy Hospital'"
+ },
+ {
+  "name": "Anupama Hospital",
+  "reason": "duplicate of 'Anupama Hospital'"
+ },
+ {
+  "name": "Trilife Hospital",
+  "reason": "duplicate of 'Trilife Hospital'"
+ },
+ {
+  "name": "K C General Hospital",
+  "reason": "duplicate of 'K.C.General Hospital'"
+ },
+ {
+  "name": "Manipal Hospital",
+  "reason": "duplicate of 'Manipal Hospital, Bengaluru Urban'"
+ },
+ {
+  "name": "P.D. Hinduja Sindhi Hospital",
+  "reason": "duplicate of 'Pd Hinduja Sindhi Hospital'"
+ },
+ {
+  "name": "Apollo Speciality Hospital",
+  "reason": "duplicate of 'Apollo Specialty Hospital'"
+ },
+ {
+  "name": "Sevakshetra Hospital, Bengaluru Urban",
+  "reason": "duplicate of 'Sevakshetra Hospital'"
+ },
+ {
+  "name": "ESI Hospital",
+  "reason": "duplicate of 'ESI Hospital'"
+ },
+ {
+  "name": "Sanjay Gandhi Accident and Trauma Hospital",
+  "reason": "duplicate of 'Sanjay Gandhi Accident and Trauma Hospital'"
+ },
+ {
+  "name": "Shree Srinivasa Uro Care",
+  "reason": "duplicate of 'Shree srinivasa uro care'"
+ },
+ {
+  "name": "South City Hospital",
+  "reason": "duplicate of 'South City Hospital, Bengaluru Urban'"
+ },
+ {
+  "name": "Shifa Hospital, Bengaluru Urban",
+  "reason": "duplicate of 'Shifa Hospital, Bengaluru Urban'"
+ },
+ {
+  "name": "Diacon Hospital",
+  "reason": "duplicate of 'Diacon Hospital'"
+ },
+ {
+  "name": "Karunalayam Hospital",
+  "reason": "duplicate of 'Karunalayam Hospital'"
+ }
+]

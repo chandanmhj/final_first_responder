@@ -1,0 +1,50 @@
+id: panic_attack
+title: Panic or anxiety
+handbook_pages: IFRC p.515
+note: null
+steps:
+- id: panic_attack.01
+  n: 1
+  text: Introduce yourself if they do not know you. Tell them they are safe and you are there to help. Move to a
+    quiet place, away from crowds.
+  roles:
+  - B
+  - R
+  source: ifrc
+  page: '515'
+- id: panic_attack.02
+  n: 2
+  text: Ask how you can help. Speak slowly, in short sentences, with a calm voice.
+  roles:
+  - B
+  - R
+  source: ifrc
+  page: '515'
+- id: panic_attack.03
+  n: 3
+  text: Tell them what they feel is frightening but it will pass. Reassure them they are not going crazy.
+  roles:
+  - B
+  - R
+  source: ifrc
+  page: '515'
+- id: panic_attack.04
+  n: 4
+  text: Show slow, even breaths and ask them to breathe with you.
+  self_text: Breathe in slowly through your nose and out slowly through your mouth. Count to four in, then four
+    out.
+  roles:
+  - B
+  - S
+  - R
+  source: ifrc
+  page: '515'
+- id: panic_attack.05
+  n: 5
+  text: When their coping works, tell them they are doing well. If they refuse help, ask if there is someone you
+    can call.
+  roles:
+  - B
+  - R
+  source: ifrc
+  page: '515'

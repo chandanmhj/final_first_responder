@@ -1,0 +1,85 @@
+id: safe_transfer
+title: Safe transport and handover
+handbook_pages: p.8, p.16-18, p.26, p.37-39
+note: null
+steps:
+- id: safe_transfer.01
+  n: 1
+  text: 'Plan before you move: where and how to take the patient, the receiving hospital''s phone number and a contact
+    person, a fully charged phone for the driver and the caregiver, and an agreed route.'
+  roles:
+  - B
+  - R
+  source: handbook
+  page: '37'
+- id: safe_transfer.02
+  n: 2
+  text: Choose an ambulance, or a vehicle with trained people and the right equipment, where possible.
+  roles:
+  - B
+  - R
+  source: handbook
+  page: '17'
+- id: safe_transfer.03
+  n: 3
+  text: If the patient cannot walk, move them on a stretcher. If there is none, improvise one.
+  roles:
+  - B
+  - R
+  source: handbook
+  page: '39'
+- id: safe_transfer.04
+  n: 4
+  text: If a spine injury is possible, move the patient with the log roll technique onto a stretcher or spine board.
+  roles:
+  - B
+  - R
+  only_groups:
+  - trauma
+  source: handbook
+  page: '39'
+- id: safe_transfer.05
+  n: 5
+  text: Keep the neck neutral and avoid bending the neck or back.
+  roles:
+  - B
+  - R
+  only_groups:
+  - trauma
+  source: handbook
+  page: 16,18
+- id: safe_transfer.06
+  n: 6
+  text: 'Keep the patient cool: AC or fan, no blankets.'
+  roles:
+  - B
+  - R
+  only_groups:
+  - cardiac
+  source: handbook
+  page: '26'
+- id: safe_transfer.07
+  n: 7
+  text: Re-check the patient every 5 minutes during transport (breathing, responsiveness, and pulse if trained).
+  roles:
+  - B
+  - R
+  source: adapted
+  page: '26'
+- id: safe_transfer.08
+  n: 8
+  text: 'Hand over using ISBAR: Identify, Situation, Background, Assessment and actions, Recommendation. The app
+    prepares this report for you.'
+  roles:
+  - B
+  - R
+  source: handbook
+  page: '38'
+- id: safe_transfer.09
+  n: 9
+  text: Follow the receiving doctor's instructions during transport and repeat them back to confirm (closed-loop
+    communication).
+  roles:
+  - R
+  source: handbook
+  page: '38'

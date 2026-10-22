@@ -7,12 +7,10 @@ import ChatPage from "./pages/ChatPage";
 import ConversationsPage from "./pages/ConversationsPage";
 import ForgotPasswordPage from "./pages/ForgotPasswordPage";
 import HandoverReportPage from "./pages/HandoverReportPage";
-import HospitalsPage from "./pages/HospitalsPage";
 import LandingPage from "./pages/LandingPage";
 import LoginPage from "./pages/LoginPage";
 import NotFoundPage from "./pages/NotFoundPage";
 import ProfilePage from "./pages/ProfilePage";
-import ReportsPage from "./pages/ReportsPage";
 import ResetPasswordPage from "./pages/ResetPasswordPage";
 import RolePage from "./pages/RolePage";
 import SignupPage from "./pages/SignupPage";
@@ -36,8 +34,6 @@ export function AppRoutes() {
         <Route element={<AppShell />}>
           <Route path="/app" element={<ConversationsPage />} />
           <Route path="/app/c/:id" element={<ChatPage />} />
-          <Route path="/app/hospitals" element={<HospitalsPage />} />
-          <Route path="/app/reports" element={<ReportsPage />} />
           <Route path="/app/incident/:id/report" element={<HandoverReportPage />} />
           <Route path="/app/profile" element={<ProfilePage />} />
         </Route>

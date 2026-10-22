@@ -1,4 +1,5 @@
 """Orchestrates one chat turn: safety, routing, scenarios, questions, photos, hospitals and reports."""
+import re
 from dataclasses import dataclass
 
 from ...config import Settings
@@ -17,6 +18,7 @@ from .roles import adjust_condition, band_protocol, infer_age_band
 from .step_manager import ScenarioState
 
 INTRO_URGENT = "Call 108 now (or ask someone to). I'll guide you step by step while help is on the way."
+ARRIVED_RE = re.compile(r"\b(help|ambulance|paramedics?|medics?)\s+(has\s+|have\s+|just\s+)?(arrived|reached|is here|are here)\b", re.I)
 
 
 @dataclass
@@ -65,6 +67,20 @@ class ChatService:
         return {"condition": state.condition, "title": self.store.conditions[state.condition].title, "location": state.location,
                 "index": state.index, "total": len(state.steps), "status": state.status}
 
+    def _hospital_prompt(self, state: ScenarioState, req: ChatRequest) -> dict:
+        """Popup data: call 108 or navigate to the nearest suitable hospital in Google Maps."""
+        lat, lon = req.lat or state.lat, req.lon or state.lon
+        hosp = None
+        if lat is not None and lon is not None:
+            try:
+                res = self.hospitals.nearby(lat, lon, state.condition, limit=1)["results"]
+                hosp = res[0] if res else None
+            except Exception:
+                hosp = None
+        url = hosp["directions_url"] + "&travelmode=driving" if hosp else "https://www.google.com/maps/search/?api=1&query=nearest+hospital"
+        return {"type": "hospital_prompt", "text": "Before we start, you first need to contact the hospital.", "maps_url": url,
+                "hospital": {"name": hosp["name"], "distance_km": hosp["distance_km"]} if hosp else None}
+
     def _start(self, user_id, session, state: ScenarioState, condition: str, location: str | None, role: str, for_self: bool,
                age_band: str | None, protocol: str, intro: str | None, urgent: bool, req: ChatRequest) -> list[dict]:
         cond_id = adjust_condition(condition, protocol)
@@ -90,7 +106,7 @@ class ChatService:
         msgs = [{"type": "text", "text": head}]
         if cond.note:
             msgs[0]["text"] += f"\n\nNote: {cond.note}"
-        return msgs + [self._step_msg(state)]
+        return msgs + [self._hospital_prompt(state, req), self._step_msg(state)]
 
     # ------------------------------------------------------------------ actions
     def _next(self, user_id, state: ScenarioState) -> list[dict]:
@@ -106,7 +122,7 @@ class ChatService:
         need = self.store.conditions[state.condition].facility_requirements
         if state.incident_id:
             self.repo.update_incident(user_id, state.incident_id, {"status": "completed", "ended_at": now_iso()})
-        return [{"type": "text", "text": f"That's all the steps. Keep watching the person until help arrives.\n\nBest place to go: {need}\n\n{disclaimers.CALL_108}",
+        return [{"type": "text", "text": f"That's all the steps. Keep watching the person until help arrives.\n\nBest place to go: {need}\n\nWhen paramedics arrive, type \"paramedics arrived\" and I'll prepare the handover report for them.",
                  "quick_replies": quick_replies.after_completion()}]
 
     def _not_worked(self, user_id, state: ScenarioState) -> list[dict]:
@@ -137,14 +153,24 @@ class ChatService:
         if not state.incident_id:
             return [{"type": "text", "text": "There is no emergency to report yet."}]
         rep = self.build_handover(user_id, state.incident_id)
-        return [{"type": "report", "incident_id": state.incident_id, "text": "Your handover report is ready.", "report": rep["report"]}]
+        return [{"type": "report", "incident_id": state.incident_id, "text": "Your handover report is ready.", "report": rep["report"], "markdown": rep["markdown"]}]
+
+    def _handover(self, user_id, state: ScenarioState) -> list[dict]:
+        """Paramedics arrived: log it, build the report, and end this chat."""
+        self._event(user_id, state, "ambulance_arrived", {})
+        self.repo.update_incident(user_id, state.incident_id, {"status": "completed", "ended_at": now_iso()})
+        rep = self.build_handover(user_id, state.incident_id)
+        state.status = "ended"
+        return [{"type": "report", "incident_id": state.incident_id, "report": rep["report"], "markdown": rep["markdown"],
+                 "text": "Paramedics have arrived. Show them this handover report and follow their instructions. This chat has now ended."}]
 
     def build_handover(self, user_id: str, incident_id: str) -> dict:
         """Create the ISBAR report for an incident (also saved)."""
         inc = self.repo.get_incident(user_id, incident_id)
         events = self.repo.list_events(user_id, incident_id)
         cond = self.store.conditions.get(inc["condition"]) if inc else None
-        report = build_report(inc, events, cond.title if cond else None, cond.facility_requirements if cond else None)
+        profile = (self.repo.get_profile(user_id) or {}) if inc and inc.get("for_self") else None  # medical details only when the chat is "for me"
+        report = build_report(inc, events, cond.title if cond else None, cond.facility_requirements if cond else None, profile)
         self.repo.save_report(user_id, incident_id, report)
         return {"report": report, "markdown": to_markdown(report)}
 
@@ -206,7 +232,11 @@ class ChatService:
         urgent = emergency_triage.is_urgent(text)
         msgs: list[dict]
 
-        if req.action == "next":
+        if state.status == "ended":
+            msgs = [{"type": "text", "text": "This chat has ended. Please start a new chat."}]
+        elif state.incident_id and req.action == "message" and ARRIVED_RE.search(text):
+            msgs = self._handover(user_id, state)
+        elif req.action == "next":
             msgs = self._next(user_id, state)
         elif req.action == "not_worked":
             msgs = self._not_worked(user_id, state)
@@ -242,4 +272,4 @@ class ChatService:
         self.repo.update_session(user_id, session["id"], patch)
         self.repo.add_message(user_id, session["id"], "assistant", {"messages": msgs, "text": " ".join(m.get("text", "") for m in msgs if m.get("text"))[:2000]})
         return {"session_id": session["id"], "incident_id": state.incident_id, "urgent": urgent or state.active and state.condition in
-                {"cardiac_arrest_adult", "cardiac_arrest_child_infant"}, "scenario": self._scenario_info(state), "messages": msgs}
+                {"cardiac_arrest_adult", "cardiac_arrest_child_infant"}, "scenario": self._scenario_info(state), "ended": state.status == "ended", "messages": msgs}

@@ -1,7 +1,8 @@
-import { Link } from "react-router-dom";
 import type { ChatItem, QuickReply } from "../../types/chat";
 import { HospitalList } from "../hospitals/HospitalList";
+import { ReportView } from "../handover/ReportView";
 import { CitationList } from "./CitationList";
+import { HospitalActions } from "./HospitalPopup";
 import { QuickReplies } from "./QuickReplies";
 import { StepCard } from "./StepCard";
 
@@ -9,7 +10,7 @@ type Props = { item: ChatItem; isLastWithActions: boolean; busy: boolean; onActi
 
 const venomColor = { yes: "border-emergency-500 bg-emergency-50", no: "border-success-500/40 bg-success-500/5", unknown: "border-amber-400 bg-amber-50" } as const;
 
-/** Renders one chat item: user text, assistant text, step card, photo result, hospitals or report link. */
+/** Renders one chat item: user text, assistant text, step card, photo result, hospital prompt, hospitals or report. */
 export function MessageBubble({ item, isLastWithActions, busy, onAction }: Props) {
   const m = item.message;
   if (m.type === "user") {
@@ -41,13 +42,20 @@ export function MessageBubble({ item, isLastWithActions, busy, onAction }: Props
       </div>
     );
   }
+  if (m.type === "hospital_prompt") {
+    return (
+      <div className="max-w-xl rounded-2xl rounded-bl-md border border-emergency-500/30 bg-white px-4 py-3 text-sm shadow-soft">
+        <p className="font-semibold text-ink-950">{m.text}</p>
+        {m.hospital && <p className="mt-1 text-xs text-ink-500">Nearest: {m.hospital.name} ({m.hospital.distance_km} km)</p>}
+        <HospitalActions prompt={m} />
+      </div>
+    );
+  }
   if (m.type === "report") {
     return (
-      <div className="max-w-xl rounded-2xl rounded-bl-md bg-white px-4 py-3 text-sm shadow-soft">
-        <p>{m.text}</p>
-        <Link to={`/app/incident/${m.incident_id}/report`} className="mt-3 inline-flex h-10 items-center rounded-xl bg-brand-600 px-4 text-sm font-semibold text-white hover:bg-brand-700">
-          Open handover report
-        </Link>
+      <div className="w-full max-w-2xl space-y-3">
+        <p className="rounded-2xl rounded-bl-md bg-white px-4 py-3 text-sm shadow-soft">{m.text}</p>
+        <ReportView report={m.report} markdown={m.markdown} />
       </div>
     );
   }

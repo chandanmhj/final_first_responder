@@ -55,7 +55,14 @@ export type Hospital = {
 
 export type HandoverReport = {
   generated_at: string;
-  identify: { reported_by_role: string | null; patient: string; age_band: string | null; started_at: string | null; location: string | null };
+  identify: {
+    reported_by_role: string | null;
+    patient: string;
+    age_band: string | null;
+    started_at: string | null;
+    location: string | null;
+    patient_details?: Record<string, string | number> | null;
+  };
   situation: { what_happened: string; scenario: string | null };
   background: { notes: string[] };
   assessment_and_actions: { time: string; text: string; type: string }[];
@@ -68,7 +75,8 @@ export type ServerMessage =
   | { type: "animal"; text: string; result: AnimalResult }
   | { type: "hospitals"; text: string; hospitals: Hospital[]; need: string | null }
   | { type: "needs_location"; text: string }
-  | { type: "report"; text: string; incident_id: string; report: HandoverReport };
+  | { type: "report"; text: string; incident_id: string; report: HandoverReport; markdown: string }
+  | { type: "hospital_prompt"; text: string; maps_url: string; hospital: { name: string; distance_km: number } | null };
 
 export type ScenarioInfo = {
   condition: string;
@@ -76,7 +84,7 @@ export type ScenarioInfo = {
   location: string | null;
   index: number;
   total: number;
-  status: "idle" | "active" | "completed";
+  status: "idle" | "active" | "completed" | "ended";
 };
 
 export type ChatResponse = {
@@ -84,6 +92,7 @@ export type ChatResponse = {
   incident_id: string | null;
   urgent: boolean;
   scenario: ScenarioInfo | null;
+  ended?: boolean;
   messages: ServerMessage[];
 };
 
@@ -98,6 +107,7 @@ export type SessionSummary = {
   status: string;
   condition: string | null;
   incident_id: string | null;
+  pinned?: boolean;
 };
 
 export type Profile = {
@@ -107,4 +117,11 @@ export type Profile = {
   role: Role | null;
   cert_number: string | null;
   attested_at: string | null;
+  age: number | null;
+  sex: string | null;
+  blood_group: string | null;
+  allergies: string | null;
+  conditions: string | null;
+  medications: string | null;
+  emergency_contact: string | null;
 };

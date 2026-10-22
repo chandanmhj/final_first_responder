@@ -178,3 +178,28 @@ def make_supabase_client(url: str, key: str):
     from supabase import create_client
 
     return create_client(url, key)
+class RetryingRepository:
+    """Wraps a repository and retries a call when the connection to Supabase drops (stale pooled connection)."""
+
+    def __init__(self, inner, tries: int = 3):
+        self._inner, self._tries = inner, tries
+
+    def __getattr__(self, name):
+        attr = getattr(self._inner, name)
+        if not callable(attr):
+            return attr
+
+        def call(*args, **kwargs):
+            import time
+
+            import httpx
+
+            for i in range(self._tries):
+                try:
+                    return attr(*args, **kwargs)
+                except httpx.TransportError:
+                    if i == self._tries - 1:
+                        raise
+                    time.sleep(0.3 * (i + 1))
+
+        return call

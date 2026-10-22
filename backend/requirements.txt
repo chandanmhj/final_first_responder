@@ -9,4 +9,4 @@ numpy>=1.26
 rank-bm25>=0.2.2
 supabase>=2.5
 # Embeddings (default provider). For tests and offline development set EMBEDDING_PROVIDER=hash and skip this line.
-fastembed>=0.3
+fastembed>=0.4.0

@@ -35,6 +35,9 @@ class Settings(BaseSettings):
     embedding_model: str = "BAAI/bge-small-en-v1.5"
     embedding_dim: int = 384
     retrieval_top_k: int = 6
+    rerank_provider: str = "cross_encoder"  # cross_encoder | heuristic
+    rerank_model: str = "Xenova/ms-marco-MiniLM-L-6-v2"
+    rerank_pool: int = 20
     abstain_min_overlap: float = 0.12
     retriever: str = "auto"  # auto | memory | supabase
 

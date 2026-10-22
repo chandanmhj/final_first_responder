@@ -18,8 +18,9 @@ export type StepData = {
 
 export type QuickReply = {
   id: string;
-  action: "next" | "not_worked" | "hospitals" | "report" | "restart";
+  action: "next" | "not_worked" | "hospitals" | "report" | "restart" | "ask";
   label: string;
+  text?: string;
 };
 
 export type Citation = { source: string; topic: string; page: string | null; label: string };
@@ -76,7 +77,7 @@ export type ServerMessage =
   | { type: "hospitals"; text: string; hospitals: Hospital[]; need: string | null }
   | { type: "needs_location"; text: string }
   | { type: "report"; text: string; incident_id: string; report: HandoverReport; markdown: string }
-  | { type: "hospital_prompt"; text: string; maps_url: string; hospital: { name: string; distance_km: number } | null };
+  | { type: "hospital_prompt"; text: string; maps_url: string; condition?: string | null; hospital: { name: string; distance_km: number; tier?: string } | null };
 
 export type ScenarioInfo = {
   condition: string;

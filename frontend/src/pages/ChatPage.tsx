@@ -49,8 +49,10 @@ function Chat() {
     ctx.current = opts; void chat.send(text, opts);
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [chat]);
-  const onAction = useCallback((a: QuickReply["action"]) => { void chat.act(a); }, [chat]);
-
+  const onAction = useCallback((a: QuickReply["action"], text?: string) => {
+    if (a === "ask") { void chat.send(text ?? "", ctx.current); return; } // a suggested reply is sent as the person's message
+    void chat.act(a);
+  }, [chat]);
   const hf = useHandsFree({
     onText: async (t) => { const r = await chat.send(t, ctx.current); return r ? spokenText(r.messages) : null; },
     onAction: async (a) => { const r = await chat.act(a); return r ? spokenText(r.messages) : null; },

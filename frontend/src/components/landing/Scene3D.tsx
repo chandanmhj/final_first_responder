@@ -70,6 +70,7 @@ export default function Scene3D() {
 
     // heart
     const geo = new THREE.ExtrudeGeometry(heartShape(), { depth: 0.28, bevelEnabled: true, bevelThickness: 0.16, bevelSize: 0.14, bevelSegments: 10, curveSegments: 56 });
+    geo.rotateZ(Math.PI); // the shape's point faces up, so flip it
     geo.center();
     const heartMat = new THREE.MeshPhysicalMaterial({ color: RED, roughness: 0.22, metalness: 0.15, clearcoat: 1, clearcoatRoughness: 0.12, emissive: 0x8a1015, emissiveIntensity: 0.4 });
     const heart = new THREE.Mesh(geo, heartMat);

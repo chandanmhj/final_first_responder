@@ -2,6 +2,10 @@
   base = "frontend"
   command = "npm run build"
   publish = "dist"
+
+[build.environment]
+  SECRETS_SCAN_OMIT_KEYS = "VITE_HCAPTCHA_SITE_KEY,VITE_SUPABASE_ANON_KEY,VITE_SUPABASE_URL,VITE_API_BASE_URL"
+
 [[redirects]]
   from = "/*"
   to = "/index.html"

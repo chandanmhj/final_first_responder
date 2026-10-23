@@ -1,0 +1,6 @@
+frontend
+evaluation
+docs
+**/__pycache__
+**/tests
+.git

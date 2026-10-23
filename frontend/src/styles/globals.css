@@ -45,3 +45,27 @@
     @apply outline-2 outline-offset-2 outline-brand-500;
   }
 }
+
+/* ---- Landing page motion ---- */
+@keyframes fr-rise { to { opacity: 1; transform: none; } }
+@keyframes fr-float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-12px); } }
+@keyframes fr-ecg { from { stroke-dashoffset: 1; } to { stroke-dashoffset: 0; } }
+@keyframes fr-shimmer { to { background-position: 200% center; } }
+@keyframes fr-pulse { 0% { box-shadow: 0 0 0 0 rgb(59 115 240 / 0.55); } 70% { box-shadow: 0 0 0 18px rgb(59 115 240 / 0); } 100% { box-shadow: 0 0 0 0 rgb(59 115 240 / 0); } }
+@keyframes fr-scroll { 0% { transform: translateY(0); opacity: 1; } 100% { transform: translateY(14px); opacity: 0; } }
+
+.fr-word { display: inline-block; opacity: 0; transform: translateY(0.7em) rotateX(-55deg); transform-origin: 50% 100%; animation: fr-rise 0.9s cubic-bezier(0.2, 0.7, 0.2, 1) forwards; }
+.fr-fade { opacity: 0; transform: translateY(16px); animation: fr-rise 0.9s cubic-bezier(0.2, 0.7, 0.2, 1) forwards; }
+.fr-gradient-text { background: linear-gradient(90deg, #fff, #9db8ff, #ff8a8c, #fff); background-size: 200% auto; -webkit-background-clip: text; background-clip: text; color: transparent; animation: fr-shimmer 7s linear infinite; }
+.fr-ecg-path { stroke-dasharray: 0.28 0.72; animation: fr-ecg 2.4s linear infinite; }
+.fr-glow-btn { animation: fr-pulse 2.6s infinite; }
+.fr-float { animation: fr-float 6s ease-in-out infinite; }
+.fr-scroll-dot { animation: fr-scroll 1.6s ease-in-out infinite; }
+.fr-reveal { opacity: 0; transform: translateY(30px) scale(0.98); transition: opacity 0.8s cubic-bezier(0.2, 0.7, 0.2, 1), transform 0.8s cubic-bezier(0.2, 0.7, 0.2, 1); transition-delay: var(--d, 0ms); }
+.fr-reveal.is-in { opacity: 1; transform: none; }
+.fr-spot { background-image: radial-gradient(320px circle at var(--mx, 50%) var(--my, 50%), rgb(59 115 240 / 0.14), transparent 60%); }
+
+@media (prefers-reduced-motion: reduce) {
+  .fr-word, .fr-fade, .fr-reveal { animation: none; opacity: 1; transform: none; transition: none; }
+  .fr-gradient-text, .fr-ecg-path, .fr-glow-btn, .fr-float, .fr-scroll-dot { animation: none; }
+}

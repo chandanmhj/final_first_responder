@@ -6,6 +6,7 @@ let counter = 0;
 const nid = () => `i${Date.now()}_${counter++}`;
 
 type Opts = { forSelf?: boolean; ageBand?: string; image?: File | null };
+type Prompt = Extract<ServerMessage, { type: "hospital_prompt" }>;
 
 function toItems(res: { messages: ServerMessage[] }): ChatItem[] {
   return res.messages.map((m) => ({ id: nid(), from: "assistant" as const, message: m }));
@@ -21,9 +22,18 @@ export function useChat(initialSessionId: string | null) {
   const [sending, setSending] = useState(false);
   const [loading, setLoading] = useState(!!initialSessionId);
   const [error, setError] = useState<string | null>(null);
+  const [ended, setEnded] = useState(false);
+  const [prompt, setPrompt] = useState<Prompt | null>(null);
   const coords = useRef<{ lat: number; lon: number } | null>(null);
+  const coordsP = useRef<Promise<void> | null>(null);
   const sessionRef = useRef<string | null>(initialSessionId);
   const countRef = useRef(0);
+
+  useEffect(() => {
+    coordsP.current = getCoords(6000).then((c) => {
+      coords.current = c;
+    }); // live location up front
+  }, []);
 
   useEffect(() => {
     countRef.current = items.length;
@@ -55,6 +65,7 @@ export function useChat(initialSessionId: string | null) {
           setScenario({ condition: st.condition, title: r.session.title, location: st.location ?? null, index: st.index ?? 0, total: st.steps?.length ?? 0, status: st.status ?? "idle" });
         }
         setIncidentId(st.incident_id ?? null);
+        setEnded(st.status === "ended");
       })
       .catch((e: unknown) => alive && setError(e instanceof Error ? e.message : "Could not load this conversation."))
       .finally(() => alive && setLoading(false));
@@ -68,6 +79,7 @@ export function useChat(initialSessionId: string | null) {
       setSending(true);
       setError(null);
       if (userBubble) setItems((prev) => [...prev, userBubble]);
+      if (!coords.current && coordsP.current) await coordsP.current;
       const form = new FormData();
       for (const [k, v] of Object.entries(fields)) if (v !== undefined && v !== "") form.append(k, v);
       if (sessionRef.current) form.append("session_id", sessionRef.current);
@@ -83,6 +95,9 @@ export function useChat(initialSessionId: string | null) {
         setScenario(res.scenario);
         setIncidentId(res.incident_id);
         setUrgent(res.urgent);
+        setEnded(!!res.ended);
+        const hp = res.messages.find((m) => m.type === "hospital_prompt");
+        if (hp && hp.type === "hospital_prompt") setPrompt(hp);
         setItems((prev) => [...prev, ...toItems(res)]);
         return res;
       } catch (e) {
@@ -117,14 +132,14 @@ export function useChat(initialSessionId: string | null) {
     [run],
   );
 
-  return { sessionId, items, scenario, incidentId, urgent, sending, loading, error, send, act };
+  return { sessionId, items, scenario, incidentId, urgent, sending, loading, error, send, act, ended, prompt, dismissPrompt: () => setPrompt(null) };
 }
 
 /** Plain text read aloud in hands-free mode for a set of server messages. */
 export function spokenText(messages: ServerMessage[]): string {
   const parts: string[] = [];
   for (const m of messages) {
-    if (m.type === "text" || m.type === "needs_location" || m.type === "report") parts.push(m.text);
+    if (m.type === "text" || m.type === "needs_location" || m.type === "report" || m.type === "hospital_prompt") parts.push(m.text);
     else if (m.type === "step") parts.push(`Step ${m.step.index + 1} of ${m.step.total}. ${m.step.text} Say next when you are done, or say it didn't work.`);
     else if (m.type === "animal") parts.push([m.result.headline, ...m.result.advice].join(" "));
     else if (m.type === "hospitals") {

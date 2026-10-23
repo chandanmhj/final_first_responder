@@ -46,7 +46,7 @@ const json = (body: unknown): RequestInit => ({ method: "POST", headers: { "Cont
 export const api = {
   health: () => apiFetch<{ status: string }>("/health"),
   getMe: () => apiFetch<Profile>("/api/me"),
-  putMe: (body: { full_name?: string; role?: Role; cert_number?: string; attested?: boolean }) =>
+  putMe: (body: { full_name?: string; role?: Role; cert_number?: string; attested?: boolean; age?: number; sex?: string; blood_group?: string; allergies?: string; conditions?: string; medications?: string; emergency_contact?: string }) =>
     apiFetch<Profile>("/api/me", { ...json(body), method: "PUT" }),
   listSessions: () => apiFetch<SessionSummary[]>("/api/sessions"),
   getMessages: (id: string) =>
@@ -55,6 +55,7 @@ export const api = {
     ),
   deleteSession: (id: string) => apiFetch<{ ok: boolean }>(`/api/sessions/${id}`, { method: "DELETE" }),
   renameSession: (id: string, title: string) => apiFetch<{ ok: boolean }>(`/api/sessions/${id}`, { ...json({ title }), method: "PATCH" }),
+  pinSession: (id: string, pinned: boolean) => apiFetch<{ ok: boolean }>(`/api/sessions/${id}`, { ...json({ pinned }), method: "PATCH" }),
   chat: (form: FormData) => apiFetch<ChatResponse>("/api/chat", { method: "POST", body: form }),
   transcribe: (wav: Blob) => {
     const f = new FormData();

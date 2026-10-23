@@ -13,7 +13,8 @@ from .services.rag.generation import GroqClient
 from .services.rag.pipeline import RagPipeline
 from .services.rag.retrieval import build_retriever
 from .services.scenarios.loader import ScenarioStore
-
+from .services.rag.reranking import CrossEncoderReranker
+from .db.repositories import MemoryRepository, RetryingRepository, SupabaseRepository, make_supabase_client
 
 @dataclass
 class Services:
@@ -38,7 +39,7 @@ def build_services(settings: Settings, repo=None, llm: GroqClient | None = None)
     if repo is None:
         if settings.supabase_ready:
             client = make_supabase_client(settings.supabase_url, settings.supabase_service_role_key)
-            repo = SupabaseRepository(client)
+            repo = RetryingRepository(SupabaseRepository(client))
         else:
             repo = MemoryRepository()
     elif settings.supabase_ready:
@@ -46,7 +47,8 @@ def build_services(settings: Settings, repo=None, llm: GroqClient | None = None)
     llm = llm or GroqClient(settings)
     embedder = get_embedder(settings)
     retriever = build_retriever(settings, embedder, client)
-    rag = RagPipeline(retriever, llm, settings.retrieval_top_k, settings.abstain_min_overlap)
+    reranker = CrossEncoderReranker(settings.rerank_model) if settings.rerank_provider == "cross_encoder" and settings.embedding_provider != "hash" else None
+    rag = RagPipeline(retriever, llm, settings.retrieval_top_k, settings.abstain_min_overlap, reranker, settings.rerank_pool)
     hospitals = HospitalIndex(settings.data_dir)
     media = StepMediaResolver(settings.media_manifest, settings.media_base_url)
     chat = ChatService(settings, store, repo, llm, rag, hospitals, media)

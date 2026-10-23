@@ -9,12 +9,17 @@ def build_report(incident: dict, events: list[dict], condition_title: str | None
     notes = [e["payload"].get("text", "") for e in events if e["event_type"] == "note"]
     key = [e for e in events if e["event_type"] not in ("step_shown",)]
     timeline = [{"time": e["occurred_at"], "text": describe(e), "type": e["event_type"]} for e in key]
+    details = None
+    if profile:
+        keys = ("age", "sex", "blood_group", "allergies", "conditions", "medications", "emergency_contact")
+        details = {k: profile[k] for k in keys if profile.get(k) not in (None, "")} or None
     return {
         "generated_at": now_iso(),
         "identify": {
             "reported_by_role": incident.get("role"), "patient": "the reporter" if incident.get("for_self") else "another person",
             "age_band": incident.get("age_band"), "started_at": incident.get("started_at"),
             "location": incident.get("location_text") or incident.get("location"),
+            "patient_details": details,
         },
         "situation": {"what_happened": condition_title or "Unknown emergency", "scenario": incident.get("condition")},
         "background": {"notes": notes},
@@ -26,10 +31,12 @@ def build_report(incident: dict, events: list[dict], condition_title: str | None
 def to_markdown(report: dict) -> str:
     """Plain-text version for copying or printing."""
     i, s = report["identify"], report["situation"]
+    extra = [f"- {k.replace('_', ' ').title()}: {v}" for k, v in (i.get("patient_details") or {}).items()]
     lines = [
         "# Handover report (ISBAR)", "",
         f"Generated: {report['generated_at']}", "",
         "## I: Identify", f"- Reported by: {i['reported_by_role']}", f"- Patient: {i['patient']}, age group {i['age_band'] or 'unknown'}",
+        *extra,
         f"- Started: {i['started_at']}", f"- Location: {i['location'] or 'not recorded'}", "",
         "## S: Situation", f"- {s['what_happened']}", "",
         "## B: Background"] + ([f"- {n}" for n in report["background"]["notes"]] or ["- None recorded"]) + ["", "## A: Assessment and actions (timeline)"]

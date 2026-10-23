@@ -9,7 +9,7 @@ from .loader import ScenarioStore
 # (condition id, keywords). More specific entries come first and score higher.
 KEYWORDS: list[tuple[str, list[str]]] = [
     ("road_not_breathing_bike", ["bike", "scooter", "motorcycle", "helmet"]),  # combined with 'not breathing' below
-    ("cardiac_arrest_adult", ["not breathing", "stopped breathing", "no pulse", "cardiac arrest", "collapsed", "unresponsive", "unconscious", "not responding", "heart stopped"]),
+    ("cardiac_arrest_adult", ["not breathing", "stopped breathing", "no pulse", "cardiac arrest", "collapsed", "unresponsive", "unconscious", "not responding", "not responsive", "lost consciousness", "lost consiousness", "lost conciousness", "heart stopped"]),
     ("heart_attack", ["heart attack", "chest pain", "chest tightness", "chest pressure", "pain in chest", "left arm pain"]),
     ("stroke", ["stroke", "face drooping", "slurred speech", "face is drooping", "arm weakness", "can't lift arm", "one side weak"]),
     ("choking_adult_child", ["choking", "choked", "something stuck in throat", "food stuck", "can't breathe and can't talk"]),
@@ -22,7 +22,7 @@ KEYWORDS: list[tuple[str, list[str]]] = [
     ("anaphylaxis", ["allergic reaction", "anaphylaxis", "throat swelling", "face swelling", "swollen lips", "allergy"]),
     ("asthma_attack", ["asthma", "wheezing", "inhaler"]),
     ("breathing_difficulty", ["difficulty breathing", "can't breathe", "short of breath", "breathless", "hard to breathe"]),
-    ("seizure", ["seizure", "convulsion", "fit ", "fitting", "epilepsy", "shaking all over"]),
+    ("seizure", ["seizure", "convulsion", "fit", "fitting", "epilepsy", "shaking all over"]),
     ("low_blood_sugar", ["low sugar", "low blood sugar", "hypoglycemia", "hypoglycaemia", "diabetic and confused"]),
     ("high_blood_sugar", ["high sugar", "high blood sugar", "hyperglycemia"]),
     ("fainting", ["fainted", "feeling faint", "dizzy and about to pass out", "passed out"]),
@@ -63,6 +63,15 @@ LOCATION_CUES = [
     ("public_place", ["mall", "street", "market", "public", "park", "temple", "station"]),
 ]
 
+_STEMS = {"burn", "amputat"}  # may be followed by more letters (burns, burning)
+
+
+def _has(t: str, w: str) -> bool:
+    """Whole-word match, so 'pond' does not match 'responding' and 'sea' does not match 'search'."""
+    w = w.strip()
+    tail = "" if (w in _STEMS or " " in w or len(w) > 6) else r"(?![a-z])"
+    return re.search(r"(?<![a-z])" + re.escape(w) + tail, t) is not None
+
 
 @dataclass
 class Route:
@@ -82,27 +91,27 @@ def rule_based_match(text: str, store: ScenarioStore) -> Route:
     for cid, words in KEYWORDS:
         if cid not in store.conditions:
             continue
-        hits = [w for w in words if w in t]
+        hits = [w for w in words if _has(t, w)]
         if hits:
             score = max(len(w.split()) for w in hits) + 0.5 * len(hits)
             if score > best_score:
                 best, best_score = cid, score
     # not breathing after a road accident
-    breathing_stopped = any(w in t for w in ("not breathing", "stopped breathing", "unresponsive", "unconscious", "no pulse"))
-    road = any(w in t for w in ("accident", "crash", "hit by", "fell off"))
+    breathing_stopped = any(_has(t, w) for w in ("not breathing", "stopped breathing", "unresponsive", "unconscious", "no pulse"))
+    road = any(_has(t, w) for w in ("accident", "crash", "hit by", "fell off"))
     if breathing_stopped and road:
-        bike = any(w in t for w in ("bike", "scooter", "motorcycle", "helmet"))
+        bike = any(_has(t, w) for w in ("bike", "scooter", "motorcycle", "helmet"))
         best = "road_not_breathing_bike" if bike else "road_not_breathing_car"
         best_score = max(best_score, 4)
     elif best == "road_not_breathing_bike" and not breathing_stopped:
         best = "road_bike_helmet"
-    if best == "cardiac_arrest_adult" and any(w in t for w in ("water", "pool", "river", "lake", "sea ", "pond", "drown")):
+    if best == "cardiac_arrest_adult" and any(_has(t, w) for w in ("water", "pool", "river", "lake", "sea", "pond", "drown")):
         best, best_score = "drowning", max(best_score, 3)
     if not best:
         return Route("unclear")
     loc = None
     for lid, cues in LOCATION_CUES:
-        if any(c in t for c in cues):
+        if any(_has(t, c) for c in cues):
             loc = lid
             break
     if best.startswith(("road_", "fall_or", "railway")) and loc not in (None, "road_accident_scene", "railway", "workplace_industrial", "home", "public_place", "outdoors"):

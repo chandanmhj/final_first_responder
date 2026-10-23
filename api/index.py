@@ -1,14 +1,16 @@
-"""Vercel entry point: exposes the FastAPI app from backend/app."""
+"""Vercel entry point (v2): exposes the FastAPI app from backend/app."""
 import os
 import sys
 
 _here = os.path.dirname(os.path.abspath(__file__))
-for _base in (_here, os.path.dirname(_here)):  # works whether Vercel runs this as /index.py or /api/index.py
-    _backend = os.path.join(_base, "backend")
-    if os.path.isdir(_backend):
-        sys.path.insert(0, _backend)
+_found = None
+for _root in (_here, os.path.dirname(_here), "/var/task"):
+    _cand = os.path.join(_root, "backend")
+    if os.path.isfile(os.path.join(_cand, "app", "main.py")):
+        _found = _cand
         break
-else:
-    raise RuntimeError(f"backend folder not found. Looked in {_here} (contents: {sorted(os.listdir(_here))[:30]})")
+if _found is None:
+    raise RuntimeError(f"ENTRY V2: backend/app/main.py not found. Looked in {_here}; files there: {sorted(os.listdir(_here))[:30]}")
+sys.path.insert(0, _found)
 
 from app.main import app  # noqa: E402,F401

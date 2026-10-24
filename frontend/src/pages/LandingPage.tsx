@@ -5,12 +5,13 @@ import { Hero } from "../components/landing/Hero";
 import { HowItWorks } from "../components/landing/HowItWorks";
 import { Navbar } from "../components/landing/Navbar";
 import { Safety } from "../components/landing/Safety";
+import { StickyCta } from "../components/landing/StickyCta";
 import { Scenarios } from "../components/landing/Scenarios";
 import { VoiceMode } from "../components/landing/VoiceMode";
 
 export default function LandingPage() {
   return (
-    <div className="bg-white">
+    <div className="bg-white pb-24 md:pb-0">
       <Navbar />
       <Hero />
       <HowItWorks />
@@ -20,6 +21,7 @@ export default function LandingPage() {
       <Safety />
       <Faq />
       <Footer />
+      <StickyCta />
     </div>
   );
 }

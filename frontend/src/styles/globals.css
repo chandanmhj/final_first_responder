@@ -69,3 +69,8 @@
   .fr-word, .fr-fade, .fr-reveal { animation: none; opacity: 1; transform: none; transition: none; }
   .fr-gradient-text, .fr-ecg-path, .fr-glow-btn, .fr-float, .fr-scroll-dot { animation: none; }
 }
+
+
+/* ---- Mobile-first landing helpers ---- */
+.no-scrollbar { scrollbar-width: none; }
+.no-scrollbar::-webkit-scrollbar { display: none; }

@@ -1,4 +1,3 @@
-import type { MouseEvent } from "react";
 import { Reveal } from "./Reveal";
 
 const items = [
@@ -10,34 +9,24 @@ const items = [
   ["Simple or clinical wording", "Plain words for everyone. Clinical terms for certified first responders."],
 ];
 
-/** Card with a light that follows the pointer and a slight 3D tilt. */
-function SpotCard({ title, text }: { title: string; text: string }) {
-  const move = (e: MouseEvent<HTMLDivElement>) => {
-    const el = e.currentTarget;
-    const r = el.getBoundingClientRect();
-    const x = (e.clientX - r.left) / r.width;
-    const y = (e.clientY - r.top) / r.height;
-    el.style.setProperty("--mx", `${x * 100}%`);
-    el.style.setProperty("--my", `${y * 100}%`);
-    el.style.transform = `perspective(800px) rotateY(${(x - 0.5) * 8}deg) rotateX(${(0.5 - y) * 8}deg) translateY(-4px)`;
-  };
-  const leave = (e: MouseEvent<HTMLDivElement>) => { e.currentTarget.style.transform = ""; };
-  return (
-    <div onMouseMove={move} onMouseLeave={leave} className="fr-spot h-full rounded-2xl border border-ink-100 bg-white p-6 shadow-soft transition-[transform,box-shadow] duration-200 ease-out hover:shadow-lift">
-      <span className="mb-3 block h-1 w-8 rounded-full bg-gradient-to-r from-brand-500 to-emergency-500" />
-      <h3 className="font-display text-lg font-bold text-ink-950">{title}</h3>
-      <p className="mt-2 text-sm text-ink-500">{text}</p>
-    </div>
-  );
-}
-
+/** Swipeable cards on phones, a grid on wide screens. */
 export function Features() {
   return (
-    <section id="features" className="bg-ink-50 py-24">
-      <div className="mx-auto max-w-6xl px-5">
-        <Reveal><h2 className="text-3xl font-bold text-ink-950 sm:text-4xl">Built for the worst minutes of someone's day</h2></Reveal>
-        <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {items.map(([t, d], i) => <Reveal key={t} delay={(i % 3) * 120 + Math.floor(i / 3) * 80}><SpotCard title={t} text={d} /></Reveal>)}
+    <section id="features" className="bg-ink-50 py-16 sm:py-24">
+      <div className="mx-auto max-w-6xl">
+        <Reveal><h2 className="px-6 text-3xl font-bold text-ink-950 sm:text-4xl">Built for the worst minutes of someone's day</h2></Reveal>
+        <div className="no-scrollbar mt-8 flex snap-x snap-mandatory gap-4 overflow-x-auto px-6 pb-4 md:grid md:grid-cols-2 md:overflow-visible md:pb-0 lg:grid-cols-3">
+          {items.map(([t, d], i) => (
+            <div key={t} className="w-[78%] shrink-0 snap-center sm:w-[60%] md:w-auto">
+              <Reveal delay={i * 80} className="h-full">
+                <div className="h-full rounded-3xl border border-ink-100 bg-white p-6 shadow-soft transition duration-300 lg:hover:-translate-y-1 lg:hover:shadow-lift">
+                  <span className="mb-4 block h-1 w-10 rounded-full bg-gradient-to-r from-brand-500 to-emergency-500" />
+                  <h3 className="font-display text-lg font-bold text-ink-950">{t}</h3>
+                  <p className="mt-2 text-sm text-ink-500">{d}</p>
+                </div>
+              </Reveal>
+            </div>
+          ))}
         </div>
       </div>
     </section>

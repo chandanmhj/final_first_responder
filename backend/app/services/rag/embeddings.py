@@ -1,10 +1,25 @@
 """Text embeddings. The default provider runs a small ONNX model locally (fastembed)."""
 import hashlib
 import re
+import shutil
+import tempfile
+from pathlib import Path
 
 import numpy as np
 
 from ...config import Settings
+
+BUNDLED_MODELS = Path(__file__).resolve().parents[3] / "model_cache"  # backend/model_cache, committed to the repo
+
+
+def _model_cache() -> str | None:
+    """Use the model files shipped in the repo (copied to a writable temp folder) so serverless starts need no download."""
+    if not BUNDLED_MODELS.is_dir():
+        return None
+    dst = Path(tempfile.gettempdir()) / "fastembed_cache"
+    if not dst.exists():
+        shutil.copytree(BUNDLED_MODELS, dst)
+    return str(dst)
 
 
 class EmbeddingProvider:
@@ -42,7 +57,9 @@ class FastEmbedProvider(EmbeddingProvider):
         if self._model is None:
             from fastembed import TextEmbedding  # imported lazily: heavy
 
-            self._model = TextEmbedding(model_name=self.model_name)
+            cache = _model_cache()
+            extra = {"cache_dir": cache, "local_files_only": True} if cache else {}
+            self._model = TextEmbedding(model_name=self.model_name, **extra)
         return self._model
 
     def embed(self, texts: list[str]) -> np.ndarray:

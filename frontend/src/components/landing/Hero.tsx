@@ -26,7 +26,7 @@ export function Hero() {
           <p className="fr-fade mt-4 text-base text-ink-300 sm:text-lg" style={{ animationDelay: "0.8s" }}>
             Tell it what happened or send a photo. Get one clear step at a time, by text or voice.
             <br />
-              An initiative by Dhanyatha and Team under the guidance under the guidence of Vishwanath Rajput
+              An initiative by Dhanyatha and Team under the guidence of Vishwanath Rajput
           </p>
           <div className="fr-fade mt-7 flex flex-col gap-3 sm:flex-row" style={{ animationDelay: "0.95s" }}>
             <Link to="/role?next=/signup" className="fr-glow-btn inline-flex h-14 items-center justify-center rounded-2xl bg-brand-600 px-8 text-base font-semibold text-white active:scale-[0.98] lg:hover:bg-brand-500">Get started free</Link>

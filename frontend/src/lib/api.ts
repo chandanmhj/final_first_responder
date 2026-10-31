@@ -44,9 +44,10 @@ export async function apiFetch<T>(path: string, init: RequestInit = {}): Promise
 const json = (body: unknown): RequestInit => ({ method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(body) });
 
 export const api = {
+  enRoute: (id: string) => apiFetch<{ sent: boolean; eta_min?: number; hospital?: string }>(`/api/incidents/${id}/en-route`, { method: "POST" }),
   health: () => apiFetch<{ status: string }>("/health"),
   getMe: () => apiFetch<Profile>("/api/me"),
-  putMe: (body: { full_name?: string; role?: Role; cert_number?: string; attested?: boolean; age?: number; sex?: string; blood_group?: string; allergies?: string; conditions?: string; medications?: string; emergency_contact?: string }) =>
+  putMe: (body: { full_name?: string; role?: Role; cert_number?: string; attested?: boolean; age?: number; sex?: string; blood_group?: string; allergies?: string; conditions?: string; medications?: string; emergency_contact?: string; emergency_telegram_ids?: string; }) =>
     apiFetch<Profile>("/api/me", { ...json(body), method: "PUT" }),
   listSessions: () => apiFetch<SessionSummary[]>("/api/sessions"),
   getMessages: (id: string) =>

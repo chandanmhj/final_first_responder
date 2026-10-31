@@ -53,6 +53,14 @@ class GroqClient:
         ]}]
         text = self.chat(messages, model=self.s.vision_model, temperature=0.0, max_tokens=max_tokens)
         return parse_json_object(text)
+    
+    def vision_json_multi(self, images: list[tuple[bytes, str]], prompt: str, max_tokens: int = 500) -> dict:
+        """Ask the vision model about several images (for example frames of a video) and return a JSON object."""
+        parts = [{"type": "text", "text": prompt}]
+        for data, mime in images:
+            parts.append({"type": "image_url", "image_url": {"url": f"data:{mime};base64,{base64.b64encode(data).decode()}"}})
+        text = self.chat([{"role": "user", "content": parts}], model=self.s.vision_model, temperature=0.0, max_tokens=max_tokens)
+        return parse_json_object(text)
 
     def transcribe(self, audio: bytes, filename: str, content_type: str) -> str:
         """Speech to text with Whisper on Groq."""

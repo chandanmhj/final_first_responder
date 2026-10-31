@@ -61,7 +61,7 @@ export function ChatInput({ onSend, disabled, showContext, onHandsFree, handsFre
         </div>
       )}
       <div className="mx-auto flex max-w-3xl items-end gap-2">
-        <input ref={file} type="file" accept="image/jpeg,image/png,image/webp" capture="environment" hidden onChange={(e) => setImage(e.target.files?.[0] ?? null)} />
+        <input ref={file} type="file" accept="image/jpeg,image/png,image/webp,video/mp4,video/webm,video/quicktime" hidden onChange={(e) => setImage(e.target.files?.[0] ?? null)} />
         <button type="button" onClick={() => file.current?.click()} aria-label="Attach a photo" className="grid size-11 shrink-0 place-items-center rounded-xl border border-ink-200 bg-white text-ink-700 hover:bg-ink-50">
           <svg viewBox="0 0 24 24" className="size-5" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M4 8h3l2-3h6l2 3h3v11H4z" /><circle cx="12" cy="13" r="3.5" /></svg>
         </button>

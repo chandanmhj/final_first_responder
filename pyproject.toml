@@ -13,4 +13,6 @@ dependencies = [
   "rank-bm25>=0.2.2",
   "supabase>=2.5",
   "fastembed>=0.4.0",
+  "av>=12",
+  "pillow>=10",
 ]

@@ -4,7 +4,7 @@ from pydantic import BaseModel, Field
 
 class ProfileUpdate(BaseModel):
     """Fields a user may change on their own profile."""
-
+    emergency_telegram_ids: str | None = Field(default=None, max_length=200)
     full_name: str | None = Field(default=None, max_length=120)
     role: str | None = Field(default=None, pattern="^(common|responder)$")
     cert_number: str | None = Field(default=None, max_length=60)

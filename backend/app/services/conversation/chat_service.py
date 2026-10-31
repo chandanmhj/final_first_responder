@@ -5,7 +5,9 @@ using the whole chat and a summary of what has already happened (steps done, thi
 """
 import re
 from dataclasses import dataclass
-
+import logging
+import os
+from datetime import datetime, timedelta, timezone
 from ...config import Settings
 from ..handover.isbar_report import build_report, to_markdown
 from ..handover.timeline import now_iso
@@ -16,7 +18,8 @@ from ..safety import disclaimers, emergency_triage, guardrails
 from ..scenarios import scenario_router
 from ..scenarios.composer import compose, valid_location
 from ..scenarios.loader import ScenarioStore
-from ..vision import animal_identification, image_understanding
+from .. import notify
+from ..vision import animal_identification, image_understanding, video_frames
 from . import quick_replies, smalltalk
 from .roles import adjust_condition, band_protocol, infer_age_band
 from .step_manager import ScenarioState
@@ -136,8 +139,77 @@ class ChatService:
         msgs = [{"type": "text", "text": head}]
         if cond.note:
             msgs[0]["text"] += f"\n\nNote: {cond.note}"
-        return msgs + [self._hospital_prompt(state, req), self._step_msg(state)]
+            prompt = self._hospital_prompt(state, req)
+        if prompt["hospital"]:  # remembered so "I'm going there" can alert that hospital later
+            self._event(user_id, state, "hospital_selected", {"text": f"Suggested hospital: {prompt['hospital']['name']} ({prompt['hospital']['distance_km']} km)", **prompt["hospital"]})
+        if for_self:
+            self._alert_contacts(user_id, state, cond.title, req)
+        return msgs + [prompt, self._step_msg(state)]
 
+    # ------------------------------------------------------------------ Telegram alerts
+    def _alert_contacts(self, user_id, state: ScenarioState, title: str, req: ChatRequest) -> None:
+        """Only when the emergency is for the user themselves: tell their emergency contacts on Telegram."""
+        profile = self.repo.get_profile(user_id) or {}
+        ids = notify.parse_ids(profile.get("emergency_telegram_ids"))
+        if not ids:
+            return
+        lat, lon = req.lat or state.lat, req.lon or state.lon
+        where = f"\nLocation: https://www.google.com/maps?q={lat},{lon}" if lat is not None and lon is not None else ""
+        when = datetime.now(timezone(timedelta(hours=5, minutes=30))).strftime("%H:%M IST")
+        msg = (f"EMERGENCY ALERT\n{profile.get('full_name') or 'Someone you know'} has started a first-aid emergency on First Responder: {title}."
+               f"{where}\nTime: {when}\nPlease call them now. In a life-threatening emergency, call 108.")
+        sent = sum(1 for i in ids if notify.send_telegram(i, msg))
+        if sent:
+            self._event(user_id, state, "note", {"text": f"Emergency contacts alerted on Telegram ({sent})"})
+
+    def notify_hospital(self, user_id: str, incident_id: str) -> dict:
+        """Demo: one Telegram chat stands in for every hospital. Tells it who is coming, why, and when (from distance only)."""
+        inc = self.repo.get_incident(user_id, incident_id)
+        if not inc:
+            return {"sent": False}
+        events = self.repo.list_events(user_id, incident_id)
+        if any(e["event_type"] == "hospital_notified" for e in events):
+            return {"sent": False, "already": True}
+        chosen = [e for e in events if e["event_type"] == "hospital_selected"]
+        chat = os.getenv("TELEGRAM_HOSPITAL_CHAT_ID")
+        if not chosen or not chat:
+            return {"sent": False}
+        h = chosen[-1]["payload"]
+        cond = self.store.conditions.get(inc["condition"])
+        profile = (self.repo.get_profile(user_id) or {}) if inc.get("for_self") else {}  # personal details only when the emergency is "for me"
+        age = f"{profile['age']} years" if profile.get("age") else (f"age group {inc['age_band']}" if inc.get("age_band") else "age unknown")
+        extra = "".join(f"\n{label}: {profile[k]}" for k, label in (("sex", "Sex"), ("allergies", "Allergies")) if profile.get(k))
+        eta = notify.eta_minutes(h.get("distance_km", 0))
+        msg = (f"INCOMING PATIENT\nA patient ({age}) is coming to {h.get('name', 'your hospital')}.\nEmergency: {cond.title if cond else inc['condition']}"
+               f"{extra}\nExpected arrival: about {eta} min (distance {h.get('distance_km')} km).\nReported through First Responder. Please prepare.")
+        ok = notify.send_telegram(chat, msg, token=os.getenv("TELEGRAM_HOSPITAL_BOT_TOKEN") or None,
+                                  reply_markup={"inline_keyboard": [[{"text": "Acknowledge patient", "callback_data": "ack"}]]})
+        if ok:
+            self.repo.add_event(user_id, incident_id, "hospital_notified", {"text": f"Hospital alerted: {h.get('name')}, arrival in about {eta} min"})
+        return {"sent": ok, "eta_min": eta, "hospital": h.get("name")}
+
+    def notify_hospital_for_session(self, user_id: str, session_id: str | None) -> dict:
+        session = self.repo.get_session(user_id, session_id) if session_id else None
+        incident_id = ((session or {}).get("state") or {}).get("incident_id")
+        return self.notify_hospital(user_id, incident_id) if incident_id else {"sent": False}
+
+    # ------------------------------------------------------------------ video
+    def _handle_video(self, user_id, session, state, req, role, video, text, age_band, protocol, for_self, history) -> list[dict]:
+        frames = video_frames.extract_frames(video[0])
+        if not frames:
+            return [{"type": "text", "text": "I could not read that video. Please send a short MP4 clip, or describe what is happening."}]
+        desc = video_frames.describe(self.llm, frames, text)
+        head = [{"type": "text", "text": f"From the video: {desc}"}] if desc else []
+        combined = f"{text} {desc}".strip()
+        if state.incident_id:  # one emergency per chat: the video is new information about it
+            if desc:
+                self._event(user_id, state, "note", {"text": f"Video shows: {desc}"})
+            return head + self._answer_question(user_id, combined or "What should I do now?", state, history)
+        route = scenario_router.rule_based_match(combined, self.store)
+        if route.kind == "emergency":
+            return head + self._start(user_id, session, state, route.condition, route.location, role, for_self, age_band, protocol, None,
+                                      emergency_triage.is_urgent(combined), req)
+        return head + [{"type": "text", "text": "Tell me what happened and who is hurt, so I can guide you."}]
     # ------------------------------------------------------------------ actions
     def _next(self, user_id, state: ScenarioState) -> list[dict]:
         if not state.active:
@@ -303,6 +375,8 @@ class ChatService:
             msgs = [{"type": "text", "text": "Okay. Tell me what is happening and I'll guide you."}]
         elif guardrails.is_crisis(text):
             msgs = [{"type": "text", "text": guardrails.CRISIS_REPLY, "crisis": True}]
+        elif image and (image[1] or "").startswith("video/"):
+            msgs = self._handle_video(user_id, session, state, req, role, image, text, age_band, protocol, for_self, history)
         elif image:
             msgs = self._handle_image(user_id, session, state, req, role, image, text, age_band, protocol, for_self)
         else:

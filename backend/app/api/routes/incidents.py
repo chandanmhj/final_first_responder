@@ -35,3 +35,11 @@ def handover(incident_id: str, user: AuthUser = Depends(current_user), services:
     if not services.repo.get_incident(user.id, incident_id):
         raise NotFound("Incident not found.")
     return services.chat.build_handover(user.id, incident_id)
+
+
+@router.post("/{incident_id}/en-route")
+def en_route(incident_id: str, user: AuthUser = Depends(current_user), services: Services = Depends(get_services)):
+    """The person is heading to the hospital: alert it (demo, over Telegram) with the arrival time worked out from the distance."""
+    if not services.repo.get_incident(user.id, incident_id):
+        raise NotFound("Incident not found.")
+    return services.chat.notify_hospital(user.id, incident_id)

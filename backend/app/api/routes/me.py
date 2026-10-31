@@ -11,7 +11,7 @@ from ..deps import current_user, get_services
 
 router = APIRouter(prefix="/api")
 
-FIELDS = ("full_name", "role", "cert_number", "attested_at", "age", "sex", "blood_group", "allergies", "conditions", "medications", "emergency_contact")
+FIELDS = ("full_name", "role", "cert_number", "attested_at", "age", "sex", "blood_group", "allergies", "conditions", "medications", "emergency_contact", "emergency_telegram_ids")
 
 
 def _out(user: AuthUser, p: dict) -> dict:

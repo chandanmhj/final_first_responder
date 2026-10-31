@@ -17,7 +17,7 @@ export function MessageBubble({ item, isLastWithActions, busy, onAction }: Props
     return (
       <div className="flex justify-end">
         <div className="max-w-[85%] rounded-2xl rounded-br-md bg-brand-600 px-4 py-3 text-sm text-white shadow-soft">
-          {m.imageUrl && <img src={m.imageUrl} alt="Your photo" className="mb-2 max-h-56 rounded-xl" />}
+          {m.imageUrl && (m.isVideo ? <video src={m.imageUrl} controls muted playsInline className="mb-2 max-h-56 rounded-xl" /> : <img src={m.imageUrl} alt="Your photo" className="mb-2 max-h-56 rounded-xl" />)}
           {m.hasImage && !m.imageUrl && <p className="mb-1 text-xs opacity-80">Photo sent</p>}
           {m.text && <p className="whitespace-pre-wrap">{m.text}</p>}
         </div>

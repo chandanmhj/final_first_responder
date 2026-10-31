@@ -1,4 +1,4 @@
-"""Telegram bot: the same chat as the web app, with buttons, photos and a shared location.
+"""Telegram bot: the same chat as the web app, with buttons, photos, videos and a shared location.
 
 Every Telegram chat keeps its own conversation. All of them run under one Supabase user (TELEGRAM_USER_ID).
 """
@@ -12,7 +12,8 @@ from .conversation.chat_service import ChatRequest
 log = logging.getLogger(__name__)
 API = "https://api.telegram.org"
 _MEM: dict[int, dict] = {}  # used only when there is no Supabase (local development)
-WELCOME = ("Hi, I'm First Responder. Tell me what is happening, or send a photo, and I'll guide you one step at a time.\n\n"
+WELCOME = ("Hi, I'm First Responder. Tell me what is happening, or send a photo or a short video, and I'll guide you one step at a time.\n\n"
+           "Send /myid to see your Telegram ID (needed to be someone's emergency contact).\n\n"
            "Tap the button below to share your location so I can find the right hospital. Send /new to start a fresh chat.\n"
            "In a life-threatening emergency, call 108 now.")
 
@@ -86,7 +87,7 @@ def convert(messages: list[dict], rev: int) -> tuple[list[dict], list[dict]]:
             if m.get("hospital"):
                 h = m["hospital"]
                 text += f"\nBest match: {h['name']} ({h.get('tier') or 'hospital'}, {h['distance_km']} km)"
-            url_buttons = [[{"text": "Navigate to hospital", "url": m["maps_url"]}]]
+            url_buttons = [[{"text": "Open in Google Maps", "url": m["maps_url"]}], [{"text": "I'm going there", "callback_data": f"h:{rev}"}]]
         elif t == "report":
             text = f"{m['text']}\n\n{m.get('markdown', '')}\n\nSend any message to start a new chat."
         rows = list(url_buttons)
@@ -110,20 +111,20 @@ def _send(chat_id: int, items: list[dict]) -> None:
             tg("sendMessage", chat_id=chat_id, text=part, disable_web_page_preview=True, **extra)
 
 
-def _download_photo(file_id: str) -> tuple[bytes, str] | None:
+def _download(file_id: str, mime: str) -> tuple[bytes, str] | None:
     info = tg("getFile", file_id=file_id)
     path = (info.get("result") or {}).get("file_path")
     if not path:
         return None
     try:
         r = httpx.get(f"{API}/file/bot{os.getenv('TELEGRAM_BOT_TOKEN', '')}/{path}", timeout=25)
-        return (r.content, "image/jpeg") if r.status_code == 200 else None
+        return (r.content, mime) if r.status_code == 200 else None
     except Exception:
         return None
 
 
 def handle_update(services, update: dict) -> None:
-    """Process one Telegram update (a message, a photo, a location or a button tap)."""
+    """Process one Telegram update (a message, a photo, a video, a location or a button tap)."""
     user_id = os.getenv("TELEGRAM_USER_ID")
     if not user_id:
         log.error("TELEGRAM_USER_ID is not set")
@@ -143,6 +144,14 @@ def handle_update(services, update: dict) -> None:
     action, text, image = "message", "", None
     if cq:
         tg("answerCallbackQuery", callback_query_id=cq["id"])
+        if (cq.get("data") or "").startswith("h:"):  # "I'm going there": alert the hospital
+            if (cq["data"].split(":") + [""])[1] != str(row.get("rev")):
+                tg("sendMessage", chat_id=chat_id, text="That button has expired. Please use the buttons on the newest message.")
+                return
+            out = services.chat.notify_hospital_for_session(user_id, row.get("session_id"))
+            tg("sendMessage", chat_id=chat_id, text=f"The hospital has been alerted. Expected arrival: about {out['eta_min']} min." if out.get("sent")
+               else "The hospital was already alerted." if out.get("already") else "I could not alert the hospital right now. Please call 108.")
+            return
         try:
             _, rev, idx = (cq.get("data") or "").split(":")
             if int(rev) != row.get("rev"):
@@ -158,15 +167,25 @@ def handle_update(services, update: dict) -> None:
         tg("sendMessage", chat_id=chat_id, text="Location saved. I will use it to pick the right hospital.")
         return
     elif msg.get("photo"):
-        image = _download_photo(msg["photo"][-1]["file_id"])
+        image = _download(msg["photo"][-1]["file_id"], "image/jpeg")
         text = msg.get("caption", "")
         if image is None:
             tg("sendMessage", chat_id=chat_id, text="I could not download that photo. Please try again.")
+            return
+    elif msg.get("video") or msg.get("video_note") or msg.get("animation"):
+        v = msg.get("video") or msg.get("video_note") or msg.get("animation")
+        image = _download(v["file_id"], "video/mp4")
+        text = msg.get("caption", "")
+        if image is None:
+            tg("sendMessage", chat_id=chat_id, text="I could not download that video. Telegram only lets bots read videos up to 20 MB, so please send a shorter clip.")
             return
     elif msg.get("text"):
         text = msg["text"].strip()
         if text.startswith("/start"):
             tg("sendMessage", chat_id=chat_id, text=WELCOME, reply_markup={"keyboard": [[{"text": "Share my location", "request_location": True}]], "resize_keyboard": True})
+            return
+        if text.startswith("/myid"):
+            tg("sendMessage", chat_id=chat_id, text=f"Your Telegram ID is {chat_id}\nGive it to the person who wants to add you as an emergency contact.")
             return
         if text.startswith("/new"):
             row["session_id"], row["replies"] = None, []
@@ -174,7 +193,7 @@ def handle_update(services, update: dict) -> None:
             tg("sendMessage", chat_id=chat_id, text="New chat started. Tell me what is happening.")
             return
     else:
-        tg("sendMessage", chat_id=chat_id, text="I can read text and photos here for now. Please type or send a photo.")
+        tg("sendMessage", chat_id=chat_id, text="I can read text, photos and short videos here. Please type or send one of those.")
         return
 
     tg("sendChatAction", chat_id=chat_id, action="typing")

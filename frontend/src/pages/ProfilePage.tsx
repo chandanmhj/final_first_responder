@@ -19,6 +19,7 @@ export default function ProfilePage() {
   const [conditions, setConditions] = useState(profile?.conditions ?? "");
   const [meds, setMeds] = useState(profile?.medications ?? "");
   const [contact, setContact] = useState(profile?.emergency_contact ?? "");
+  const [tgIds, setTgIds] = useState(profile?.emergency_telegram_ids ?? "");
   const [msg, setMsg] = useState<string | null>(null);
 
   const save = async () => {
@@ -27,6 +28,7 @@ export default function ProfilePage() {
         full_name: name || undefined, role: role ?? undefined, attested: role === "responder" ? attested : undefined,
         age: age ? Number(age) : undefined, sex: sex || undefined, blood_group: blood || undefined, allergies: allergies || undefined,
         conditions: conditions || undefined, medications: meds || undefined, emergency_contact: contact || undefined,
+        emergency_telegram_ids: tgIds || undefined,
       });
       if (role) setStoredRole({ role, attested, cert: "" });
       await refresh(); setMsg("Saved.");
@@ -41,7 +43,7 @@ export default function ProfilePage() {
       <section className="space-y-4 rounded-2xl border border-ink-100 bg-white p-5 shadow-soft">
         <div>
           <h2 className="font-display text-lg font-bold text-ink-950">Medical details</h2>
-          <p className="text-xs text-ink-500">Shown to paramedics in the handover report only when you choose "this is for me" in a chat.</p>
+          <p className="text-xs text-ink-500">Shown to paramedics and the hospital only when you choose "this is for me" in a chat.</p>
         </div>
         <div className="grid gap-4 sm:grid-cols-3">
           <Input label="Age" type="number" min={0} max={120} value={age} onChange={(e) => setAge(e.target.value)} />
@@ -57,6 +59,10 @@ export default function ProfilePage() {
         <Input label="Medical conditions" placeholder="e.g. diabetes, asthma" value={conditions} onChange={(e) => setConditions(e.target.value)} />
         <Input label="Current medicines" value={meds} onChange={(e) => setMeds(e.target.value)} />
         <Input label="Emergency contact" placeholder="Name and phone" value={contact} onChange={(e) => setContact(e.target.value)} />
+        <div>
+          <Input label="Emergency contacts' Telegram IDs" placeholder="e.g. 123456789, 987654321" value={tgIds} onChange={(e) => setTgIds(e.target.value)} />
+          <p className="mt-1 text-xs text-ink-500">They get an alert when you start a chat marked "this is for me". Each contact must open our Telegram bot, press Start, and send /myid to get their ID.</p>
+        </div>
       </section>
       <div className="flex items-center gap-3"><Button onClick={() => void save()} disabled={role === "responder" && !attested}>Save</Button>{msg && <span className="text-sm text-ink-500">{msg}</span>}</div>
     </div></div>

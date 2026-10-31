@@ -50,6 +50,7 @@ class Settings(BaseSettings):
     # Limits
     rate_limit_per_minute: int = 40
     max_image_mb: int = 8
+    max_video_mb: int = 4
     max_audio_mb: int = 12
 
     @property

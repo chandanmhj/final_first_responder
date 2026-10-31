@@ -117,7 +117,7 @@ export function useChat(initialSessionId: string | null) {
       const bubble: ChatItem = {
         id: nid(),
         from: "user",
-        message: { type: "user", text: clean, hasImage: !!opts.image, imageUrl: opts.image ? URL.createObjectURL(opts.image) : undefined },
+                message: { type: "user", text: clean, hasImage: !!opts.image, isVideo: !!opts.image?.type.startsWith("video/"), imageUrl: opts.image ? URL.createObjectURL(opts.image) : undefined },
       };
       return run({ message: clean, action: "message", for_self: opts.forSelf === undefined ? undefined : String(opts.forSelf), age_band: opts.ageBand }, bubble, opts.image);
     },

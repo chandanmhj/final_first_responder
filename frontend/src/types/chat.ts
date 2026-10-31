@@ -97,7 +97,7 @@ export type ChatResponse = {
   messages: ServerMessage[];
 };
 
-export type UserBubble = { type: "user"; text: string; hasImage: boolean; imageUrl?: string };
+export type UserBubble = { type: "user"; text: string; hasImage: boolean; imageUrl?: string; isVideo?: boolean };
 
 export type ChatItem = { id: string; from: "user" | "assistant"; message: ServerMessage | UserBubble };
 
@@ -125,4 +125,5 @@ export type Profile = {
   conditions: string | null;
   medications: string | null;
   emergency_contact: string | null;
+  emergency_telegram_ids: string | null;
 };

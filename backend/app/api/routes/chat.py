@@ -10,6 +10,7 @@ from ..deps import get_services, rate_limited
 router = APIRouter(prefix="/api")
 
 IMAGE_TYPES = {"image/jpeg", "image/png", "image/webp", "image/gif"}
+VIDEO_TYPES = {"video/mp4", "video/webm", "video/quicktime", "video/x-matroska"}
 
 
 @router.post("/chat")
@@ -28,14 +29,13 @@ async def chat(
 ):
     """Handle one turn. Returns the messages to show (text, step cards, photo result, hospitals, report)."""
     img = None
+    
     if image is not None and image.filename:
-        if (image.content_type or "") not in IMAGE_TYPES:
-            raise AppError("Please send a JPEG, PNG or WebP image.")
+        is_video = (image.content_type or "") in VIDEO_TYPES
+        if not is_video and (image.content_type or "") not in IMAGE_TYPES:
+            raise AppError("Please send a JPEG, PNG or WebP image, or a short MP4 video.")
+        limit = services.settings.max_video_mb if is_video else services.settings.max_image_mb
         data = await image.read()
-        if len(data) > services.settings.max_image_mb * 1024 * 1024:
-            raise AppError(f"Image is larger than {services.settings.max_image_mb} MB.")
+        if len(data) > limit * 1024 * 1024:
+            raise AppError(f"The video is larger than {limit} MB. Please send a shorter clip." if is_video else f"Image is larger than {limit} MB.")
         img = (data, image.content_type)
-    if action not in ("message", "next", "not_worked", "hospitals", "report", "restart"):
-        raise AppError("Unknown action.")
-    req = ChatRequest(message=message, session_id=session_id, action=action, role=role, for_self=for_self, age_band=age_band, lat=lat, lon=lon)
-    return services.chat.handle(user.id, req, img)

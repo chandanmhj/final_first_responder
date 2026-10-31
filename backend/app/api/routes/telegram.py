@@ -2,7 +2,7 @@
 import os
 
 from fastapi import APIRouter, Body, Depends, Header, HTTPException
-
+from ...services.hospital_bot import handle_hospital_update
 from ...services.telegram_bot import handle_update
 from ...state import Services
 from ..deps import get_services
@@ -18,4 +18,15 @@ def webhook(update: dict = Body(...), x_telegram_bot_api_secret_token: str | Non
     if not secret or x_telegram_bot_api_secret_token != secret:
         raise HTTPException(status_code=403, detail="Forbidden")
     handle_update(services, update)
+    return {"ok": True}
+
+
+
+@router.post("/hospital-webhook")
+def hospital_webhook(update: dict = Body(...), x_telegram_bot_api_secret_token: str | None = Header(default=None)):
+    """Webhook of the second (demo hospital portal) bot."""
+    secret = os.getenv("TELEGRAM_HOSPITAL_WEBHOOK_SECRET") or os.getenv("TELEGRAM_WEBHOOK_SECRET")
+    if not secret or x_telegram_bot_api_secret_token != secret:
+        raise HTTPException(status_code=403, detail="Forbidden")
+    handle_hospital_update(update)
     return {"ok": True}

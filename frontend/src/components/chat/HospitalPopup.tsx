@@ -6,13 +6,10 @@ type Prompt = Extract<ServerMessage, { type: "hospital_prompt" }>;
 
 /** The two choices: call 108, or open Google Maps directly to the hospital picked for this emergency. */
 export function HospitalActions({ prompt, incidentId, onDone }: { prompt: Prompt; incidentId?: string | null; onDone?: () => void }) {
-  const log = (type: string, text?: string) => { if (incidentId) void api.addEvent(incidentId, type, text).catch(() => undefined); };
-
   const navigate = async (e: MouseEvent) => {
-    log("note", `Navigating to ${prompt.hospital?.name ?? "nearest hospital"}`);
+    if (incidentId) void api.enRoute(incidentId).catch(() => undefined); // tells the hospital someone is coming (demo, over Telegram)
     onDone?.();
     if (prompt.hospital) return; // hospital already chosen: the link opens Google Maps to it
-    // No location was available earlier: get it now, pick the hospital for this emergency, then open Maps.
     e.preventDefault();
     const w = window.open("", "_blank");
     let url = prompt.maps_url;
@@ -28,7 +25,7 @@ export function HospitalActions({ prompt, incidentId, onDone }: { prompt: Prompt
 
   return (
     <div className="mt-4 grid gap-2">
-      <a href="tel:108" onClick={() => { log("called_108"); onDone?.(); }} className="inline-flex h-12 items-center justify-center rounded-xl bg-emergency-600 text-sm font-bold text-white hover:bg-emergency-500">Call 108</a>
+      <a href="tel:108" onClick={() => { if (incidentId) void api.addEvent(incidentId, "called_108").catch(() => undefined); onDone?.(); }} className="inline-flex h-12 items-center justify-center rounded-xl bg-emergency-600 text-sm font-bold text-white hover:bg-emergency-500">Call 108</a>
       <a href={prompt.maps_url} target="_blank" rel="noreferrer" onClick={(e) => void navigate(e)} className="inline-flex h-12 items-center justify-center rounded-xl border border-ink-200 bg-white text-sm font-semibold text-ink-900 hover:bg-ink-50">Navigate yourself</a>
     </div>
   );

@@ -3,8 +3,7 @@ from contextlib import asynccontextmanager
 
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-
-from .api.routes import chat, health, hospitals, incidents, me, media, scenarios, sessions, voice
+from .api.routes import chat, health, hospitals, incidents, me, media, scenarios, sessions, telegram, voice
 from .config import Settings, get_settings
 from .core.errors import install_error_handlers
 from .core.logging import setup_logging
@@ -26,7 +25,7 @@ def create_app(settings: Settings | None = None, services: Services | None = Non
     install_error_handlers(app)
     app.include_router(health.router)
     app.include_router(health.router, prefix="/api")
-    for r in (me, sessions, chat, voice, media, hospitals, incidents, scenarios):
+    for r in (me, sessions, chat, voice, media, hospitals, incidents, scenarios, telegram):
         app.include_router(r.router)
     return app
 

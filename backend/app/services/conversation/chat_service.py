@@ -3,11 +3,12 @@
 One chat carries one emergency. Once an emergency has started, later messages are answered inside it,
 using the whole chat and a summary of what has already happened (steps done, things the person reported).
 """
-import re
-from dataclasses import dataclass
 import logging
 import os
+import re
+from dataclasses import dataclass
 from datetime import datetime, timedelta, timezone
+
 from ...config import Settings
 from ..handover.isbar_report import build_report, to_markdown
 from ..handover.timeline import now_iso
@@ -24,6 +25,8 @@ from . import quick_replies, smalltalk
 from .roles import adjust_condition, band_protocol, infer_age_band
 from .step_manager import ScenarioState
 
+log = logging.getLogger(__name__)
+FALLBACK_REPLIES = ["I did that. What next?", "I can't manage this step", "Something has changed"]
 INTRO_URGENT = "Call 108 now (or ask someone to). I'll guide you step by step while help is on the way."
 ARRIVED_RE = re.compile(r"\b(help|ambulance|paramedics?|medics?)\s+(has\s+|have\s+|just\s+)?(arrived|reached|is here|are here)\b", re.I)
 NEG_RE = re.compile(r"\b(didn'?t work|did not work|not working|doesn'?t work|isn'?t working|no change|not helping|nothing happened|getting worse|still\s+\w+)\b", re.I)
@@ -139,7 +142,7 @@ class ChatService:
         msgs = [{"type": "text", "text": head}]
         if cond.note:
             msgs[0]["text"] += f"\n\nNote: {cond.note}"
-            prompt = self._hospital_prompt(state, req)
+        prompt = self._hospital_prompt(state, req)
         if prompt["hospital"]:  # remembered so "I'm going there" can alert that hospital later
             self._event(user_id, state, "hospital_selected", {"text": f"Suggested hospital: {prompt['hospital']['name']} ({prompt['hospital']['distance_km']} km)", **prompt["hospital"]})
         if for_self:
@@ -210,6 +213,7 @@ class ChatService:
             return head + self._start(user_id, session, state, route.condition, route.location, role, for_self, age_band, protocol, None,
                                       emergency_triage.is_urgent(combined), req)
         return head + [{"type": "text", "text": "Tell me what happened and who is hurt, so I can guide you."}]
+
     # ------------------------------------------------------------------ actions
     def _next(self, user_id, state: ScenarioState) -> list[dict]:
         if not state.active:
@@ -301,7 +305,7 @@ class ChatService:
                 log.warning("follow-up suggestions failed: %s", exc)
         reps = reps[:3] or FALLBACK_REPLIES
         return [{"id": f"ask{i}", "action": "ask", "label": r, "text": r} for i, r in enumerate(reps)]
-    
+
     def _answer_question(self, user_id, text: str, state: ScenarioState, history) -> list[dict]:
         cur = state.current()
         style = "clinical" if state.role == "responder" else "simple"

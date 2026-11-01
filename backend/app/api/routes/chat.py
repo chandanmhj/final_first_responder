@@ -1,4 +1,4 @@
-"""The chat endpoint: text, quick-reply actions and an optional photo."""
+"""The chat endpoint: text, quick-reply actions and an optional photo or short video."""
 from fastapi import APIRouter, Depends, File, Form, UploadFile
 
 from ...core.errors import AppError
@@ -29,7 +29,6 @@ async def chat(
 ):
     """Handle one turn. Returns the messages to show (text, step cards, photo result, hospitals, report)."""
     img = None
-    
     if image is not None and image.filename:
         is_video = (image.content_type or "") in VIDEO_TYPES
         if not is_video and (image.content_type or "") not in IMAGE_TYPES:
@@ -39,3 +38,7 @@ async def chat(
         if len(data) > limit * 1024 * 1024:
             raise AppError(f"The video is larger than {limit} MB. Please send a shorter clip." if is_video else f"Image is larger than {limit} MB.")
         img = (data, image.content_type)
+    if action not in ("message", "next", "not_worked", "hospitals", "report", "restart"):
+        raise AppError("Unknown action.")
+    req = ChatRequest(message=message, session_id=session_id, action=action, role=role, for_self=for_self, age_band=age_band, lat=lat, lon=lon)
+    return services.chat.handle(user.id, req, img)

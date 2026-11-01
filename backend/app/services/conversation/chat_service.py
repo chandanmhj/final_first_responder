@@ -283,21 +283,25 @@ class ChatService:
 
     # ------------------------------------------------------------------ free text and photos
     def _followups(self, question: str, answer: str, case: str) -> list[dict]:
-        """2-3 tappable replies that fit this specific answer (for example the likely reply to a question just asked)."""
-        if not self.llm.ready:
-            return []
-        try:
-            out = self.llm.chat_json([
-                {"role": "system", "content": "Suggest 3 short replies the person might tap next in a first-aid chat, specific to the answer just given: likely answers "
-                                              "to anything the assistant asked, or likely follow-up questions. First person, under 8 words each, all different. "
-                                              "Return JSON {\"replies\": [\"...\", \"...\", \"...\"]}."},
-                {"role": "user", "content": f"Case notes:\n{case}\n\nPerson said: {question}\nAssistant answered: {answer[:700]}"},
-            ], max_tokens=150)
-        except Exception:
-            return []
-        reps = [str(r).strip() for r in (out.get("replies") or []) if str(r).strip()][:3]
+        """2-3 tappable replies that fit this specific answer. Falls back to generic ones if the model fails, so buttons always show."""
+        reps: list[str] = []
+        if self.llm.ready:
+            try:
+                text = self.llm.chat([
+                    {"role": "system", "content": "Suggest 3 short replies the person might tap next in a first-aid chat, specific to the answer just given: likely answers "
+                                                  "to anything the assistant asked, or likely follow-up questions. First person, under 8 words each, all different. "
+                                                  "Write exactly 3 lines, one reply per line, with no numbering and no quotes."},
+                    {"role": "user", "content": f"Case notes:\n{case}\n\nPerson said: {question}\nAssistant answered: {answer[:700]}"},
+                ], temperature=0.3, max_tokens=80)
+                for line in text.splitlines():
+                    t = line.strip().lstrip("-•*0123456789.) ").strip().strip('"“”')
+                    if 2 < len(t) <= 60:
+                        reps.append(t)
+            except Exception as exc:  # never break the reply because suggestions failed
+                log.warning("follow-up suggestions failed: %s", exc)
+        reps = reps[:3] or FALLBACK_REPLIES
         return [{"id": f"ask{i}", "action": "ask", "label": r, "text": r} for i, r in enumerate(reps)]
-
+    
     def _answer_question(self, user_id, text: str, state: ScenarioState, history) -> list[dict]:
         cur = state.current()
         style = "clinical" if state.role == "responder" else "simple"
